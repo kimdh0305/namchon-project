@@ -180,9 +180,16 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   }, [pan]);
 
   // Two-finger pinch = in-frame zoom (drives the same zoomScale/pan as the +/-
-  // buttons), NOT the browser's native whole-page zoom. touch-action below
-  // disables native pinch so this handler owns the gesture; page-flip never
-  // sees the multi-touch, so it can't auto-flip or jitter mid-zoom.
+  // buttons), NOT the browser's native whole-page zoom.
+  //
+  // page-flip binds touchstart on #book and touchmove/touchend on window, and
+  // decides a page flip in its touchend (start->end distance > swipeDistance).
+  // So these listeners run in the CAPTURE phase (before page-flip's) and, from
+  // the moment a 2nd finger lands until EVERY finger lifts, stopImmediatePropagation
+  // hides the whole multi-touch sequence — including the concluding touchend —
+  // from page-flip. Without blocking that final touchend the pinch was read as a
+  // swipe and flipped one page. Single-finger touches pass through untouched, so
+  // normal swipe-to-flip still works.
   const getTouchDistance = (t1, t2) =>
     Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
 
@@ -191,7 +198,8 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     if (!wrapper || !onZoomChange) return undefined;
 
     const beginPinch = (event) => {
-      if (event.touches.length !== 2) return;
+      // Engage only on multi-touch; a lone finger stays with page-flip.
+      if (event.touches.length < 2) return;
       const [t1, t2] = [event.touches[0], event.touches[1]];
       const rect = wrapper.getBoundingClientRect();
       pinchRef.current = {
@@ -206,15 +214,18 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
       if (hostRef.current) hostRef.current.style.pointerEvents = "none";
       activePointerIdRef.current = null;
       setIsPanning(true);
+      event.stopImmediatePropagation();
       event.preventDefault();
-      event.stopPropagation();
     };
 
     const movePinch = (event) => {
       const pinch = pinchRef.current;
-      if (!pinch || event.touches.length !== 2 || pinch.startDistance <= 0) return;
-      event.preventDefault();
-      event.stopPropagation();
+      if (!pinch) return;
+      // Lock is active: keep the entire gesture away from page-flip.
+      event.stopImmediatePropagation();
+      if (event.cancelable) event.preventDefault();
+      // A finger may have lifted mid-pinch; hold the lock but stop zooming.
+      if (event.touches.length < 2 || pinch.startDistance <= 0) return;
 
       const distance = getTouchDistance(event.touches[0], event.touches[1]);
       const rawZoom = Math.round((pinch.startZoom * (distance / pinch.startDistance)) * 100) / 100;
@@ -228,7 +239,12 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     };
 
     const endPinch = (event) => {
-      if (!pinchRef.current || event.touches.length >= 2) return;
+      if (!pinchRef.current) return;
+      // Hide every touchend of the pinch from page-flip, including the last one
+      // that would otherwise be scored as a swipe.
+      event.stopImmediatePropagation();
+      // Stay locked until the screen is fully released.
+      if (event.touches.length > 0) return;
       pinchRef.current = null;
       setIsPanning(false);
       if (hostRef.current) {
@@ -240,18 +256,19 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     // WebKit-only: block iOS Safari's page zoom, which ignores touch-action.
     const blockGesture = (event) => event.preventDefault();
 
-    wrapper.addEventListener("touchstart", beginPinch, { passive: false });
-    wrapper.addEventListener("touchmove", movePinch, { passive: false });
-    wrapper.addEventListener("touchend", endPinch, { passive: false });
-    wrapper.addEventListener("touchcancel", endPinch, { passive: false });
+    const capture = { capture: true, passive: false };
+    wrapper.addEventListener("touchstart", beginPinch, capture);
+    wrapper.addEventListener("touchmove", movePinch, capture);
+    wrapper.addEventListener("touchend", endPinch, capture);
+    wrapper.addEventListener("touchcancel", endPinch, capture);
     wrapper.addEventListener("gesturestart", blockGesture, { passive: false });
     wrapper.addEventListener("gesturechange", blockGesture, { passive: false });
     wrapper.addEventListener("gestureend", blockGesture, { passive: false });
     return () => {
-      wrapper.removeEventListener("touchstart", beginPinch);
-      wrapper.removeEventListener("touchmove", movePinch);
-      wrapper.removeEventListener("touchend", endPinch);
-      wrapper.removeEventListener("touchcancel", endPinch);
+      wrapper.removeEventListener("touchstart", beginPinch, capture);
+      wrapper.removeEventListener("touchmove", movePinch, capture);
+      wrapper.removeEventListener("touchend", endPinch, capture);
+      wrapper.removeEventListener("touchcancel", endPinch, capture);
       wrapper.removeEventListener("gesturestart", blockGesture);
       wrapper.removeEventListener("gesturechange", blockGesture);
       wrapper.removeEventListener("gestureend", blockGesture);
