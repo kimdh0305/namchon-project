@@ -43,6 +43,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   const pageFlipRef = useRef(null);
   const totalPagesRef = useRef(1);
   const coverOffsetRef = useRef(0);
+  const loadAroundRef = useRef(null);
   const onPageChangeRef = useRef(onPageChange);
   const activePointerIdRef = useRef(null);
   const lastPointerRef = useRef({ x: 0, y: 0 });
@@ -111,6 +112,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
         }
       }
     };
+    loadAroundRef.current = loadAround;
 
     const toIndex = (contentPage) =>
       Math.min(totalPagesRef.current - 1, Math.max(0, contentPage - 1 + offset));
@@ -138,9 +140,13 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     pageFlip.loadFromHTML(pages);
 
     // Default open shows the cover (page "0"); an explicit page request opens that content page.
+    // turnToPage positions instantly (no animation), which lands exactly on the
+    // requested page — an animated flip() to a far page can be swallowed and settle elsewhere.
     const startIndex = offset && initialPage <= 1 ? 0 : toIndex(initialPage);
     loadAround(startIndex);
-    if (typeof pageFlip.flip === "function") {
+    if (typeof pageFlip.turnToPage === "function") {
+      pageFlip.turnToPage(startIndex);
+    } else if (typeof pageFlip.flip === "function") {
       pageFlip.flip(startIndex);
     }
     onPageChangeRef.current?.(Math.max(0, startIndex + 1 - offset), contentTotal);
@@ -323,9 +329,23 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
         ? pageFlip.getCurrentPageIndex()
         : -1;
 
-    if (currentIndex !== targetIndex && typeof pageFlip.flip === "function") {
+    if (currentIndex === targetIndex) return;
+
+    // Same-book jumps (e.g. the writer-search result) must land EXACTLY on the
+    // requested page. An animated flip() to a distant page races the current
+    // animation and often settles on the wrong page (or the cover), so use the
+    // instant turnToPage; since that emits no "flip" event, load the surrounding
+    // images and update the page counter here directly.
+    loadAroundRef.current?.(targetIndex);
+    if (typeof pageFlip.turnToPage === "function") {
+      pageFlip.turnToPage(targetIndex);
+    } else if (typeof pageFlip.flip === "function") {
       pageFlip.flip(targetIndex);
     }
+    onPageChangeRef.current?.(
+      Math.max(0, targetIndex + 1 - offset),
+      totalPagesRef.current - offset
+    );
   }, [initialPage, manifest]);
 
   useEffect(() => {
