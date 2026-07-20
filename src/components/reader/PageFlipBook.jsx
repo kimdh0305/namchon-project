@@ -46,10 +46,15 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   const onPageChangeRef = useRef(onPageChange);
   const activePointerIdRef = useRef(null);
   const lastPointerRef = useRef({ x: 0, y: 0 });
+  const nativeZoomedRef = useRef(false);
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
+  // Tracks OS-level pinch-zoom (visualViewport scale), separate from our own
+  // +/- zoomScale, so a mobile pinch gesture can't be misread as a page swipe.
+  const [nativeZoomed, setNativeZoomed] = useState(false);
 
   const zoomed = zoomScale > minZoom + 0.001;
+  const flipBlocked = zoomed || nativeZoomed;
 
   const clampPanForScale = useCallback((x, y, scale) => {
     if (!wrapperRef.current || scale <= minZoom + 0.001) return { x: 0, y: 0 };
@@ -163,8 +168,50 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
-    host.style.pointerEvents = zoomed ? "none" : "auto";
-  }, [zoomed]);
+    host.style.pointerEvents = flipBlocked ? "none" : "auto";
+  }, [flipBlocked]);
+
+  // Instant lock the moment a second finger touches down, since visualViewport's
+  // resize event can lag a frame behind and let page-flip see the first swipe.
+  useEffect(() => {
+    const wrapper = wrapperRef.current;
+    if (!wrapper) return undefined;
+
+    const onTouchStartCapture = (event) => {
+      if (event.touches.length > 1) {
+        nativeZoomedRef.current = true;
+        setNativeZoomed(true);
+        if (hostRef.current) hostRef.current.style.pointerEvents = "none";
+      }
+    };
+
+    wrapper.addEventListener("touchstart", onTouchStartCapture, { capture: true, passive: true });
+    return () => {
+      wrapper.removeEventListener("touchstart", onTouchStartCapture, { capture: true });
+    };
+  }, []);
+
+  // Authoritative unlock: only once the OS-level pinch-zoom has actually been
+  // released back to 1x, per "확대 후 다시 줄일 때까지 페이지 넘김 금지".
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return undefined;
+
+    const ZOOM_EPSILON = 0.02;
+    const updateFromViewport = () => {
+      const isZoomed = vv.scale > 1 + ZOOM_EPSILON;
+      nativeZoomedRef.current = isZoomed;
+      setNativeZoomed(isZoomed);
+    };
+
+    updateFromViewport();
+    vv.addEventListener("resize", updateFromViewport);
+    vv.addEventListener("scroll", updateFromViewport);
+    return () => {
+      vv.removeEventListener("resize", updateFromViewport);
+      vv.removeEventListener("scroll", updateFromViewport);
+    };
+  }, []);
 
   useEffect(() => {
     if (!zoomed) {
@@ -210,6 +257,8 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     setPan({ x: 0, y: 0 });
     setIsPanning(false);
     activePointerIdRef.current = null;
+    nativeZoomedRef.current = false;
+    setNativeZoomed(false);
   }, [manifest]);
 
   const handleWheel = useCallback((event) => {
