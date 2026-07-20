@@ -1,6 +1,6 @@
 {
   "book_id": "matthew",
-  "total_pages": 111,
+  "total_pages": 96,
   "page_window": 3,
   "pages": [
     {
@@ -576,96 +576,6 @@
     {
       "page": 96,
       "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0096.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 97,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0097.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 98,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0098.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 99,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0099.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 100,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0100.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 101,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0101.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 102,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0102.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 103,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0103.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 104,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0104.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 105,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0105.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 106,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0106.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 107,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0107.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 108,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0108.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 109,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0109.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 110,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0110.webp",
-      "width": 1042,
-      "height": 1573
-    },
-    {
-      "page": 111,
-      "image": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/books/book-40/0111.webp",
       "width": 1042,
       "height": 1573
     }
