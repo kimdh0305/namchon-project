@@ -1,0 +1,13 @@
+[project]
+name = "bible-flipbook-static"
+version = "0.1.0"
+description = "Static-first Bible handwriting archive builder"
+requires-python = ">=3.11"
+dependencies = [
+    "openpyxl>=3.1.5",
+]
+
+[tool.bible_project]
+source_pdf = "sample_input/book-01.pdf"
+book_id = "book-01"
+

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{BOOK_TITLE}} Reader</title>
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f7f5",
+            foreground: "#191919",
+            card: "#ffffff",
+            muted: "#f1f1ef",
+            border: "#e6e6e2",
+            ring: "#1f6feb",
+            primary: "#111827",
+            secondary: "#f3f4f6"
+          },
+          boxShadow: {
+            soft: "0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.08)"
+          },
+          fontFamily: {
+            sans: ["Inter", "Pretendard", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body data-view="reader" class="bg-background text-foreground antialiased font-sans">
+  <header class="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur">
+    <div class="mx-auto flex h-14 w-full max-w-[1440px] items-center justify-between px-4 sm:px-6">
+      <a class="text-sm font-semibold tracking-tight" href="/">Main Page</a>
+      <nav class="flex items-center gap-1 text-sm text-zinc-600">
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/">Main</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/reader/{{BOOK_ID}}/">Reader</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/gallery/">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto grid w-full max-w-[1440px] gap-4 px-4 py-4 sm:px-6 lg:grid-cols-[280px_minmax(0,1fr)] lg:py-5">
+    <aside class="h-fit max-h-[72vh] overflow-auto rounded-xl border border-border bg-card p-4 shadow-soft lg:sticky lg:top-[72px]">
+      <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-500">Table of Contents</p>
+      <h2 class="mt-2 text-base font-semibold tracking-tight">성경 목차</h2>
+      <ul id="toc-list" class="mt-3 grid gap-3"></ul>
+    </aside>
+
+    <section class="flex min-h-[78vh] flex-col overflow-hidden rounded-xl border border-zinc-800/10 bg-zinc-900 shadow-soft">
+      <div class="flex flex-col gap-3 border-b border-white/10 bg-zinc-900/80 p-3 md:flex-row md:items-center md:justify-between">
+        <div>
+          <p class="text-[11px] font-semibold uppercase tracking-[0.14em] text-zinc-400">Reader</p>
+          <h1 class="mt-1 text-xl font-semibold text-zinc-100">{{BOOK_TITLE}}</h1>
+        </div>
+        <div class="flex w-full flex-col gap-2 sm:flex-row md:w-auto">
+          <div class="writer-search-wrap relative w-full sm:w-64">
+            <input id="writer-search" class="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30" type="search" placeholder="필사자 검색" autocomplete="off" />
+            <div id="writer-results" class="writer-results writer-results-toolbar"></div>
+          </div>
+          <input id="page-search" class="w-full rounded-md border border-zinc-700 bg-zinc-950 px-3 py-2 text-sm text-zinc-100 placeholder-zinc-500 focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/30 sm:w-28" type="number" min="1" placeholder="페이지" />
+        </div>
+      </div>
+
+      <div class="page-stage flex min-h-0 flex-1 items-center justify-center p-2" id="page-stage">
+        <div id="book" class="book-stage"></div>
+      </div>
+
+      <div class="flex min-h-12 items-center justify-between gap-2 border-t border-white/10 bg-zinc-900/80 px-3 py-2 text-zinc-200">
+        <button id="prev-page" class="inline-flex items-center rounded-md border border-zinc-600 bg-zinc-100 px-3 py-1.5 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200">이전</button>
+        <span id="page-indicator" class="text-sm text-zinc-300"></span>
+        <div class="flex items-center gap-2">
+          <div class="zoom-controls" aria-label="Zoom controls">
+            <button id="zoom-out" type="button" class="zoom-btn" aria-label="Zoom out">-</button>
+            <span id="zoom-level" class="zoom-level" aria-live="polite">100%</span>
+            <button id="zoom-in" type="button" class="zoom-btn" aria-label="Zoom in">+</button>
+          </div>
+          <button id="next-page" class="inline-flex items-center rounded-md border border-zinc-600 bg-zinc-100 px-3 py-1.5 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200">다음</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
+  <script>
+    window.__MANIFEST__ = {{MANIFEST_JSON}};
+    window.__TOC__ = {{TOC_JSON}};
+    window.__WRITERS__ = {{WRITERS_JSON}};
+    window.__BOOKS__ = {{BOOKS_JSON}};
+  </script>
+  <script src="/scripts/reader.js" defer></script>
+</body>
+</html>

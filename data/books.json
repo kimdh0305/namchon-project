@@ -1,0 +1,596 @@
+[
+  {
+    "book_id": "genesis",
+    "testament": "old",
+    "order": 1,
+    "title_en": "Genesis",
+    "title_ko": "창세기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/genesis.json"
+  },
+  {
+    "book_id": "exodus",
+    "testament": "old",
+    "order": 2,
+    "title_en": "Exodus",
+    "title_ko": "출애굽기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/exodus.json"
+  },
+  {
+    "book_id": "leviticus",
+    "testament": "old",
+    "order": 3,
+    "title_en": "Leviticus",
+    "title_ko": "레위기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/leviticus.json"
+  },
+  {
+    "book_id": "numbers",
+    "testament": "old",
+    "order": 4,
+    "title_en": "Numbers",
+    "title_ko": "민수기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/numbers.json"
+  },
+  {
+    "book_id": "deuteronomy",
+    "testament": "old",
+    "order": 5,
+    "title_en": "Deuteronomy",
+    "title_ko": "신명기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/deuteronomy.json"
+  },
+  {
+    "book_id": "joshua",
+    "testament": "old",
+    "order": 6,
+    "title_en": "Joshua",
+    "title_ko": "여호수아",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/joshua.json"
+  },
+  {
+    "book_id": "judges",
+    "testament": "old",
+    "order": 7,
+    "title_en": "Judges",
+    "title_ko": "사사기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/judges.json"
+  },
+  {
+    "book_id": "ruth",
+    "testament": "old",
+    "order": 8,
+    "title_en": "Ruth",
+    "title_ko": "룻기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/ruth.json"
+  },
+  {
+    "book_id": "first-samuel",
+    "testament": "old",
+    "order": 9,
+    "title_en": "1 Samuel",
+    "title_ko": "사무엘상",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-samuel.json"
+  },
+  {
+    "book_id": "second-samuel",
+    "testament": "old",
+    "order": 10,
+    "title_en": "2 Samuel",
+    "title_ko": "사무엘하",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-samuel.json"
+  },
+  {
+    "book_id": "first-kings",
+    "testament": "old",
+    "order": 11,
+    "title_en": "1 Kings",
+    "title_ko": "열왕기상",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-kings.json"
+  },
+  {
+    "book_id": "second-kings",
+    "testament": "old",
+    "order": 12,
+    "title_en": "2 Kings",
+    "title_ko": "열왕기하",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-kings.json"
+  },
+  {
+    "book_id": "first-chronicles",
+    "testament": "old",
+    "order": 13,
+    "title_en": "1 Chronicles",
+    "title_ko": "역대상",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-chronicles.json"
+  },
+  {
+    "book_id": "second-chronicles",
+    "testament": "old",
+    "order": 14,
+    "title_en": "2 Chronicles",
+    "title_ko": "역대하",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-chronicles.json"
+  },
+  {
+    "book_id": "ezra",
+    "testament": "old",
+    "order": 15,
+    "title_en": "Ezra",
+    "title_ko": "에스라",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/ezra.json"
+  },
+  {
+    "book_id": "nehemiah",
+    "testament": "old",
+    "order": 16,
+    "title_en": "Nehemiah",
+    "title_ko": "느헤미야",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/nehemiah.json"
+  },
+  {
+    "book_id": "esther",
+    "testament": "old",
+    "order": 17,
+    "title_en": "Esther",
+    "title_ko": "에스더",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/esther.json"
+  },
+  {
+    "book_id": "job",
+    "testament": "old",
+    "order": 18,
+    "title_en": "Job",
+    "title_ko": "욥기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/job.json"
+  },
+  {
+    "book_id": "psalms",
+    "testament": "old",
+    "order": 19,
+    "title_en": "Psalms",
+    "title_ko": "시편",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/psalms.json"
+  },
+  {
+    "book_id": "proverbs",
+    "testament": "old",
+    "order": 20,
+    "title_en": "Proverbs",
+    "title_ko": "잠언",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/proverbs.json"
+  },
+  {
+    "book_id": "ecclesiastes",
+    "testament": "old",
+    "order": 21,
+    "title_en": "Ecclesiastes",
+    "title_ko": "전도서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/ecclesiastes.json"
+  },
+  {
+    "book_id": "song-of-songs",
+    "testament": "old",
+    "order": 22,
+    "title_en": "Song of Songs",
+    "title_ko": "아가",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/song-of-songs.json"
+  },
+  {
+    "book_id": "isaiah",
+    "testament": "old",
+    "order": 23,
+    "title_en": "Isaiah",
+    "title_ko": "이사야",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/isaiah.json"
+  },
+  {
+    "book_id": "jeremiah",
+    "testament": "old",
+    "order": 24,
+    "title_en": "Jeremiah",
+    "title_ko": "예레미야",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/jeremiah.json"
+  },
+  {
+    "book_id": "lamentations",
+    "testament": "old",
+    "order": 25,
+    "title_en": "Lamentations",
+    "title_ko": "예레미야애가",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/lamentations.json"
+  },
+  {
+    "book_id": "ezekiel",
+    "testament": "old",
+    "order": 26,
+    "title_en": "Ezekiel",
+    "title_ko": "에스겔",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/ezekiel.json"
+  },
+  {
+    "book_id": "daniel",
+    "testament": "old",
+    "order": 27,
+    "title_en": "Daniel",
+    "title_ko": "다니엘",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/daniel.json"
+  },
+  {
+    "book_id": "hosea",
+    "testament": "old",
+    "order": 28,
+    "title_en": "Hosea",
+    "title_ko": "호세아",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/hosea.json"
+  },
+  {
+    "book_id": "joel",
+    "testament": "old",
+    "order": 29,
+    "title_en": "Joel",
+    "title_ko": "요엘",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/joel.json"
+  },
+  {
+    "book_id": "amos",
+    "testament": "old",
+    "order": 30,
+    "title_en": "Amos",
+    "title_ko": "아모스",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/amos.json"
+  },
+  {
+    "book_id": "obadiah",
+    "testament": "old",
+    "order": 31,
+    "title_en": "Obadiah",
+    "title_ko": "오바댜",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/obadiah.json"
+  },
+  {
+    "book_id": "jonah",
+    "testament": "old",
+    "order": 32,
+    "title_en": "Jonah",
+    "title_ko": "요나",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/jonah.json"
+  },
+  {
+    "book_id": "micah",
+    "testament": "old",
+    "order": 33,
+    "title_en": "Micah",
+    "title_ko": "미가",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/micah.json"
+  },
+  {
+    "book_id": "nahum",
+    "testament": "old",
+    "order": 34,
+    "title_en": "Nahum",
+    "title_ko": "나훔",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/nahum.json"
+  },
+  {
+    "book_id": "habakkuk",
+    "testament": "old",
+    "order": 35,
+    "title_en": "Habakkuk",
+    "title_ko": "하박국",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/habakkuk.json"
+  },
+  {
+    "book_id": "zephaniah",
+    "testament": "old",
+    "order": 36,
+    "title_en": "Zephaniah",
+    "title_ko": "스바냐",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/zephaniah.json"
+  },
+  {
+    "book_id": "haggai",
+    "testament": "old",
+    "order": 37,
+    "title_en": "Haggai",
+    "title_ko": "학개",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/haggai.json"
+  },
+  {
+    "book_id": "zechariah",
+    "testament": "old",
+    "order": 38,
+    "title_en": "Zechariah",
+    "title_ko": "스가랴",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/zechariah.json"
+  },
+  {
+    "book_id": "malachi",
+    "testament": "old",
+    "order": 39,
+    "title_en": "Malachi",
+    "title_ko": "말라기",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/malachi.json"
+  },
+  {
+    "book_id": "matthew",
+    "testament": "new",
+    "order": 40,
+    "title_en": "Matthew",
+    "title_ko": "마태복음",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/matthew.json"
+  },
+  {
+    "book_id": "mark",
+    "testament": "new",
+    "order": 41,
+    "title_en": "Mark",
+    "title_ko": "마가복음",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/mark.json"
+  },
+  {
+    "book_id": "luke",
+    "testament": "new",
+    "order": 42,
+    "title_en": "Luke",
+    "title_ko": "누가복음",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/luke.json"
+  },
+  {
+    "book_id": "john",
+    "testament": "new",
+    "order": 43,
+    "title_en": "John",
+    "title_ko": "요한복음",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/john.json"
+  },
+  {
+    "book_id": "acts",
+    "testament": "new",
+    "order": 44,
+    "title_en": "Acts",
+    "title_ko": "사도행전",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/acts.json"
+  },
+  {
+    "book_id": "romans",
+    "testament": "new",
+    "order": 45,
+    "title_en": "Romans",
+    "title_ko": "로마서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/romans.json"
+  },
+  {
+    "book_id": "first-corinthians",
+    "testament": "new",
+    "order": 46,
+    "title_en": "1 Corinthians",
+    "title_ko": "고린도전서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-corinthians.json"
+  },
+  {
+    "book_id": "second-corinthians",
+    "testament": "new",
+    "order": 47,
+    "title_en": "2 Corinthians",
+    "title_ko": "고린도후서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-corinthians.json"
+  },
+  {
+    "book_id": "galatians",
+    "testament": "new",
+    "order": 48,
+    "title_en": "Galatians",
+    "title_ko": "갈라디아서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/galatians.json"
+  },
+  {
+    "book_id": "ephesians",
+    "testament": "new",
+    "order": 49,
+    "title_en": "Ephesians",
+    "title_ko": "에베소서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/ephesians.json"
+  },
+  {
+    "book_id": "philippians",
+    "testament": "new",
+    "order": 50,
+    "title_en": "Philippians",
+    "title_ko": "빌립보서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/philippians.json"
+  },
+  {
+    "book_id": "colossians",
+    "testament": "new",
+    "order": 51,
+    "title_en": "Colossians",
+    "title_ko": "골로새서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/colossians.json"
+  },
+  {
+    "book_id": "first-thessalonians",
+    "testament": "new",
+    "order": 52,
+    "title_en": "1 Thessalonians",
+    "title_ko": "데살로니가전서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-thessalonians.json"
+  },
+  {
+    "book_id": "second-thessalonians",
+    "testament": "new",
+    "order": 53,
+    "title_en": "2 Thessalonians",
+    "title_ko": "데살로니가후서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-thessalonians.json"
+  },
+  {
+    "book_id": "first-timothy",
+    "testament": "new",
+    "order": 54,
+    "title_en": "1 Timothy",
+    "title_ko": "디모데전서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-timothy.json"
+  },
+  {
+    "book_id": "second-timothy",
+    "testament": "new",
+    "order": 55,
+    "title_en": "2 Timothy",
+    "title_ko": "디모데후서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-timothy.json"
+  },
+  {
+    "book_id": "titus",
+    "testament": "new",
+    "order": 56,
+    "title_en": "Titus",
+    "title_ko": "디도서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/titus.json"
+  },
+  {
+    "book_id": "philemon",
+    "testament": "new",
+    "order": 57,
+    "title_en": "Philemon",
+    "title_ko": "빌레몬서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/philemon.json"
+  },
+  {
+    "book_id": "hebrews",
+    "testament": "new",
+    "order": 58,
+    "title_en": "Hebrews",
+    "title_ko": "히브리서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/hebrews.json"
+  },
+  {
+    "book_id": "james",
+    "testament": "new",
+    "order": 59,
+    "title_en": "James",
+    "title_ko": "야고보서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/james.json"
+  },
+  {
+    "book_id": "first-peter",
+    "testament": "new",
+    "order": 60,
+    "title_en": "1 Peter",
+    "title_ko": "베드로전서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-peter.json"
+  },
+  {
+    "book_id": "second-peter",
+    "testament": "new",
+    "order": 61,
+    "title_en": "2 Peter",
+    "title_ko": "베드로후서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-peter.json"
+  },
+  {
+    "book_id": "first-john",
+    "testament": "new",
+    "order": 62,
+    "title_en": "1 John",
+    "title_ko": "요한일서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/first-john.json"
+  },
+  {
+    "book_id": "second-john",
+    "testament": "new",
+    "order": 63,
+    "title_en": "2 John",
+    "title_ko": "요한이서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/second-john.json"
+  },
+  {
+    "book_id": "third-john",
+    "testament": "new",
+    "order": 64,
+    "title_en": "3 John",
+    "title_ko": "요한삼서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/third-john.json"
+  },
+  {
+    "book_id": "jude",
+    "testament": "new",
+    "order": 65,
+    "title_en": "Jude",
+    "title_ko": "유다서",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/jude.json"
+  },
+  {
+    "book_id": "revelation",
+    "testament": "new",
+    "order": 66,
+    "title_en": "Revelation",
+    "title_ko": "요한계시록",
+    "cover_image": "/assets/covers/genesis_cover.png",
+    "manifest_path": "/data/manifests/revelation.json"
+  }
+]

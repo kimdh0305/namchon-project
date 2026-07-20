@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bible Archive</title>
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f7f5",
+            foreground: "#191919",
+            card: "#ffffff",
+            muted: "#f1f1ef",
+            border: "#e6e6e2",
+            ring: "#1f6feb",
+            primary: "#111827",
+            secondary: "#f3f4f6"
+          },
+          boxShadow: {
+            soft: "0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.08)"
+          },
+          fontFamily: {
+            sans: ["Inter", "Pretendard", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body data-view="landing" class="bg-background text-foreground antialiased font-sans">
+  <header class="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur">
+    <div class="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
+      <a class="text-sm font-semibold tracking-tight" href="/">Main Page</a>
+      <nav class="flex items-center gap-1 text-sm text-zinc-600">
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/">Main</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/reader/genesis/">Reader</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/gallery/">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto grid w-full max-w-7xl gap-6 px-4 py-8 sm:px-6 lg:py-10">
+    <section class="overflow-hidden rounded-2xl border border-zinc-900/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-slate-800 p-8 text-zinc-100 shadow-soft">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-300">Commemorative Bible Archive</p>
+      <h1 class="mt-3 text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">남서울 평촌교회<br class="hidden sm:block" />30주년 기념 성경 전시관</h1>
+      <p class="mt-4 max-w-2xl text-sm leading-7 text-zinc-300">공동체의 손글씨로 제작된 성경입니다.</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a class="inline-flex items-center rounded-lg border border-zinc-300/20 bg-white px-4 py-2 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200" href="/reader/genesis/">성경책 보기</a>
+        <a class="inline-flex items-center rounded-lg border border-zinc-200/20 bg-zinc-700/50 px-4 py-2 text-sm font-medium text-zinc-100 transition hover:bg-zinc-700" href="/gallery/">제작 기록 보기</a>
+      </div>
+    </section>
+
+    <article class="rounded-2xl border border-border bg-card p-6 shadow-soft">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">발간사</p>
+      <h2 class="mt-2 text-2xl font-semibold tracking-tight">기록을 보존하고, 다음 세대로 전합니다.</h2>
+      <p class="mt-3 text-sm leading-7 text-zinc-700">성도들의 손끝에서 완성된 성경 필사를 책의 물성 그대로 경험할 수 있도록 디지털 아카이브로 정리했습니다.</p>
+    </article>
+
+    <section class="rounded-2xl border border-border bg-card p-6 shadow-soft">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Bible Collection</p>
+        <h2 class="mt-2 text-2xl font-semibold tracking-tight">66권 전권 소장본</h2>
+      </div>
+
+      <section class="mt-6">
+        <h3 class="text-base font-semibold text-zinc-800">구약 39권</h3>
+        <div id="ot-cover-grid" class="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"></div>
+      </section>
+
+      <section class="mt-8">
+        <h3 class="text-base font-semibold text-zinc-800">신약 27권</h3>
+        <div id="nt-cover-grid" class="mt-4 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"></div>
+      </section>
+    </section>
+
+    <section class="flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-border bg-card p-5 shadow-soft">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Archive Story</p>
+        <h2 class="mt-1 text-xl font-semibold tracking-tight">아카이브 제작 과정 보기</h2>
+      </div>
+      <a class="inline-flex items-center rounded-lg border border-border bg-secondary px-4 py-2 text-sm font-medium text-zinc-900 transition hover:bg-zinc-200" href="/gallery/">갤러리 이동</a>
+    </section>
+  </main>
+
+  <script>
+    window.__BOOKS__ = {{BOOKS_JSON}};
+  </script>
+  <script src="/scripts/landing.js" defer></script>
+</body>
+</html>

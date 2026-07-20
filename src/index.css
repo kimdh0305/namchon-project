@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm archive palette: cream #faf5ea · brown #483625 · beige #efe2c9 · sage #c3c7b7 */
+  --background: 41 60% 95%;
+  --foreground: 29 32% 18%;
+  --card: 44 56% 97%;
+  --card-foreground: 29 32% 18%;
+  --primary: 29 32% 21%;
+  --primary-foreground: 41 60% 95%;
+  --secondary: 39 54% 86%;
+  --secondary-foreground: 29 32% 21%;
+  --muted: 40 35% 90%;
+  --muted-foreground: 30 12% 40%;
+  --accent: 75 12% 75%;
+  --accent-foreground: 29 32% 21%;
+  --border: 38 25% 84%;
+  --input: 38 25% 82%;
+  --ring: 29 40% 35%;
+  --radius: 0.8rem;
+  --ko-letter-spacing: -0.008em;
+  --ko-word-spacing: 0.008em;
+  --ko-line-height-title: 1.22;
+  --ko-line-height-body: 1.74;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: "Pretendard Variable", "Pretendard", system-ui, -apple-system, sans-serif;
+}
+
+/* English captions/labels: uppercase and one step smaller than the surrounding Korean */
+.txt-en {
+  text-transform: uppercase;
+  font-size: 0.85em;
+  letter-spacing: 0.04em;
+}
+
+/* Korean typography: viewport and resolution-aware tracking */
+.typo-ko {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+  line-break: strict;
+  letter-spacing: var(--ko-letter-spacing);
+  word-spacing: var(--ko-word-spacing);
+}
+
+.typo-ko-title {
+  line-height: var(--ko-line-height-title);
+  text-wrap: balance;
+}
+
+.typo-ko-body {
+  line-height: var(--ko-line-height-body);
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --ko-letter-spacing: -0.004em;
+    --ko-word-spacing: 0.004em;
+    --ko-line-height-title: 1.28;
+    --ko-line-height-body: 1.78;
+  }
+}
+
+@media (min-width: 1536px) {
+  :root {
+    --ko-letter-spacing: -0.011em;
+    --ko-word-spacing: 0.011em;
+    --ko-line-height-title: 1.2;
+    --ko-line-height-body: 1.7;
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  :root {
+    --ko-letter-spacing: calc(var(--ko-letter-spacing) * 0.95);
+    --ko-word-spacing: calc(var(--ko-word-spacing) * 1.2);
+  }
+}
+
+#book {
+  width: min(1160px, 100%);
+  height: min(900px, calc(100vh - 170px));
+}
+
+#book .page {
+  width: 100%;
+  height: 100%;
+  background: #fffef8;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+#book .page img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+  background: #fffef8;
+}
+
+.page-stage {
+  position: relative;
+  background: #6f5c49;
+}
+
+.page-stage::before,
+.page-stage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 12%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.page-stage::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(72, 54, 37, 0.18), transparent);
+}
+
+.page-stage::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(72, 54, 37, 0.18), transparent);
+}
+
+.page-stage:hover::before,
+.page-stage:hover::after {
+  opacity: 1;
+}
+
+.writer-results-panel {
+  max-height: 290px;
+}
+
+@media (max-width: 900px) {
+  #book {
+    height: min(620px, calc(100vh - 280px));
+  }
+}

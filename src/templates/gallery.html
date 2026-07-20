@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery</title>
+  <script>
+    tailwind = window.tailwind || {};
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#f7f7f5",
+            foreground: "#191919",
+            card: "#ffffff",
+            muted: "#f1f1ef",
+            border: "#e6e6e2",
+            ring: "#1f6feb",
+            primary: "#111827",
+            secondary: "#f3f4f6"
+          },
+          boxShadow: {
+            soft: "0 1px 2px rgba(16, 24, 40, 0.06), 0 8px 24px rgba(16, 24, 40, 0.08)"
+          },
+          fontFamily: {
+            sans: ["Inter", "Pretendard", "system-ui", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="/styles/main.css" />
+</head>
+<body data-view="gallery" class="bg-background text-foreground antialiased font-sans">
+  <header class="sticky top-0 z-40 border-b border-border/80 bg-background/90 backdrop-blur">
+    <div class="mx-auto flex h-14 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
+      <a class="text-sm font-semibold tracking-tight" href="/">Main Page</a>
+      <nav class="flex items-center gap-1 text-sm text-zinc-600">
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/">Main</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/reader/genesis/">Reader</a>
+        <a class="rounded-md px-3 py-1.5 transition hover:bg-muted hover:text-foreground" href="/gallery/">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto grid w-full max-w-6xl gap-6 px-4 py-8 sm:px-6 lg:py-10">
+    <section class="rounded-2xl border border-zinc-900/10 bg-gradient-to-br from-zinc-900 to-slate-800 p-8 text-zinc-100 shadow-soft">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-300">Making Process</p>
+      <h1 class="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">제작 아카이브</h1>
+      <p class="mt-4 max-w-3xl text-sm leading-7 text-zinc-300">스캔부터 웹 전시까지, 손글씨 성경을 디지털 보존물로 완성한 과정을 기록합니다.</p>
+    </section>
+
+    <section class="rounded-2xl border border-border bg-card p-6 shadow-soft">
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Documentary Archive</p>
+      <h2 class="mt-2 text-2xl font-semibold tracking-tight">기록의 여정</h2>
+      <p class="mt-3 text-sm leading-7 text-zinc-700">각 단계의 현장 사진과 메모를 시간 흐름에 따라 배치해 전시형 타임라인으로 구성했습니다.</p>
+    </section>
+
+    <section>
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.14em] text-zinc-500">Timeline</p>
+        <h2 class="mt-2 text-2xl font-semibold tracking-tight">아카이브 타임라인</h2>
+      </div>
+      <div id="timeline" class="mt-4 grid gap-4"></div>
+    </section>
+  </main>
+
+  <script>
+    window.__GALLERY__ = {{GALLERY_JSON}};
+  </script>
+  <script src="/scripts/gallery.js" defer></script>
+</body>
+</html>
