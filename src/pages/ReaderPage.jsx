@@ -288,11 +288,11 @@ export function ReaderPage() {
           <Separator className="bg-border" />
 
           <div className="flex items-center justify-center gap-3 px-3 py-2">
-            <Button size="sm" onClick={() => flipRef.current?.prev()} className="bg-secondary text-secondary-foreground hover:bg-secondary/80">이전</Button>
+            <Button size="sm" onClick={() => flipRef.current?.prev()} className="bg-accent text-accent-foreground hover:bg-accent/80">이전</Button>
             <p className="flex items-center gap-2 text-sm text-muted-foreground">
               <Sparkles className="h-4 w-4 text-primary" /> {pageInfo.current === 0 ? "표지" : pageInfo.current} / {pageInfo.total || "-"}
             </p>
-            <Button size="sm" onClick={() => flipRef.current?.next()} className="bg-secondary text-secondary-foreground hover:bg-secondary/80">다음</Button>
+            <Button size="sm" onClick={() => flipRef.current?.next()} className="bg-accent text-accent-foreground hover:bg-accent/80">다음</Button>
           </div>
         </section>
       </main>

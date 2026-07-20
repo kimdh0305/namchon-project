@@ -184,12 +184,15 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   //
   // page-flip binds touchstart on #book and touchmove/touchend on window, and
   // decides a page flip in its touchend (start->end distance > swipeDistance).
-  // So these listeners run in the CAPTURE phase (before page-flip's) and, from
-  // the moment a 2nd finger lands until EVERY finger lifts, stopImmediatePropagation
-  // hides the whole multi-touch sequence — including the concluding touchend —
-  // from page-flip. Without blocking that final touchend the pinch was read as a
-  // swipe and flipped one page. Single-finger touches pass through untouched, so
-  // normal swipe-to-flip still works.
+  // So these listeners run in the CAPTURE phase (before page-flip's) and use
+  // stopImmediatePropagation to hide touches from page-flip in two cases:
+  //   1) during a pinch (2nd finger down → all fingers up), so the concluding
+  //      touchend can't be scored as a swipe — that flipped one page otherwise;
+  //   2) whenever the view is zoomed in, so the book never flips on touch and
+  //      navigation is by the 이전/다음 buttons only (a stale touchPoint left by
+  //      the pinch used to leak one flip on the first tap after zooming).
+  // Single-finger touches at 1x pass through untouched, so normal swipe-to-flip
+  // still works. Panning while zoomed uses pointer events, unaffected by this.
   const getTouchDistance = (t1, t2) =>
     Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
 
@@ -197,30 +200,38 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     const wrapper = wrapperRef.current;
     if (!wrapper || !onZoomChange) return undefined;
 
+    const isZoomedIn = () => zoomScaleRef.current > minZoom + 0.001;
+
     const beginPinch = (event) => {
-      // Engage only on multi-touch; a lone finger stays with page-flip.
-      if (event.touches.length < 2) return;
-      const [t1, t2] = [event.touches[0], event.touches[1]];
-      const rect = wrapper.getBoundingClientRect();
-      pinchRef.current = {
-        startDistance: getTouchDistance(t1, t2),
-        startZoom: zoomScaleRef.current,
-        startPan: panRef.current,
-        // Pinch midpoint relative to the frame center = the zoom anchor.
-        anchorX: (t1.clientX + t2.clientX) / 2 - (rect.left + rect.width / 2),
-        anchorY: (t1.clientY + t2.clientY) / 2 - (rect.top + rect.height / 2)
-      };
-      // Freeze page-flip and the pan transition for the duration of the pinch.
-      if (hostRef.current) hostRef.current.style.pointerEvents = "none";
-      activePointerIdRef.current = null;
-      setIsPanning(true);
-      event.stopImmediatePropagation();
-      event.preventDefault();
+      if (event.touches.length >= 2) {
+        const [t1, t2] = [event.touches[0], event.touches[1]];
+        const rect = wrapper.getBoundingClientRect();
+        pinchRef.current = {
+          startDistance: getTouchDistance(t1, t2),
+          startZoom: zoomScaleRef.current,
+          startPan: panRef.current,
+          // Pinch midpoint relative to the frame center = the zoom anchor.
+          anchorX: (t1.clientX + t2.clientX) / 2 - (rect.left + rect.width / 2),
+          anchorY: (t1.clientY + t2.clientY) / 2 - (rect.top + rect.height / 2)
+        };
+        // Freeze page-flip and the pan transition for the duration of the pinch.
+        if (hostRef.current) hostRef.current.style.pointerEvents = "none";
+        activePointerIdRef.current = null;
+        setIsPanning(true);
+        event.stopImmediatePropagation();
+        event.preventDefault();
+        return;
+      }
+      // Single finger while zoomed: the book must not flip on touch (buttons only).
+      if (isZoomedIn()) event.stopImmediatePropagation();
     };
 
     const movePinch = (event) => {
       const pinch = pinchRef.current;
-      if (!pinch) return;
+      if (!pinch) {
+        if (isZoomedIn()) event.stopImmediatePropagation();
+        return;
+      }
       // Lock is active: keep the entire gesture away from page-flip.
       event.stopImmediatePropagation();
       if (event.cancelable) event.preventDefault();
@@ -239,7 +250,10 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     };
 
     const endPinch = (event) => {
-      if (!pinchRef.current) return;
+      if (!pinchRef.current) {
+        if (isZoomedIn()) event.stopImmediatePropagation();
+        return;
+      }
       // Hide every touchend of the pinch from page-flip, including the last one
       // that would otherwise be scored as a swipe.
       event.stopImmediatePropagation();
@@ -248,8 +262,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
       pinchRef.current = null;
       setIsPanning(false);
       if (hostRef.current) {
-        hostRef.current.style.pointerEvents =
-          zoomScaleRef.current > minZoom + 0.001 ? "none" : "auto";
+        hostRef.current.style.pointerEvents = isZoomedIn() ? "none" : "auto";
       }
     };
 
