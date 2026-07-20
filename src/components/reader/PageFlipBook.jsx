@@ -46,15 +46,15 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   const onPageChangeRef = useRef(onPageChange);
   const activePointerIdRef = useRef(null);
   const lastPointerRef = useRef({ x: 0, y: 0 });
-  const nativeZoomedRef = useRef(false);
+  const pinchRef = useRef(null);
+  // Mirror the latest zoom/pan into refs so the (stable) native touch handler
+  // can read current values without re-attaching listeners mid-gesture.
+  const zoomScaleRef = useRef(zoomScale);
+  const panRef = useRef({ x: 0, y: 0 });
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
-  // Tracks OS-level pinch-zoom (visualViewport scale), separate from our own
-  // +/- zoomScale, so a mobile pinch gesture can't be misread as a page swipe.
-  const [nativeZoomed, setNativeZoomed] = useState(false);
 
   const zoomed = zoomScale > minZoom + 0.001;
-  const flipBlocked = zoomed || nativeZoomed;
 
   const clampPanForScale = useCallback((x, y, scale) => {
     if (!wrapperRef.current || scale <= minZoom + 0.001) return { x: 0, y: 0 };
@@ -168,50 +168,95 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   useEffect(() => {
     const host = hostRef.current;
     if (!host) return;
-    host.style.pointerEvents = flipBlocked ? "none" : "auto";
-  }, [flipBlocked]);
+    host.style.pointerEvents = zoomed ? "none" : "auto";
+  }, [zoomed]);
 
-  // Instant lock the moment a second finger touches down, since visualViewport's
-  // resize event can lag a frame behind and let page-flip see the first swipe.
+  useEffect(() => {
+    zoomScaleRef.current = zoomScale;
+  }, [zoomScale]);
+
+  useEffect(() => {
+    panRef.current = pan;
+  }, [pan]);
+
+  // Two-finger pinch = in-frame zoom (drives the same zoomScale/pan as the +/-
+  // buttons), NOT the browser's native whole-page zoom. touch-action below
+  // disables native pinch so this handler owns the gesture; page-flip never
+  // sees the multi-touch, so it can't auto-flip or jitter mid-zoom.
+  const getTouchDistance = (t1, t2) =>
+    Math.hypot(t2.clientX - t1.clientX, t2.clientY - t1.clientY);
+
   useEffect(() => {
     const wrapper = wrapperRef.current;
-    if (!wrapper) return undefined;
+    if (!wrapper || !onZoomChange) return undefined;
 
-    const onTouchStartCapture = (event) => {
-      if (event.touches.length > 1) {
-        nativeZoomedRef.current = true;
-        setNativeZoomed(true);
-        if (hostRef.current) hostRef.current.style.pointerEvents = "none";
+    const beginPinch = (event) => {
+      if (event.touches.length !== 2) return;
+      const [t1, t2] = [event.touches[0], event.touches[1]];
+      const rect = wrapper.getBoundingClientRect();
+      pinchRef.current = {
+        startDistance: getTouchDistance(t1, t2),
+        startZoom: zoomScaleRef.current,
+        startPan: panRef.current,
+        // Pinch midpoint relative to the frame center = the zoom anchor.
+        anchorX: (t1.clientX + t2.clientX) / 2 - (rect.left + rect.width / 2),
+        anchorY: (t1.clientY + t2.clientY) / 2 - (rect.top + rect.height / 2)
+      };
+      // Freeze page-flip and the pan transition for the duration of the pinch.
+      if (hostRef.current) hostRef.current.style.pointerEvents = "none";
+      activePointerIdRef.current = null;
+      setIsPanning(true);
+      event.preventDefault();
+      event.stopPropagation();
+    };
+
+    const movePinch = (event) => {
+      const pinch = pinchRef.current;
+      if (!pinch || event.touches.length !== 2 || pinch.startDistance <= 0) return;
+      event.preventDefault();
+      event.stopPropagation();
+
+      const distance = getTouchDistance(event.touches[0], event.touches[1]);
+      const rawZoom = Math.round((pinch.startZoom * (distance / pinch.startDistance)) * 100) / 100;
+      const nextZoom = clampZoom(rawZoom, minZoom, maxZoom);
+      const ratio = nextZoom / pinch.startZoom;
+
+      const nextX = (pinch.startPan.x * ratio) + (pinch.anchorX * (1 - ratio));
+      const nextY = (pinch.startPan.y * ratio) + (pinch.anchorY * (1 - ratio));
+      setPan(clampPanForScale(nextX, nextY, nextZoom));
+      onZoomChange(nextZoom);
+    };
+
+    const endPinch = (event) => {
+      if (!pinchRef.current || event.touches.length >= 2) return;
+      pinchRef.current = null;
+      setIsPanning(false);
+      if (hostRef.current) {
+        hostRef.current.style.pointerEvents =
+          zoomScaleRef.current > minZoom + 0.001 ? "none" : "auto";
       }
     };
 
-    wrapper.addEventListener("touchstart", onTouchStartCapture, { capture: true, passive: true });
+    // WebKit-only: block iOS Safari's page zoom, which ignores touch-action.
+    const blockGesture = (event) => event.preventDefault();
+
+    wrapper.addEventListener("touchstart", beginPinch, { passive: false });
+    wrapper.addEventListener("touchmove", movePinch, { passive: false });
+    wrapper.addEventListener("touchend", endPinch, { passive: false });
+    wrapper.addEventListener("touchcancel", endPinch, { passive: false });
+    wrapper.addEventListener("gesturestart", blockGesture, { passive: false });
+    wrapper.addEventListener("gesturechange", blockGesture, { passive: false });
+    wrapper.addEventListener("gestureend", blockGesture, { passive: false });
     return () => {
-      wrapper.removeEventListener("touchstart", onTouchStartCapture, { capture: true });
+      wrapper.removeEventListener("touchstart", beginPinch);
+      wrapper.removeEventListener("touchmove", movePinch);
+      wrapper.removeEventListener("touchend", endPinch);
+      wrapper.removeEventListener("touchcancel", endPinch);
+      wrapper.removeEventListener("gesturestart", blockGesture);
+      wrapper.removeEventListener("gesturechange", blockGesture);
+      wrapper.removeEventListener("gestureend", blockGesture);
     };
-  }, []);
-
-  // Authoritative unlock: only once the OS-level pinch-zoom has actually been
-  // released back to 1x, per "확대 후 다시 줄일 때까지 페이지 넘김 금지".
-  useEffect(() => {
-    const vv = window.visualViewport;
-    if (!vv) return undefined;
-
-    const ZOOM_EPSILON = 0.02;
-    const updateFromViewport = () => {
-      const isZoomed = vv.scale > 1 + ZOOM_EPSILON;
-      nativeZoomedRef.current = isZoomed;
-      setNativeZoomed(isZoomed);
-    };
-
-    updateFromViewport();
-    vv.addEventListener("resize", updateFromViewport);
-    vv.addEventListener("scroll", updateFromViewport);
-    return () => {
-      vv.removeEventListener("resize", updateFromViewport);
-      vv.removeEventListener("scroll", updateFromViewport);
-    };
-  }, []);
+  }, [onZoomChange, minZoom, maxZoom, clampPanForScale]);
 
   useEffect(() => {
     if (!zoomed) {
@@ -257,8 +302,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     setPan({ x: 0, y: 0 });
     setIsPanning(false);
     activePointerIdRef.current = null;
-    nativeZoomedRef.current = false;
-    setNativeZoomed(false);
+    pinchRef.current = null;
   }, [manifest]);
 
   const handleWheel = useCallback((event) => {
@@ -298,7 +342,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   }, [handleWheel]);
 
   function handlePointerDown(event) {
-    if (!zoomed) return;
+    if (!zoomed || pinchRef.current) return;
     if (event.pointerType === "mouse" && event.button !== 0) return;
 
     activePointerIdRef.current = event.pointerId;
@@ -309,7 +353,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   }
 
   function handlePointerMove(event) {
-    if (!zoomed || activePointerIdRef.current !== event.pointerId) return;
+    if (!zoomed || pinchRef.current || activePointerIdRef.current !== event.pointerId) return;
     const dx = event.clientX - lastPointerRef.current.x;
     const dy = event.clientY - lastPointerRef.current.y;
     lastPointerRef.current = { x: event.clientX, y: event.clientY };
@@ -360,7 +404,10 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
         transform: "translate(" + pan.x + "px, " + pan.y + "px) scale(" + zoomScale + ")",
         transformOrigin: "center center",
         transition: isPanning ? "none" : "transform 140ms ease-out",
-        touchAction: zoomed ? "none" : "auto",
+        // pan-y (not auto) keeps vertical scroll + page-flip swipes but disables
+        // the browser's native pinch-zoom, so pinching zooms inside the frame
+        // instead of the whole page; once zoomed we own all touches.
+        touchAction: zoomed ? "none" : "pan-y",
         cursor: zoomed ? (isPanning ? "grabbing" : "grab") : "auto"
       }}
     />
