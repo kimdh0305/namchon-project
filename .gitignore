@@ -26,3 +26,11 @@ __pycache__/
 
 # archives
 *.zip
+
+# external-share safe mode (private github)
+.codex_write_test
+data/croped/
+assets/pages/
+screenshots/
+docs/*.xlsx
+tools/ocr/raw_ocr_*.jsonl
