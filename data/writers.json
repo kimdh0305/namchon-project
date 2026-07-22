@@ -11699,5 +11699,4802 @@
         "notes": []
       }
     ]
+  },{
+    "writer_id": "송아영",
+    "name": "송아영",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": "사도행전  1장장",
+        "raw_ocr": [
+          "송아영",
+          "송아영",
+          "송아영జ",
+          "송아영"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 97.2,
+        "match_margin_min": 44.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "분리등장(송아영@acts:p1-4, p65-65)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "acts",
+        "page": 65,
+        "start_page": 65,
+        "end_page": 65,
+        "page_count": 1,
+        "assigned": "사도행전  1장장",
+        "raw_ocr": [
+          "송길ㄱ"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)",
+          "분리등장(송아영@acts:p1-4, p65-65)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['송아영', '송하준']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이현학",
+    "name": "이현학",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 6,
+        "page_count": 2,
+        "assigned": "사도행전  3장장",
+        "raw_ocr": [
+          "이현학",
+          "이현학"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 62.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "임도연",
+    "name": "임도연",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 7,
+        "start_page": 7,
+        "end_page": 8,
+        "page_count": 2,
+        "assigned": "사도행전  4장장",
+        "raw_ocr": [
+          "암도면",
+          "암도연"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 81.2,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "정희경",
+    "name": "정희경",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 9,
+        "start_page": 9,
+        "end_page": 9,
+        "page_count": 1,
+        "assigned": "사도행전 25장장",
+        "raw_ocr": [
+          "정희경"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 62.5,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(정희경@acts:p9-9, p63-63, p72-73)|고립구간의심"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "acts",
+        "page": 63,
+        "start_page": 63,
+        "end_page": 63,
+        "page_count": 1,
+        "assigned": "사도행전 25장장",
+        "raw_ocr": [
+          "정희령"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 87.5,
+        "match_margin_min": 50.0,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(정희경@acts:p9-9, p63-63, p72-73)|고립구간의심"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "acts",
+        "page": 72,
+        "start_page": 72,
+        "end_page": 73,
+        "page_count": 2,
+        "assigned": "사도행전 25장장",
+        "raw_ocr": [
+          "정희경",
+          "장희경"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 93.8,
+        "match_margin_min": 43.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "분리등장(정희경@acts:p9-9, p63-63, p72-73)|본구간추정"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "문승주",
+    "name": "문승주",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 10,
+        "start_page": 10,
+        "end_page": 10,
+        "page_count": 1,
+        "assigned": "사도행전 5장(1~20절)장",
+        "raw_ocr": [
+          "문광"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 50.0,
+        "match_margin_min": 21.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(50.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "송하준",
+    "name": "송하준",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 11,
+        "start_page": 11,
+        "end_page": 12,
+        "page_count": 2,
+        "assigned": "사도행전 26장장",
+        "raw_ocr": [
+          "봉학",
+          ""
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 50.0,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "빈칸-앞사람배정",
+          "저점수(50.0)",
+          "분리등장(송하준@acts:p11-12, p67-67)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "acts",
+        "page": 67,
+        "start_page": 67,
+        "end_page": 67,
+        "page_count": 1,
+        "assigned": "사도행전 26장장",
+        "raw_ocr": [
+          "송재근జ"
+        ],
+        "match_score_min": 44.4,
+        "match_score_avg": 44.4,
+        "match_margin_min": 11.1,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(44.4)",
+          "분리등장(송하준@acts:p11-12, p67-67)|고립구간의심"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "matthew",
+        "page": 83,
+        "start_page": 83,
+        "end_page": 84,
+        "page_count": 2,
+        "assigned": "마태복음 26장(17~35절)장",
+        "raw_ocr": [
+          "송하준",
+          "승하준ഴ"
+        ],
+        "match_score_min": 77.8,
+        "match_score_avg": 88.9,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "박서후",
+    "name": "박서후",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 13,
+        "start_page": 13,
+        "end_page": 13,
+        "page_count": 1,
+        "assigned": "사도행전 5장(21-42절)장",
+        "raw_ocr": [
+          "박재우"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 57.1,
+        "match_margin_min": 7.1,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 7.1차)"
+        ],
+        "notes": [
+          "저점수(57.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이강인",
+    "name": "이강인",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 14,
+        "start_page": 14,
+        "end_page": 14,
+        "page_count": 1,
+        "assigned": "사도행전  6장장",
+        "raw_ocr": [
+          "이강인"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 50.0,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(이강인@acts:p14-14, p48-48)"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "acts",
+        "page": 48,
+        "start_page": 48,
+        "end_page": 48,
+        "page_count": 1,
+        "assigned": "사도행전  6장장",
+        "raw_ocr": [
+          "금민"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)",
+          "분리등장(이강인@acts:p14-14, p48-48)"
+        ],
+        "notes": [
+          "상위후보동점:['김수현', '김온유', '박유빈', '이강인']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "신재이",
+    "name": "신재이",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 15,
+        "start_page": 15,
+        "end_page": 19,
+        "page_count": 5,
+        "assigned": "사도행전  7장장",
+        "raw_ocr": [
+          "신재이",
+          "진재·",
+          "신재이",
+          "신재이",
+          "신재희"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 85.7,
+        "match_margin_min": 23.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(57.1)",
+          "저점수(71.4)",
+          "분리등장(신재이@acts:p15-19, p64-64)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "acts",
+        "page": 64,
+        "start_page": 64,
+        "end_page": 64,
+        "page_count": 1,
+        "assigned": "사도행전  7장장",
+        "raw_ocr": [
+          "정민정జ"
+        ],
+        "match_score_min": 40.0,
+        "match_score_avg": 40.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(40.0)",
+          "애매(2위와 0.0차)",
+          "분리등장(신재이@acts:p15-19, p64-64)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['강진영', '신재이', '정세준', '정희경']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "오유나",
+    "name": "오유나",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 20,
+        "start_page": 20,
+        "end_page": 24,
+        "page_count": 5,
+        "assigned": "사도행전  8장장",
+        "raw_ocr": [
+          "오유나",
+          "오유나",
+          "오유나",
+          "오뚜나",
+          "오유나"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 93.3,
+        "match_margin_min": 29.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "방다흰",
+    "name": "방다흰",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 25,
+        "start_page": 25,
+        "end_page": 29,
+        "page_count": 5,
+        "assigned": "사도행전 10장장",
+        "raw_ocr": [
+          "방다훈",
+          "방다은",
+          "방다훈",
+          "방다린",
+          "방다흰"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 85.0,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "전혜원",
+    "name": "전혜원",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 30,
+        "start_page": 30,
+        "end_page": 34,
+        "page_count": 5,
+        "assigned": "사도행전 12장장",
+        "raw_ocr": [
+          "전혜원",
+          "전혜원",
+          "전혜원",
+          "전혜원",
+          "전상현"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 91.1,
+        "match_margin_min": 11.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "박유빈",
+    "name": "박유빈",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 35,
+        "start_page": 35,
+        "end_page": 38,
+        "page_count": 4,
+        "assigned": "사도행전 14장장",
+        "raw_ocr": [
+          "박유빈",
+          "박유빈",
+          "박유빈জ",
+          "박유빈"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 97.2,
+        "match_margin_min": 55.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "안희철",
+    "name": "안희철",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 39,
+        "start_page": 39,
+        "end_page": 41,
+        "page_count": 3,
+        "assigned": "사도행전 16장장",
+        "raw_ocr": [
+          "안희철즈",
+          "한희철",
+          "달희철"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 80.8,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)",
+          "분리등장(안희철@acts:p39-41, p66-66)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "acts",
+        "page": 66,
+        "start_page": 66,
+        "end_page": 66,
+        "page_count": 1,
+        "assigned": "사도행전 16장장",
+        "raw_ocr": [
+          "능재철"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 12.5,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "분리등장(안희철@acts:p39-41, p66-66)|고립구간의심"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "허  주",
+    "name": "허  주",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 42,
+        "start_page": 42,
+        "end_page": 44,
+        "page_count": 3,
+        "assigned": "사도행전 17장장",
+        "raw_ocr": [
+          "허주",
+          "허주",
+          "허주"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 62.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김온유",
+    "name": "김온유",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 45,
+        "start_page": 45,
+        "end_page": 47,
+        "page_count": 3,
+        "assigned": "사도행전 18장장",
+        "raw_ocr": [
+          "김윤유",
+          "김은유",
+          "김문욱"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 76.9,
+        "match_margin_min": 11.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 37,
+        "start_page": 37,
+        "end_page": 39,
+        "page_count": 3,
+        "assigned": "마태복음 13장(1~30절)장; 마태복음 17장(13-27절)장",
+        "raw_ocr": [
+          "김우우",
+          "감본읍",
+          "김은유"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 68.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "저점수(55.6)",
+          "저점수(62.5)",
+          "분리등장(김온유@matthew:p37-39, p53-54)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 53,
+        "start_page": 53,
+        "end_page": 54,
+        "page_count": 2,
+        "assigned": "마태복음 13장(1~30절)장; 마태복음 17장(13-27절)장",
+        "raw_ocr": [
+          "김은유지",
+          "김은유"
+        ],
+        "match_score_min": 70.0,
+        "match_score_avg": 78.8,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(김온유@matthew:p37-39, p53-54)|고립구간의심"
+        ],
+        "notes": [
+          "저점수(70.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "강진영",
+    "name": "강진영",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 49,
+        "start_page": 49,
+        "end_page": 54,
+        "page_count": 6,
+        "assigned": "사도행전 20장장",
+        "raw_ocr": [
+          "강진영",
+          "강진영",
+          "강진명",
+          "강진영",
+          "강진영",
+          "강진영"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 98.1,
+        "match_margin_min": 55.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "정세준",
+    "name": "정세준",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 55,
+        "start_page": 55,
+        "end_page": 58,
+        "page_count": 4,
+        "assigned": "사도행전 22장장",
+        "raw_ocr": [
+          "정세준",
+          "정세준",
+          "컴시즌జ్",
+          "정세훈"
+        ],
+        "match_score_min": 40.0,
+        "match_score_avg": 81.9,
+        "match_margin_min": 10.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(40.0)"
+        ],
+        "notes": [
+          "분리등장(정세준@acts:p55-58, p62-62)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "acts",
+        "page": 62,
+        "start_page": 62,
+        "end_page": 62,
+        "page_count": 1,
+        "assigned": "사도행전 22장장",
+        "raw_ocr": [
+          "점비정"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)",
+          "분리등장(정세준@acts:p55-58, p62-62)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['정세준', '정희경']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이규만",
+    "name": "이규만",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 59,
+        "start_page": 59,
+        "end_page": 61,
+        "page_count": 3,
+        "assigned": "사도행전 24장장",
+        "raw_ocr": [
+          "이규빈",
+          "이광민",
+          "이규민"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 77.4,
+        "match_margin_min": 8.9,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 8.9차)"
+        ],
+        "notes": [
+          "위치보정-샌드위치(원래:이강인→이규만)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김수현",
+    "name": "김수현",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 68,
+        "start_page": 68,
+        "end_page": 69,
+        "page_count": 2,
+        "assigned": "사도행전 27장(1-20절)장",
+        "raw_ocr": [
+          "김수진주",
+          "김수현"
+        ],
+        "match_score_min": 60.0,
+        "match_score_avg": 80.0,
+        "match_margin_min": 20.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(60.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김은찬",
+    "name": "김은찬",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 70,
+        "start_page": 70,
+        "end_page": 71,
+        "page_count": 2,
+        "assigned": "사도행전 27장(21-44절)장",
+        "raw_ocr": [
+          "김은찬",
+          "김은찬즈"
+        ],
+        "match_score_min": 81.8,
+        "match_score_avg": 90.9,
+        "match_margin_min": 36.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "박견후",
+    "name": "박견후",
+    "entries": [
+      {
+        "book_id": "acts",
+        "page": 74,
+        "start_page": 74,
+        "end_page": 74,
+        "page_count": 1,
+        "assigned": "사도행전 28장(21~31절)장",
+        "raw_ocr": [
+          "박견후"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "서정우",
+    "name": "서정우",
+    "entries": [
+      {
+        "book_id": "colossians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "골로새서 1장",
+        "raw_ocr": [
+          "서진",
+          "서정후",
+          "먕"
+        ],
+        "match_score_min": 14.3,
+        "match_score_avg": 47.6,
+        "match_margin_min": 1.8,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(14.3)",
+          "극저점수(42.9)",
+          "애매(2위와 1.8차)"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "philippians",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 8,
+        "page_count": 4,
+        "assigned": "빌립보서 3~4장",
+        "raw_ocr": [
+          "박정우",
+          "박경우",
+          "서경우",
+          "박정수"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 55.4,
+        "match_margin_min": 37.5,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)"
+        ],
+        "notes": [
+          "저점수(50.0)",
+          "저점수(62.5)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "안도은",
+    "name": "안도은",
+    "entries": [
+      {
+        "book_id": "colossians",
+        "page": 4,
+        "start_page": 4,
+        "end_page": 7,
+        "page_count": 4,
+        "assigned": "골로새서 2~4장",
+        "raw_ocr": [
+          "안도운",
+          "안토니",
+          "안중은주",
+          "안도원జ"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 67.5,
+        "match_margin_min": 18.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(50.0)",
+          "저점수(54.5)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "안수빈B",
+    "name": "안수빈",
+    "entries": [
+      {
+        "book_id": "ephesians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "에베소서 1~3장",
+        "raw_ocr": [
+          "연습빈B",
+          "Q수빈B",
+          "안석빈B",
+          "안수빈B",
+          "안숙빈B"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 81.3,
+        "match_margin_min": 20.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)",
+          "저점수(70.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "안예빈",
+    "name": "안예빈",
+    "entries": [
+      {
+        "book_id": "ephesians",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 9,
+        "page_count": 4,
+        "assigned": "에베소서 4~6장",
+        "raw_ocr": [
+          "안예빈",
+          "아메리",
+          "안예빈주",
+          "안예빈జ"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 76.6,
+        "match_margin_min": 4.2,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 4.2차)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "전찬준",
+    "name": "전찬준",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": "고린도전서 1~2장",
+        "raw_ocr": [
+          "전찬준",
+          "전찬준",
+          "전찬준",
+          "전고훈"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 88.9,
+        "match_margin_min": 5.6,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 5.6차)"
+        ],
+        "notes": [
+          "저점수(55.6)"
+        ]
+      },
+      {
+        "book_id": "romans",
+        "page": 31,
+        "start_page": 31,
+        "end_page": 32,
+        "page_count": 2,
+        "assigned": "로마서 16장",
+        "raw_ocr": [
+          "전찬호జ",
+          "전찬균"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 72.2,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "정지은",
+    "name": "정지은",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 10,
+        "page_count": 6,
+        "assigned": "고린도전서 1~4장",
+        "raw_ocr": [
+          "정지은",
+          "정지은",
+          "정지은",
+          "정지는",
+          "정지은",
+          "정지은"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 97.9,
+        "match_margin_min": 43.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "채정화",
+    "name": "채정화",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 11,
+        "start_page": 11,
+        "end_page": 16,
+        "page_count": 6,
+        "assigned": "고린도전서 5~7장",
+        "raw_ocr": [
+          "채정화",
+          "채정화",
+          "채정화",
+          "채정화",
+          "채정화",
+          "채정화"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 75.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "배창욱",
+    "name": "배창욱",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 17,
+        "start_page": 17,
+        "end_page": 21,
+        "page_count": 5,
+        "assigned": "고린도전서 8~9장",
+        "raw_ocr": [
+          "배창록",
+          "배창욱",
+          "배창욱주",
+          "배창욱",
+          "배창욱"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 91.0,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "신재혁",
+    "name": "신재혁",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 22,
+        "start_page": 22,
+        "end_page": 27,
+        "page_count": 6,
+        "assigned": "고린도전서 10~12장",
+        "raw_ocr": [
+          "신재혁",
+          "신개혁",
+          "신재혁",
+          "신재혁",
+          "신개혁",
+          "신재혁"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 95.8,
+        "match_margin_min": 62.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "안도헌",
+    "name": "안도헌",
+    "entries": [
+      {
+        "book_id": "first-corinthians",
+        "page": 28,
+        "start_page": 28,
+        "end_page": 33,
+        "page_count": 6,
+        "assigned": "고린도전서 13~14장",
+        "raw_ocr": [
+          "한도현",
+          "안도현",
+          "안도현",
+          "안도현",
+          "안도현주",
+          "안도현"
+        ],
+        "match_score_min": 70.0,
+        "match_score_avg": 82.5,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(70.0)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "박은혁",
+    "name": "박은혁",
+    "entries": [
+      {
+        "book_id": "first-john",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": null,
+        "raw_ocr": [
+          "박은혁",
+          "박은혁",
+          "박은혁",
+          "박은혁"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 44.4,
+        "needs_review": true,
+        "review_reasons": [
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(박은혁↔요한일서)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김가은",
+    "name": "김가은",
+    "entries": [
+      {
+        "book_id": "first-john",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 6,
+        "page_count": 2,
+        "assigned": null,
+        "raw_ocr": [
+          "김경혜",
+          "김경혜"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 62.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(김가은↔요한일서)"
+        ],
+        "notes": [
+          "상위후보동점:['김가온', '김가은']",
+          "저점수(62.5)"
+        ]
+      },
+      {
+        "book_id": "john",
+        "page": 56,
+        "start_page": 56,
+        "end_page": 60,
+        "page_count": 5,
+        "assigned": "요한복음 20~21장",
+        "raw_ocr": [
+          "김가은즈",
+          "강가는జ",
+          "감가은",
+          "강가은",
+          "김가은"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 79.6,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)",
+          "저점수(75.0)"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 78,
+        "start_page": 78,
+        "end_page": 81,
+        "page_count": 4,
+        "assigned": "마태복음 25장(46절)장",
+        "raw_ocr": [
+          "김가은",
+          "김가은",
+          "검가은",
+          "김가은"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 96.9,
+        "match_margin_min": 31.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "유하린",
+    "name": "유하린",
+    "entries": [
+      {
+        "book_id": "first-john",
+        "page": 7,
+        "start_page": 7,
+        "end_page": 7,
+        "page_count": 1,
+        "assigned": null,
+        "raw_ocr": [
+          "이혜신"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 57.1,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(유하린↔요한일서)"
+        ],
+        "notes": [
+          "상위후보동점:['유하린', '이예만', '이예은', '이제인', '이호준', '조혜진']",
+          "저점수(57.1)"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 3,
+        "start_page": 3,
+        "end_page": 5,
+        "page_count": 3,
+        "assigned": "마태복음 2장(23절)장",
+        "raw_ocr": [
+          "유하린",
+          "유하린",
+          "윤하린"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 95.8,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이제인",
+    "name": "이제인",
+    "entries": [
+      {
+        "book_id": "first-john",
+        "page": 8,
+        "start_page": 8,
+        "end_page": 8,
+        "page_count": 1,
+        "assigned": null,
+        "raw_ocr": [
+          "이병선"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 50.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(이제인↔요한일서)"
+        ],
+        "notes": [
+          "상위후보동점:['민하선', '이강인', '이세은', '이예은', '이은서', '이재원', '이제인', '이채원', '이평화']",
+          "저점수(50.0)"
+        ]
+      },
+      {
+        "book_id": "mark",
+        "page": 36,
+        "start_page": 36,
+        "end_page": 37,
+        "page_count": 2,
+        "assigned": "마가복음 10장(1~31절)장",
+        "raw_ocr": [
+          "이지인",
+          "이지인"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 85.7,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "matthew",
+        "page": 23,
+        "start_page": 23,
+        "end_page": 25,
+        "page_count": 3,
+        "assigned": "마태복음 9장(38절)장",
+        "raw_ocr": [
+          "이지엔1",
+          "이제인",
+          "이제인"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 87.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['오지윤', '이제인', '이지음']",
+          "저점수(62.5)",
+          "분리등장(이제인@matthew:p23-25, p58-58)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 58,
+        "start_page": 58,
+        "end_page": 58,
+        "page_count": 1,
+        "assigned": "마태복음 9장(38절)장",
+        "raw_ocr": [
+          "이둘이ㅈ"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 50.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(이제인@matthew:p23-25, p58-58)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['이로이', '이제인']",
+          "저점수(50.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "원예빈",
+    "name": "원예빈",
+    "entries": [
+      {
+        "book_id": "first-peter",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 2,
+        "page_count": 2,
+        "assigned": "베드로전서 1장",
+        "raw_ocr": [
+          "윤예빈",
+          "원예빈"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 93.8,
+        "match_margin_min": 62.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "james",
+        "page": 4,
+        "start_page": 4,
+        "end_page": 6,
+        "page_count": 3,
+        "assigned": "야고보서 3~5장",
+        "raw_ocr": [
+          "원예빈",
+          "원예빈",
+          "원예빈"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 75.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "엄주연",
+    "name": "엄주연",
+    "entries": [
+      {
+        "book_id": "first-peter",
+        "page": 3,
+        "start_page": 3,
+        "end_page": 7,
+        "page_count": 5,
+        "assigned": "베드로전서 2~5장",
+        "raw_ocr": [
+          "엄주연",
+          "엄주연",
+          "영주연",
+          "임구연",
+          "영무연జ"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 81.1,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최은우",
+    "name": "최은우",
+    "entries": [
+      {
+        "book_id": "first-thessalonians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "데살로니가전서 1~4장",
+        "raw_ocr": [
+          "최은우",
+          "최은우",
+          "최은우",
+          "최윤우",
+          "최은우"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 97.1,
+        "match_margin_min": 85.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "galatians",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 10,
+        "page_count": 5,
+        "assigned": "갈라디아서 1~3장",
+        "raw_ocr": [
+          "화운",
+          "최은우",
+          "하은",
+          "최은우",
+          "최은우జ"
+        ],
+        "match_score_min": 28.6,
+        "match_score_avg": 71.8,
+        "match_margin_min": 6.3,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(28.6)",
+          "극저점수(42.9)",
+          "애매(2위와 6.3차)"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "luke",
+        "page": 73,
+        "start_page": 73,
+        "end_page": 76,
+        "page_count": 4,
+        "assigned": "누가복음 22장장",
+        "raw_ocr": [
+          "초은우జ",
+          "초은우",
+          "최은우",
+          "최은우"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 90.2,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "엄주희",
+    "name": "엄주희",
+    "entries": [
+      {
+        "book_id": "first-thessalonians",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 7,
+        "page_count": 2,
+        "assigned": "데살로니가전서 5장",
+        "raw_ocr": [
+          "엄주희",
+          "엄주희"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 100.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "second-thessalonians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "데살로니가후서 1~3장",
+        "raw_ocr": [
+          "엄주희",
+          "엄주희",
+          "염주희"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 95.2,
+        "match_margin_min": 85.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "엄진영",
+    "name": "엄진영",
+    "entries": [
+      {
+        "book_id": "first-timothy",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 8,
+        "page_count": 8,
+        "assigned": "디모데전서 4~7장",
+        "raw_ocr": [
+          "엄진영",
+          "엄진영",
+          "엄진영",
+          "염진영",
+          "안재형",
+          "ㅇㅏㅅㅣㅂㅜㅈ",
+          "안재영주",
+          "ㅇㅏㅁㅣㅅㅁㅈ"
+        ],
+        "match_score_min": 33.3,
+        "match_score_avg": 68.0,
+        "match_margin_min": 8.3,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(33.3)",
+          "극저점수(40.0)",
+          "극저점수(44.4)",
+          "애매(2위와 8.3차)"
+        ],
+        "notes": [
+          "위치보정-샌드위치(원래:오샛별→엄진영)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "안수빈A",
+    "name": "안수빈",
+    "entries": [
+      {
+        "book_id": "galatians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "갈라디아서 1~3장",
+        "raw_ocr": [
+          "안수빈A",
+          "안두빈A",
+          "안수빈A",
+          "안수빈A",
+          "안수빈A"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 97.8,
+        "match_margin_min": 77.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "second-corinthians",
+        "page": 18,
+        "start_page": 18,
+        "end_page": 18,
+        "page_count": 1,
+        "assigned": "고린도후서 13장",
+        "raw_ocr": [
+          "안수빈A"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 66.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김린수",
+    "name": "김린수",
+    "entries": [
+      {
+        "book_id": "hebrews",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 6,
+        "page_count": 6,
+        "assigned": "히브리서 1~5장",
+        "raw_ocr": [
+          "김린수జ",
+          "김민수주",
+          "김진수주",
+          "김남수",
+          "김민수직",
+          "김현수주"
+        ],
+        "match_score_min": 60.0,
+        "match_score_avg": 69.2,
+        "match_margin_min": 30.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(60.0)",
+          "저점수(62.5)",
+          "저점수(63.6)",
+          "저점수(70.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이주찬",
+    "name": "이주찬",
+    "entries": [
+      {
+        "book_id": "hebrews",
+        "page": 7,
+        "start_page": 7,
+        "end_page": 11,
+        "page_count": 5,
+        "assigned": "히브리서 6~8장",
+        "raw_ocr": [
+          "이주찬",
+          "이추천",
+          "이주찬",
+          "이주찬",
+          "이주찬"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 94.3,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "허현",
+    "name": "허현",
+    "entries": [
+      {
+        "book_id": "hebrews",
+        "page": 12,
+        "start_page": 12,
+        "end_page": 15,
+        "page_count": 4,
+        "assigned": "히브리서 9~10장",
+        "raw_ocr": [
+          "허현",
+          "하연",
+          "허현",
+          "하현"
+        ],
+        "match_score_min": 60.0,
+        "match_score_avg": 85.0,
+        "match_margin_min": 31.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(60.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "송아름",
+    "name": "송아름",
+    "entries": [
+      {
+        "book_id": "hebrews",
+        "page": 16,
+        "start_page": 16,
+        "end_page": 20,
+        "page_count": 5,
+        "assigned": "히브리서 11~12장",
+        "raw_ocr": [
+          "송아름",
+          "송아름",
+          "송아름",
+          "송아름జ",
+          "송아름직"
+        ],
+        "match_score_min": 72.7,
+        "match_score_avg": 92.3,
+        "match_margin_min": 54.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(72.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이호준",
+    "name": "이호준",
+    "entries": [
+      {
+        "book_id": "hebrews",
+        "page": 21,
+        "start_page": 21,
+        "end_page": 22,
+        "page_count": 2,
+        "assigned": "히브리서 13장",
+        "raw_ocr": [
+          "이호준",
+          "이호준"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 57.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "james",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "야고보서 1~2장",
+        "raw_ocr": [
+          "이호호",
+          "이호준",
+          "이호준"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 85.7,
+        "match_margin_min": 44.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(57.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "강병용",
+    "name": "강병용",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "요한복음 1~2장",
+        "raw_ocr": [
+          "강병용",
+          "강병용",
+          "강병용조",
+          "강병용",
+          "강병용"
+        ],
+        "match_score_min": 81.8,
+        "match_score_avg": 96.4,
+        "match_margin_min": 63.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "윤혜림",
+    "name": "윤혜림",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 11,
+        "page_count": 6,
+        "assigned": "요한복음 3~4장",
+        "raw_ocr": [
+          "윤혜링",
+          "윤혜림",
+          "윤혜림",
+          "윤혜림",
+          "윤예림",
+          "윤혜령"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 91.7,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "황시온",
+    "name": "황시온",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 12,
+        "start_page": 12,
+        "end_page": 14,
+        "page_count": 3,
+        "assigned": "요한복음 5장; 요한복음 18~19장",
+        "raw_ocr": [
+          "황시온",
+          "상시온",
+          "황시온"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 91.7,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(황시온@john:p12-14, p51-55)|고립구간의심"
+        ],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      },
+      {
+        "book_id": "john",
+        "page": 51,
+        "start_page": 51,
+        "end_page": 55,
+        "page_count": 5,
+        "assigned": "요한복음 5장; 요한복음 18~19장",
+        "raw_ocr": [
+          "황시온",
+          "황시온",
+          "성시온",
+          "황시온",
+          "황시온"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 95.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "저점수(75.0)",
+          "분리등장(황시온@john:p12-14, p51-55)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "second-timothy",
+        "page": 3,
+        "start_page": 3,
+        "end_page": 6,
+        "page_count": 4,
+        "assigned": "디모데후서 2~4장",
+        "raw_ocr": [
+          "황시훈",
+          "황시온",
+          "황시온",
+          "황시돈"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 90.6,
+        "match_margin_min": 75.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "임윤택",
+    "name": "임윤택",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 15,
+        "start_page": 15,
+        "end_page": 19,
+        "page_count": 5,
+        "assigned": "요한복음 6장",
+        "raw_ocr": [
+          "임윤택",
+          "임윤택",
+          "임윤택",
+          "임윤택",
+          "임효택"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 93.3,
+        "match_margin_min": 41.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "조혜진",
+    "name": "조혜진",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 20,
+        "start_page": 20,
+        "end_page": 23,
+        "page_count": 4,
+        "assigned": "요한복음 7장",
+        "raw_ocr": [
+          "조혜진A",
+          "조혜진A",
+          "조흥진A",
+          "조형민A"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 74.3,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)",
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김동찬",
+    "name": "김동찬",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 24,
+        "start_page": 24,
+        "end_page": 27,
+        "page_count": 4,
+        "assigned": "요한복음 8장",
+        "raw_ocr": [
+          "김동찬",
+          "김동찬",
+          "김동찬",
+          "김동찬"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 44.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이기리",
+    "name": "이기리",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 28,
+        "start_page": 28,
+        "end_page": 32,
+        "page_count": 5,
+        "assigned": "요한복음 9~10장",
+        "raw_ocr": [
+          "이끼리",
+          "이기리",
+          "이기리",
+          "이기리",
+          "이기리"
+        ],
+        "match_score_min": 83.3,
+        "match_score_avg": 96.7,
+        "match_margin_min": 45.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "박성희",
+    "name": "박성희",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 33,
+        "start_page": 33,
+        "end_page": 36,
+        "page_count": 4,
+        "assigned": "요한복음 11장",
+        "raw_ocr": [
+          "박성희",
+          "박성희",
+          "박성희",
+          "박성희"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 75.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김시윤",
+    "name": "김시윤",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 37,
+        "start_page": 37,
+        "end_page": 41,
+        "page_count": 5,
+        "assigned": "요한복음 12~13장",
+        "raw_ocr": [
+          "김시윤",
+          "김사윤",
+          "길사뭄",
+          "김사윤",
+          "김시윤"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 82.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['김가은', '김시윤']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "송제훈",
+    "name": "송제훈",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 42,
+        "start_page": 42,
+        "end_page": 46,
+        "page_count": 5,
+        "assigned": "요한복음 14~15장",
+        "raw_ocr": [
+          "송지윤",
+          "송지훈",
+          "송예은",
+          "송지훈",
+          "송제훈"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 77.5,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(50.0)",
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이규호",
+    "name": "이규호",
+    "entries": [
+      {
+        "book_id": "john",
+        "page": 47,
+        "start_page": 47,
+        "end_page": 50,
+        "page_count": 4,
+        "assigned": "요한복음 16~17장",
+        "raw_ocr": [
+          "이규호",
+          "이규호",
+          "이규호",
+          "이금호"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 92.8,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "안수빈C",
+    "name": "안수빈",
+    "entries": [
+      {
+        "book_id": "jude",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "유다서 1장",
+        "raw_ocr": [
+          "안수빈C",
+          "안수빈C",
+          "안수빈C"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 100.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "second-john",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 1,
+        "page_count": 1,
+        "assigned": null,
+        "raw_ocr": [
+          "안수빈C"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(안수빈C↔요한이서)"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "third-john",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 1,
+        "page_count": 1,
+        "assigned": null,
+        "raw_ocr": [
+          "안수빈C"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "책매핑없음(전체대상매칭)",
+          "분배표에없는배정(안수빈C↔요한삼서)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "정우빈",
+    "name": "정우빈",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "누가복음  1장장",
+        "raw_ocr": [
+          "정우빈",
+          "정우빈주",
+          "정연빈",
+          "저흰희경",
+          "전희경"
+        ],
+        "match_score_min": 20.0,
+        "match_score_avg": 60.6,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(20.0)",
+          "극저점수(25.0)",
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['강우영', '문홍주', '정우빈', '정은서', '조은채', '최도영']",
+          "상위후보동점:['강우영', '문홍주', '정우빈', '정은서', '최도영']",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "강호준",
+    "name": "강호준",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 9,
+        "page_count": 4,
+        "assigned": "누가복음  2장장",
+        "raw_ocr": [
+          "강호준",
+          "강호준",
+          "강호큰",
+          "강효은"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 84.4,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(62.5)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김라윤",
+    "name": "김라윤",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 10,
+        "start_page": 10,
+        "end_page": 20,
+        "page_count": 11,
+        "assigned": "누가복음  3장~ 4장장",
+        "raw_ocr": [
+          "김라윤즈",
+          "김라윤",
+          "김라윤",
+          "김라윤직",
+          "김라윤",
+          "김아인",
+          "김서연",
+          "감사인",
+          "김아인",
+          "김나연",
+          "감아아జ"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 77.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['강우영', '김라윤', '김주아', '김하언']",
+          "상위후보동점:['김라윤', '김시환', '김하언']",
+          "상위후보동점:['김라윤', '김하언']",
+          "저점수(50.0)",
+          "저점수(62.5)",
+          "저점수(72.7)",
+          "저점수(75.0)",
+          "분리등장(김라윤@luke:p10-20, p45-45)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "luke",
+        "page": 45,
+        "start_page": 45,
+        "end_page": 45,
+        "page_count": 1,
+        "assigned": "누가복음  3장~ 4장장",
+        "raw_ocr": [
+          "곤룡아"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)",
+          "분리등장(김라윤@luke:p10-20, p45-45)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['김라윤', '김주아']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "조은채",
+    "name": "조은채",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 21,
+        "start_page": 21,
+        "end_page": 23,
+        "page_count": 3,
+        "assigned": "누가복음  7장장",
+        "raw_ocr": [
+          "조은재",
+          "조은채",
+          "조은채"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 95.2,
+        "match_margin_min": 35.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김주아",
+    "name": "김주아",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 24,
+        "start_page": 24,
+        "end_page": 25,
+        "page_count": 2,
+        "assigned": "누가복음 12장장",
+        "raw_ocr": [
+          "거동아",
+          "지영아"
+        ],
+        "match_score_min": 42.9,
+        "match_score_avg": 42.9,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(42.9)",
+          "애매(2위와 0.0차)",
+          "애매(2위와 5.4차)",
+          "분리등장(김주아@luke:p24-25, p41-44)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['김주아', '최도영']"
+        ]
+      },
+      {
+        "book_id": "luke",
+        "page": 41,
+        "start_page": 41,
+        "end_page": 44,
+        "page_count": 4,
+        "assigned": "누가복음 12장장",
+        "raw_ocr": [
+          "김주아",
+          "김준아",
+          "김주아",
+          "김조아"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 93.3,
+        "match_margin_min": 35.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "분리등장(김주아@luke:p24-25, p41-44)|본구간추정"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김은서",
+    "name": "김은서",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 26,
+        "start_page": 26,
+        "end_page": 29,
+        "page_count": 4,
+        "assigned": "누가복음  8장장",
+        "raw_ocr": [
+          "김완서",
+          "김윤서",
+          "김은서",
+          "김은서జ"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 94.1,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['김윤서', '김은서']",
+          "위치보정-샌드위치(원래:김윤서→김은서)",
+          "분리등장(김은서@luke:p26-29, p49-50)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "luke",
+        "page": 49,
+        "start_page": 49,
+        "end_page": 50,
+        "page_count": 2,
+        "assigned": "누가복음  8장장",
+        "raw_ocr": [
+          "김문서జ",
+          "김원더"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 70.8,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(김은서@luke:p26-29, p49-50)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['김윤서', '김은서']",
+          "저점수(66.7)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "정은서",
+    "name": "정은서",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 30,
+        "start_page": 30,
+        "end_page": 33,
+        "page_count": 4,
+        "assigned": "누가복음  9장장",
+        "raw_ocr": [
+          "정은서",
+          "정은서",
+          "정은서",
+          "정원서"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 96.9,
+        "match_margin_min": 31.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "장은솔",
+    "name": "장은솔",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 34,
+        "start_page": 34,
+        "end_page": 35,
+        "page_count": 2,
+        "assigned": "누가복음 10장장",
+        "raw_ocr": [
+          "장암물",
+          "장운솔"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 72.2,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이은서",
+    "name": "이은서",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 36,
+        "start_page": 36,
+        "end_page": 40,
+        "page_count": 5,
+        "assigned": "누가복음 11장장",
+        "raw_ocr": [
+          "이운서",
+          "이은서జ",
+          "이윤서",
+          "이은서",
+          "이은서"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 91.8,
+        "match_margin_min": 10.7,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김윤서",
+    "name": "김윤서",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 46,
+        "start_page": 46,
+        "end_page": 48,
+        "page_count": 3,
+        "assigned": "누가복음 13장~14장장",
+        "raw_ocr": [
+          "김윤서",
+          "김윤서",
+          "김윤서"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김민진",
+    "name": "김민진",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 51,
+        "start_page": 51,
+        "end_page": 55,
+        "page_count": 5,
+        "assigned": "누가복음 15장장; 누가복음 16장장",
+        "raw_ocr": [
+          "김민진즈",
+          "김민진",
+          "김민진",
+          "김민진",
+          "김민진"
+        ],
+        "match_score_min": 81.8,
+        "match_score_avg": 96.4,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "박한빈",
+    "name": "박한빈",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 56,
+        "start_page": 56,
+        "end_page": 61,
+        "page_count": 6,
+        "assigned": "누가복음 17장장; 누가복음 18장장",
+        "raw_ocr": [
+          "박만빈ㅈ",
+          "백범",
+          "박사빈",
+          "감사인జ",
+          "박6빈",
+          "박빈"
+        ],
+        "match_score_min": 33.3,
+        "match_score_avg": 63.4,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(33.3)",
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "위치보정-샌드위치(원래:김라윤→박한빈)",
+          "저점수(66.7)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이은율",
+    "name": "이은율",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 62,
+        "start_page": 62,
+        "end_page": 65,
+        "page_count": 4,
+        "assigned": "누가복음 19장장",
+        "raw_ocr": [
+          "이윤율",
+          "이문월",
+          "이윤율",
+          "이은율జ"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 81.6,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "문홍주",
+    "name": "문홍주",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 66,
+        "start_page": 66,
+        "end_page": 66,
+        "page_count": 1,
+        "assigned": "누가복음 20장(1~10절)장",
+        "raw_ocr": [
+          "문용주주"
+        ],
+        "match_score_min": 60.0,
+        "match_score_avg": 60.0,
+        "match_margin_min": 30.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(60.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "조예도",
+    "name": "조예도",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 67,
+        "start_page": 67,
+        "end_page": 69,
+        "page_count": 3,
+        "assigned": "누가복음 20장(11~47절)장",
+        "raw_ocr": [
+          "초예르",
+          "조예트",
+          "조예트"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 61.1,
+        "match_margin_min": 21.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(50.0)",
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "강우영",
+    "name": "강우영",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 70,
+        "start_page": 70,
+        "end_page": 72,
+        "page_count": 3,
+        "assigned": "누가복음 21장장",
+        "raw_ocr": [
+          "강영",
+          "강복영",
+          "강욱명"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 73.2,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)",
+          "저점수(75.0)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최도영",
+    "name": "최도영",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 77,
+        "start_page": 77,
+        "end_page": 79,
+        "page_count": 3,
+        "assigned": "누가복음 23장장",
+        "raw_ocr": [
+          "최도영",
+          "최도영",
+          "최도영"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 62.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김시환",
+    "name": "김시환",
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 80,
+        "start_page": 80,
+        "end_page": 83,
+        "page_count": 4,
+        "assigned": "누가복음 24장장",
+        "raw_ocr": [
+          "김시한",
+          "김시환",
+          "김시환",
+          "김시환"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 96.9,
+        "match_margin_min": 31.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김아인",
+    "name": "김아인",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "마가복음 1장(45절)장",
+        "raw_ocr": [
+          "김아인",
+          "김아인",
+          "곽아인జ"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 88.9,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "민하선",
+    "name": "민하선",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 4,
+        "start_page": 4,
+        "end_page": 6,
+        "page_count": 3,
+        "assigned": "마가복음 2장(28절)장",
+        "raw_ocr": [
+          "백민하선",
+          "민하은",
+          "민하선"
+        ],
+        "match_score_min": 72.7,
+        "match_score_avg": 86.7,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "위치보정-샌드위치(원래:민하윤→민하선)",
+          "저점수(72.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "문유준",
+    "name": "문유준",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 7,
+        "start_page": 7,
+        "end_page": 9,
+        "page_count": 3,
+        "assigned": "마가복음 3장(35절)장",
+        "raw_ocr": [
+          "문유준",
+          "문유준즈",
+          "문유준"
+        ],
+        "match_score_min": 80.0,
+        "match_score_avg": 93.3,
+        "match_margin_min": 40.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "방민하",
+    "name": "방민하",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 10,
+        "start_page": 10,
+        "end_page": 14,
+        "page_count": 5,
+        "assigned": "마가복음 4장(41절)장",
+        "raw_ocr": [
+          "방민하జ",
+          "남민하",
+          "방민라",
+          "방진하జ",
+          "방민하"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 85.8,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이채원",
+    "name": "이채원",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 15,
+        "start_page": 15,
+        "end_page": 23,
+        "page_count": 9,
+        "assigned": "마가복음 5장(43절)장",
+        "raw_ocr": [
+          "이채순",
+          "이재우년",
+          "이채연",
+          "이치세윤",
+          "이서은",
+          "이세은",
+          "이세은",
+          "이세은",
+          "최연"
+        ],
+        "match_score_min": 42.9,
+        "match_score_avg": 78.7,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(42.9)",
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['이제인', '이채원']",
+          "위치보정-샌드위치(원래:이세은→이채원)",
+          "저점수(55.6)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "지다은",
+    "name": "지다은",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 24,
+        "start_page": 24,
+        "end_page": 24,
+        "page_count": 1,
+        "assigned": "마가복음 6장(30~56절)장",
+        "raw_ocr": [
+          "지다은"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 42.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "장은성",
+    "name": "장은성",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 25,
+        "start_page": 25,
+        "end_page": 28,
+        "page_count": 4,
+        "assigned": "마가복음 7장(37절)장",
+        "raw_ocr": [
+          "장은성",
+          "장은성",
+          "장은성",
+          "창은성"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 97.2,
+        "match_margin_min": 55.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김강준",
+    "name": "김강준",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 29,
+        "start_page": 29,
+        "end_page": 30,
+        "page_count": 2,
+        "assigned": "마가복음 8장(38절)장",
+        "raw_ocr": [
+          "강강준",
+          "김강룡"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 72.2,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['김가온', '김강준']",
+          "저점수(66.7)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "한태준",
+    "name": "한태준",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 31,
+        "start_page": 31,
+        "end_page": 35,
+        "page_count": 5,
+        "assigned": "마가복음 9장(50절)장",
+        "raw_ocr": [
+          "한태준",
+          "한태준",
+          "한태준",
+          "한태준",
+          "한태준"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "엄선아",
+    "name": "엄선아",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 38,
+        "start_page": 38,
+        "end_page": 39,
+        "page_count": 2,
+        "assigned": "마가복음 10장(32~52절)장",
+        "raw_ocr": [
+          "엄신아",
+          "영신아జ"
+        ],
+        "match_score_min": 55.6,
+        "match_score_avg": 71.5,
+        "match_margin_min": 11.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(55.6)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김서진",
+    "name": "김서진",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 40,
+        "start_page": 40,
+        "end_page": 42,
+        "page_count": 3,
+        "assigned": "마가복음 11장(33절)장",
+        "raw_ocr": [
+          "김서진",
+          "김서진",
+          "김서진"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "변지후",
+    "name": "변지후",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 43,
+        "start_page": 43,
+        "end_page": 46,
+        "page_count": 4,
+        "assigned": "마가복음 12장(44절)장",
+        "raw_ocr": [
+          "번지후",
+          "번지후",
+          "변지후주",
+          "변지후"
+        ],
+        "match_score_min": 77.8,
+        "match_score_avg": 87.3,
+        "match_margin_min": 42.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이윤우",
+    "name": "이윤우",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 47,
+        "start_page": 47,
+        "end_page": 50,
+        "page_count": 4,
+        "assigned": "마가복음 13장(37절)장",
+        "raw_ocr": [
+          "아윤우",
+          "야뭇జ",
+          "이윤우జ",
+          "이윤석"
+        ],
+        "match_score_min": 25.0,
+        "match_score_avg": 65.2,
+        "match_margin_min": 2.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "위치보정-샌드위치(원래:엄선아→이윤우)",
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "민하윤",
+    "name": "민하윤",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 51,
+        "start_page": 51,
+        "end_page": 52,
+        "page_count": 2,
+        "assigned": "마가복음 14장(1~26절)장",
+        "raw_ocr": [
+          "민하윤",
+          "민하윤"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "신재윤",
+    "name": "신재윤",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 53,
+        "start_page": 53,
+        "end_page": 55,
+        "page_count": 3,
+        "assigned": "마가복음 14장(27~52절)장",
+        "raw_ocr": [
+          "신재윤",
+          "신재윤",
+          "신재윤"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김가온",
+    "name": "김가온",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 56,
+        "start_page": 56,
+        "end_page": 57,
+        "page_count": 2,
+        "assigned": "마가복음 14장(53~72절)장",
+        "raw_ocr": [
+          "김가온",
+          "길가온"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 93.8,
+        "match_margin_min": 20.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이예만",
+    "name": "이예만",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 58,
+        "start_page": 58,
+        "end_page": 60,
+        "page_count": 3,
+        "assigned": "마가복음 15장(47절)장",
+        "raw_ocr": [
+          "이예만",
+          "이예만",
+          "이예만"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 57.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "정시우",
+    "name": "정시우",
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 61,
+        "start_page": 61,
+        "end_page": 62,
+        "page_count": 2,
+        "assigned": "마가복음 16장(20절)장",
+        "raw_ocr": [
+          "정시우",
+          "정시우"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 57.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이샘율",
+    "name": "이샘율",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 2,
+        "page_count": 2,
+        "assigned": "마태복음 1장(25절)장",
+        "raw_ocr": [
+          "미생윤",
+          "이샘을"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 75.0,
+        "match_margin_min": 18.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "금시온",
+    "name": "금시온",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 7,
+        "page_count": 2,
+        "assigned": "마태복음 7장(29절)장",
+        "raw_ocr": [
+          "스미스라운",
+          "스미스라운"
+        ],
+        "match_score_min": 45.5,
+        "match_score_avg": 45.5,
+        "match_margin_min": 9.1,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 9.1차)",
+          "분리등장(금시온@matthew:p6-7, p18-19)"
+        ],
+        "notes": [
+          "저점수(45.5)"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 18,
+        "start_page": 18,
+        "end_page": 19,
+        "page_count": 2,
+        "assigned": "마태복음 7장(29절)장",
+        "raw_ocr": [
+          "김시영",
+          ""
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 62.5,
+        "match_margin_min": 12.5,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(금시온@matthew:p6-7, p18-19)"
+        ],
+        "notes": [
+          "빈칸-앞사람배정",
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "문다인",
+    "name": "문다인",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 8,
+        "start_page": 8,
+        "end_page": 9,
+        "page_count": 2,
+        "assigned": "마태복음 4장(25절)장",
+        "raw_ocr": [
+          "문다인",
+          "문터인జ"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 83.3,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "유하준",
+    "name": "유하준",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 10,
+        "start_page": 10,
+        "end_page": 13,
+        "page_count": 4,
+        "assigned": "마태복음 5장(48절)장",
+        "raw_ocr": [
+          "유하준",
+          "유하준",
+          "유하즈",
+          "유하준"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 92.8,
+        "match_margin_min": 14.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(71.4)",
+          "분리등장(유하준@matthew:p10-13, p28-28, p59-59, p82-82)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 28,
+        "start_page": 28,
+        "end_page": 28,
+        "page_count": 1,
+        "assigned": "마태복음 5장(48절)장",
+        "raw_ocr": [
+          "오한둔"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 62.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(유하준@matthew:p10-13, p28-28, p59-59, p82-82)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['오하윤', '유하준']",
+          "저점수(62.5)"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 59,
+        "start_page": 59,
+        "end_page": 59,
+        "page_count": 1,
+        "assigned": "마태복음 5장(48절)장",
+        "raw_ocr": [
+          "곽호주జ"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 37.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "애매(2위와 0.0차)",
+          "분리등장(유하준@matthew:p10-13, p28-28, p59-59, p82-82)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['문효주', '송하준', '유하준']"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 82,
+        "start_page": 82,
+        "end_page": 82,
+        "page_count": 1,
+        "assigned": "마태복음 5장(48절)장",
+        "raw_ocr": [
+          "9이아푼"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 50.0,
+        "match_margin_min": 12.5,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(유하준@matthew:p10-13, p28-28, p59-59, p82-82)|고립구간의심"
+        ],
+        "notes": [
+          "저점수(50.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "유지아",
+    "name": "유지아",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 14,
+        "start_page": 14,
+        "end_page": 17,
+        "page_count": 4,
+        "assigned": "마태복음 6장(34절)장",
+        "raw_ocr": [
+          "유지아",
+          "유지아",
+          "유지미-",
+          "유지아"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 89.3,
+        "match_margin_min": 14.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(57.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이다솜",
+    "name": "이다솜",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 20,
+        "start_page": 20,
+        "end_page": 22,
+        "page_count": 3,
+        "assigned": "마태복음 8장(34절)장",
+        "raw_ocr": [
+          "이다솜",
+          "이대숙",
+          "이따숨"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 76.2,
+        "match_margin_min": 19.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(57.1)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "오하윤",
+    "name": "오하윤",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 26,
+        "start_page": 26,
+        "end_page": 27,
+        "page_count": 2,
+        "assigned": "마태복음 10장(42절)장",
+        "raw_ocr": [
+          "오하윤",
+          "오하윤"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "분리등장(오하윤@matthew:p26-27, p52-52)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 52,
+        "start_page": 52,
+        "end_page": 52,
+        "page_count": 1,
+        "assigned": "마태복음 10장(42절)장",
+        "raw_ocr": [
+          "오자윤"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 85.7,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(오하윤@matthew:p26-27, p52-52)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['오지윤', '오하윤']"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이서정",
+    "name": "이서정",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 29,
+        "start_page": 29,
+        "end_page": 31,
+        "page_count": 3,
+        "assigned": "마태복음 11장(30절)장; 마태복음 14장(36절)장",
+        "raw_ocr": [
+          "이서정",
+          "이서정",
+          "이서정"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(이서정@matthew:p29-31, p42-44)"
+        ],
+        "notes": []
+      },
+      {
+        "book_id": "matthew",
+        "page": 42,
+        "start_page": 42,
+        "end_page": 44,
+        "page_count": 3,
+        "assigned": "마태복음 11장(30절)장; 마태복음 14장(36절)장",
+        "raw_ocr": [
+          "이서정",
+          "이서정",
+          "이서정"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(이서정@matthew:p29-31, p42-44)"
+        ],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이지음",
+    "name": "이지음",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 32,
+        "start_page": 32,
+        "end_page": 36,
+        "page_count": 5,
+        "assigned": "마태복음 12장(50절)장",
+        "raw_ocr": [
+          "이지음",
+          "이처음",
+          "이지음",
+          "이지움",
+          "이지움"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 88.6,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최은성",
+    "name": "최은성",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 40,
+        "start_page": 40,
+        "end_page": 41,
+        "page_count": 2,
+        "assigned": "마태복음 13장(31~58절)장",
+        "raw_ocr": [
+          "최운섭",
+          "초은성"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 81.2,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "조정원",
+    "name": "조정원",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 45,
+        "start_page": 45,
+        "end_page": 47,
+        "page_count": 3,
+        "assigned": "마태복음 15장(39절)장",
+        "raw_ocr": [
+          "조정원",
+          "조정원",
+          "조정원"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "장은채",
+    "name": "장은채",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 48,
+        "start_page": 48,
+        "end_page": 50,
+        "page_count": 3,
+        "assigned": "마태복음 16장(28절)장",
+        "raw_ocr": [
+          "장은채",
+          "장은채",
+          "장온채జ"
+        ],
+        "match_score_min": 77.8,
+        "match_score_avg": 92.6,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "오지윤",
+    "name": "오지윤",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 51,
+        "start_page": 51,
+        "end_page": 51,
+        "page_count": 1,
+        "assigned": "마태복음 17장(1-12절)장",
+        "raw_ocr": [
+          "오지훈"
+        ],
+        "match_score_min": 71.4,
+        "match_score_avg": 71.4,
+        "match_margin_min": 21.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이로이",
+    "name": "이로이",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 55,
+        "start_page": 55,
+        "end_page": 57,
+        "page_count": 3,
+        "assigned": "마태복음 18장(35절)장",
+        "raw_ocr": [
+          "이로이즈",
+          "이혼기",
+          "이로이"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 77.4,
+        "match_margin_min": 14.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(57.1)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "문효주",
+    "name": "문효주",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 60,
+        "start_page": 60,
+        "end_page": 61,
+        "page_count": 2,
+        "assigned": "마태복음 19장(30절)장",
+        "raw_ocr": [
+          "문한주",
+          "문현주"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 75.0,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김지환",
+    "name": "김지환",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 62,
+        "start_page": 62,
+        "end_page": 63,
+        "page_count": 2,
+        "assigned": "마태복음 20장(34절)장",
+        "raw_ocr": [
+          "김지환",
+          "김지환"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 50.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "지다빈",
+    "name": "지다빈",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 64,
+        "start_page": 64,
+        "end_page": 67,
+        "page_count": 4,
+        "assigned": "마태복음 21장(46절)장",
+        "raw_ocr": [
+          "지다빈",
+          "지다빈",
+          "지다빈",
+          "지다빈"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 42.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "최수인",
+    "name": "최수인",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 68,
+        "start_page": 68,
+        "end_page": 70,
+        "page_count": 3,
+        "assigned": "마태복음 22장(46절)장",
+        "raw_ocr": [
+          "최민ㅈ",
+          "조다원",
+          "초무인"
+        ],
+        "match_score_min": 42.9,
+        "match_score_avg": 58.9,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(42.9)",
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['최다인', '최수인']",
+          "위치보정-샌드위치(원래:조정원→최수인)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "임강연",
+    "name": "임강연",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 71,
+        "start_page": 71,
+        "end_page": 74,
+        "page_count": 4,
+        "assigned": "마태복음 23장(39절)장",
+        "raw_ocr": [
+          "임강연",
+          "임강연",
+          "임강연",
+          "암강연"
+        ],
+        "match_score_min": 88.9,
+        "match_score_avg": 97.2,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "최연우6",
+    "name": "최연우6",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 75,
+        "start_page": 75,
+        "end_page": 77,
+        "page_count": 3,
+        "assigned": "마태복음 24장(51절)장",
+        "raw_ocr": [
+          "최연우",
+          "최연우జ",
+          "최연우"
+        ],
+        "match_score_min": 87.5,
+        "match_score_avg": 87.5,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)"
+        ],
+        "notes": [
+          "상위후보동점:['최연우1', '최연우6']",
+          "분리등장(최연우6@matthew:p75-77, p85-86)|본구간추정"
+        ]
+      },
+      {
+        "book_id": "matthew",
+        "page": 85,
+        "start_page": 85,
+        "end_page": 86,
+        "page_count": 2,
+        "assigned": "마태복음 24장(51절)장",
+        "raw_ocr": [
+          "최연우조",
+          "초연우주"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 72.2,
+        "match_margin_min": 0.0,
+        "needs_review": true,
+        "review_reasons": [
+          "애매(2위와 0.0차)",
+          "분리등장(최연우6@matthew:p75-77, p85-86)|고립구간의심"
+        ],
+        "notes": [
+          "상위후보동점:['최연우1', '최연우6']",
+          "저점수(66.7)",
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "송서준",
+    "name": "송서준",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 87,
+        "start_page": 87,
+        "end_page": 88,
+        "page_count": 2,
+        "assigned": "마태복음 26장(57~75절)장",
+        "raw_ocr": [
+          "송세윤",
+          "설버준"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 62.5,
+        "match_margin_min": 12.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최다인",
+    "name": "최다인",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 89,
+        "start_page": 89,
+        "end_page": 90,
+        "page_count": 2,
+        "assigned": "마태복음 27장(1~26절)장",
+        "raw_ocr": [
+          "최다인",
+          "최다인"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 28.6,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "조이서",
+    "name": "조이서",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 91,
+        "start_page": 91,
+        "end_page": 92,
+        "page_count": 2,
+        "assigned": "마태복음 27장(27~44절)장",
+        "raw_ocr": [
+          "고이서",
+          "조이서"
+        ],
+        "match_score_min": 83.3,
+        "match_score_avg": 91.7,
+        "match_margin_min": 45.8,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "박연아",
+    "name": "박연아",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 93,
+        "start_page": 93,
+        "end_page": 94,
+        "page_count": 2,
+        "assigned": "마태복음 27장 45~66절장",
+        "raw_ocr": [
+          "박연아",
+          "박면ㅇ"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 87.5,
+        "match_margin_min": 32.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "박시아",
+    "name": "박시아",
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 95,
+        "start_page": 95,
+        "end_page": 96,
+        "page_count": 2,
+        "assigned": "마태복음 28장(20절)장",
+        "raw_ocr": [
+          "박시아",
+          "박서아"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 92.8,
+        "match_margin_min": 23.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "이평화",
+    "name": "이평화",
+    "entries": [
+      {
+        "book_id": "philemon",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 2,
+        "page_count": 2,
+        "assigned": "빌레몬서 1장",
+        "raw_ocr": [
+          "이평화",
+          "이평화"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 100.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      },
+      {
+        "book_id": "titus",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 3,
+        "page_count": 3,
+        "assigned": "디도서 1~3장",
+        "raw_ocr": [
+          "이평화",
+          "이평화",
+          "이평호ㅈ"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 91.7,
+        "match_margin_min": 75.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "허진",
+    "name": "허진",
+    "entries": [
+      {
+        "book_id": "philippians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": "빌립보서 1~2장",
+        "raw_ocr": [
+          "허진",
+          "허진",
+          "허진",
+          "허진"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 71.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "최여진",
+    "name": "최여진",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "요한계시록 1~3장",
+        "raw_ocr": [
+          "최여진",
+          "최여진",
+          "최여진",
+          "최여진",
+          "최여진"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 57.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "김민서",
+    "name": "김민서",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 11,
+        "page_count": 6,
+        "assigned": "요한계시록 4~8장",
+        "raw_ocr": [
+          "김민서",
+          "김민서",
+          "김민서",
+          "김민서",
+          "김민서",
+          "김민서"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 87.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "오지훈",
+    "name": "오지훈",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 12,
+        "start_page": 12,
+        "end_page": 17,
+        "page_count": 6,
+        "assigned": "요한계시록 9~12장",
+        "raw_ocr": [
+          "9지훈",
+          "오지훈",
+          "오재훈",
+          "오자훈",
+          "오세훈",
+          "무재님"
+        ],
+        "match_score_min": 14.3,
+        "match_score_avg": 71.4,
+        "match_margin_min": 0.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "위치보정-경계앞사람(원래:최여진→오지훈,점수14.3)",
+          "저점수(71.4)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "전시은",
+    "name": "전시은",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 18,
+        "start_page": 18,
+        "end_page": 22,
+        "page_count": 5,
+        "assigned": "요한계시록 13~16장",
+        "raw_ocr": [
+          "전시은",
+          "전사은",
+          "전사문",
+          "전시는",
+          "전시은"
+        ],
+        "match_score_min": 62.5,
+        "match_score_avg": 87.5,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(62.5)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최차원",
+    "name": "최차원",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 23,
+        "start_page": 23,
+        "end_page": 24,
+        "page_count": 2,
+        "assigned": "요한계시록 17장",
+        "raw_ocr": [
+          "최강원",
+          "최찬원"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 81.2,
+        "match_margin_min": 37.5,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(최차원@revelation:p23-24, p31-32)"
+        ],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      },
+      {
+        "book_id": "revelation",
+        "page": 31,
+        "start_page": 31,
+        "end_page": 32,
+        "page_count": 2,
+        "assigned": "요한계시록 17장",
+        "raw_ocr": [
+          "최강",
+          "최강"
+        ],
+        "match_score_min": 57.1,
+        "match_score_avg": 57.1,
+        "match_margin_min": 28.6,
+        "needs_review": true,
+        "review_reasons": [
+          "분리등장(최차원@revelation:p23-24, p31-32)"
+        ],
+        "notes": [
+          "저점수(57.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이예은",
+    "name": "이예은",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 25,
+        "start_page": 25,
+        "end_page": 27,
+        "page_count": 3,
+        "assigned": "요한계시록 18~19장",
+        "raw_ocr": [
+          "이여은",
+          "이예은",
+          "이여은"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 90.5,
+        "match_margin_min": 42.9,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "지승아",
+    "name": "지승아",
+    "entries": [
+      {
+        "book_id": "revelation",
+        "page": 28,
+        "start_page": 28,
+        "end_page": 30,
+        "page_count": 3,
+        "assigned": "요한계시록 20~22장",
+        "raw_ocr": [
+          "거동아జ",
+          "저동아",
+          "거동아"
+        ],
+        "match_score_min": 37.5,
+        "match_score_avg": 45.8,
+        "match_margin_min": 12.5,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(37.5)",
+          "극저점수(42.9)"
+        ],
+        "notes": [
+          "저점수(57.1)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "박정덕",
+    "name": "박정덕",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 5,
+        "page_count": 5,
+        "assigned": "로마서 1~2장",
+        "raw_ocr": [
+          "박정덕",
+          "박정역",
+          "박정덕",
+          "박정덕",
+          "박정덕"
+        ],
+        "match_score_min": 77.8,
+        "match_score_avg": 95.6,
+        "match_margin_min": 33.3,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "손희진",
+    "name": "손희진",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 10,
+        "page_count": 5,
+        "assigned": "로마서 3~5장",
+        "raw_ocr": [
+          "설희진",
+          "손희신",
+          "솔희진",
+          "설희선",
+          "문희련"
+        ],
+        "match_score_min": 50.0,
+        "match_score_avg": 70.0,
+        "match_margin_min": 25.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(50.0)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "정영학",
+    "name": "정영학",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 11,
+        "start_page": 11,
+        "end_page": 17,
+        "page_count": 7,
+        "assigned": "로마서 6~8장",
+        "raw_ocr": [
+          "정영학",
+          "정영학주",
+          "정영학",
+          "정영학",
+          "정영택",
+          "정영학",
+          "정영학"
+        ],
+        "match_score_min": 77.8,
+        "match_score_avg": 94.2,
+        "match_margin_min": 22.2,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(77.8)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "전주형",
+    "name": "전주형",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 18,
+        "start_page": 18,
+        "end_page": 21,
+        "page_count": 4,
+        "assigned": "로마서 9~10장",
+        "raw_ocr": [
+          "전규형",
+          "전주형",
+          "전주형",
+          "전주공"
+        ],
+        "match_score_min": 75.0,
+        "match_score_avg": 87.5,
+        "match_margin_min": 37.5,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "정겨울",
+    "name": "정겨울",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 22,
+        "start_page": 22,
+        "end_page": 25,
+        "page_count": 4,
+        "assigned": "로마서 11~12장",
+        "raw_ocr": [
+          "정겨울",
+          "정겨울",
+          "정겨울",
+          "정겨울"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 44.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "박혜인",
+    "name": "박혜인",
+    "entries": [
+      {
+        "book_id": "romans",
+        "page": 26,
+        "start_page": 26,
+        "end_page": 30,
+        "page_count": 5,
+        "assigned": "로마서 13~15장",
+        "raw_ocr": [
+          "박혜인",
+          "박혜인",
+          "박혜인",
+          "박혜인",
+          "박헤인주"
+        ],
+        "match_score_min": 70.0,
+        "match_score_avg": 94.0,
+        "match_margin_min": 30.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(70.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "윤상훈",
+    "name": "윤상훈",
+    "entries": [
+      {
+        "book_id": "second-corinthians",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": "고린도후서 1~4장",
+        "raw_ocr": [
+          "윤상훈",
+          "윤상훈",
+          "유상호",
+          "윤성훈"
+        ],
+        "match_score_min": 66.7,
+        "match_score_avg": 88.9,
+        "match_margin_min": 38.1,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(66.7)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이재원",
+    "name": "이재원",
+    "entries": [
+      {
+        "book_id": "second-corinthians",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 10,
+        "page_count": 6,
+        "assigned": "고린도후서 5~8장",
+        "raw_ocr": [
+          "이재원",
+          "이재원",
+          "이재윤",
+          "이재원",
+          "이재원",
+          "이재원"
+        ],
+        "match_score_min": 85.7,
+        "match_score_avg": 97.6,
+        "match_margin_min": 52.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "전주승",
+    "name": "전주승",
+    "entries": [
+      {
+        "book_id": "second-corinthians",
+        "page": 11,
+        "start_page": 11,
+        "end_page": 17,
+        "page_count": 7,
+        "assigned": "고린도후서 9~12장",
+        "raw_ocr": [
+          "전주솜직",
+          "전주승즈",
+          "조주승",
+          "전주승직",
+          "전주송즈",
+          "전주송지",
+          "전주승"
+        ],
+        "match_score_min": 54.5,
+        "match_score_avg": 74.6,
+        "match_margin_min": 36.4,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "저점수(54.5)",
+          "저점수(70.0)",
+          "저점수(72.7)",
+          "저점수(75.0)"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김주원",
+    "name": "김주원",
+    "entries": [
+      {
+        "book_id": "second-peter",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 4,
+        "page_count": 4,
+        "assigned": "베드로후서 1~3장",
+        "raw_ocr": [
+          "김주원",
+          "김주원",
+          "김주원",
+          "김주원"
+        ],
+        "match_score_min": 100.0,
+        "match_score_avg": 100.0,
+        "match_margin_min": 100.0,
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": []
+      }
+    ]
+  },
+  {
+    "writer_id": "오샛별",
+    "name": "오샛별",
+    "entries": [
+      {
+        "book_id": "second-timothy",
+        "page": 1,
+        "start_page": 1,
+        "end_page": 2,
+        "page_count": 2,
+        "assigned": "디모데후서 1장",
+        "raw_ocr": [
+          "안재민జ",
+          "ㅇㅐㅈㅣㅁㅜ"
+        ],
+        "match_score_min": 22.2,
+        "match_score_avg": 23.6,
+        "match_margin_min": 11.1,
+        "needs_review": true,
+        "review_reasons": [
+          "극저점수(22.2)",
+          "극저점수(25.0)"
+        ],
+        "notes": []
+      }
+    ]
   }
 ]
