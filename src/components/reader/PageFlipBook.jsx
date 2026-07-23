@@ -45,6 +45,12 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   const coverOffsetRef = useRef(0);
   const loadAroundRef = useRef(null);
   const onPageChangeRef = useRef(onPageChange);
+  // Index we intend to display. Only real user turns update it; used to restore
+  // the page after an orientation switch re-maps the internal spread index.
+  const currentIndexRef = useRef(0);
+  // True only while a genuine page turn (user swipe or our flip/prev/next) is in
+  // flight, so spurious "flip" events from layout/orientation settling are ignored.
+  const realFlipRef = useRef(false);
   const activePointerIdRef = useRef(null);
   const lastPointerRef = useRef({ x: 0, y: 0 });
   const pinchRef = useRef(null);
@@ -149,14 +155,42 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     } else if (typeof pageFlip.flip === "function") {
       pageFlip.flip(startIndex);
     }
+    currentIndexRef.current = startIndex;
     onPageChangeRef.current?.(Math.max(0, startIndex + 1 - offset), contentTotal);
+
+    // A genuine turn (user swipe, or our flip()/prev()/next()) passes through these
+    // states; programmatic turnToPage and layout/orientation re-renders do not.
+    pageFlip.on("changeState", (event) => {
+      if (event.data === "user_fold" || event.data === "fold_corner" || event.data === "flipping") {
+        realFlipRef.current = true;
+      }
+    });
 
     pageFlip.on("flip", (event) => {
       const idx = Number.isFinite(event.data)
         ? event.data
         : pageFlip.getCurrentPageIndex();
       loadAround(idx);
+      // Ignore flips we didn't cause. On slow first loads page-flip re-emits "flip"
+      // with a remapped spread index while the layout settles; that used to rewrite
+      // the URL and drag the reader to an arbitrary page (e.g. requested 20 → 10).
+      if (!realFlipRef.current) return;
+      realFlipRef.current = false;
+      currentIndexRef.current = idx;
       onPageChangeRef.current?.(Math.max(0, idx + 1 - offset), contentTotal);
+    });
+
+    // Portrait<->landscape switches re-apply the preserved spread index, which
+    // points at a different page between layouts (landscape spread N = pages 2N/2N+1,
+    // portrait spread N = page N). Restore the page we intend to show, by number.
+    pageFlip.on("changeOrientation", () => {
+      const want = currentIndexRef.current;
+      if (typeof pageFlip.getCurrentPageIndex === "function"
+          && pageFlip.getCurrentPageIndex() !== want
+          && typeof pageFlip.turnToPage === "function") {
+        pageFlip.turnToPage(want);
+        onPageChangeRef.current?.(Math.max(0, want + 1 - offset), contentTotal);
+      }
     });
 
     return () => {
@@ -342,6 +376,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     } else if (typeof pageFlip.flip === "function") {
       pageFlip.flip(targetIndex);
     }
+    currentIndexRef.current = targetIndex;
     onPageChangeRef.current?.(
       Math.max(0, targetIndex + 1 - offset),
       totalPagesRef.current - offset
