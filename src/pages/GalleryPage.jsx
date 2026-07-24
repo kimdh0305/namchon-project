@@ -17,12 +17,6 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
 import { fetchJson } from "@/lib/data";
 
-const PREFACE = [
-  "남서울평촌교회 30주년을 맞아, 온 성도가 손으로 성경을 옮겨 적었습니다. 이 전시관은 그 필사의 시간을 책의 물성 그대로 보존하고, 다음 세대에 전하기 위해 마련되었습니다.",
-  "한 사람의 손끝에서 완성된 한 페이지가 모여 66권이 되었습니다. 종이의 흐름과 잉크의 결, 함께 기도하며 적어 내려간 공동체의 시간을 한 화면에서 만나실 수 있습니다.",
-  "이 기록이 단지 과거의 보관이 아니라, 말씀을 사랑하는 마음이 다음 세대로 이어지는 통로가 되기를 바랍니다."
-];
-
 const APOSTLES_CREED =
   "전능하사 천지를 만드신 하나님 아버지를 내가 믿사오며, 그 외아들 우리 주 예수 그리스도를 믿사오니, 이는 성령으로 잉태하사 동정녀 마리아에게 나시고, 본디오 빌라도에게 고난을 받으사 십자가에 못 박혀 죽으시고, 장사한 지 사흘 만에 죽은 자 가운데서 다시 살아나시며, 하늘에 오르사 전능하신 하나님 우편에 앉아 계시다가, 저리로서 산 자와 죽은 자를 심판하러 오시리라. 성령을 믿사오며, 거룩한 공회와 성도가 서로 교통하는 것과, 죄를 사하여 주시는 것과, 몸이 다시 사는 것과, 영원히 사는 것을 믿사옵나이다. 아멘.";
 
@@ -209,14 +203,13 @@ export function GalleryPage() {
           <Card>
             <CardContent className="p-6 lg:p-8">
               {active === "preface" && (
-                <SectionShell en="Preface" title="발간사">
-                  <div className="grid gap-4">
-                    {PREFACE.map((para, idx) => (
-                      <p key={idx} className="typo-ko typo-ko-body text-[15px] leading-relaxed text-foreground/90">{para}</p>
-                    ))}
-                    <p className="typo-ko mt-2 text-sm text-muted-foreground">남서울평촌교회 30주년 기념 성경 전시관</p>
-                  </div>
-                </SectionShell>
+                // 원본 발간사 PDF를 그대로 보존 — WEBP로 변환해 이미지로 표시.
+                <img
+                  src="/assets/history/preface.webp"
+                  alt="발간사 · 남서울평촌교회 담임목사 방상웅"
+                  loading="lazy"
+                  className="mx-auto w-full max-w-2xl rounded-xl bg-card object-contain shadow-premium"
+                />
               )}
 
               {active === "creed" && (
