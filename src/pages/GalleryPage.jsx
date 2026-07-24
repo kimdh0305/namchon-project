@@ -36,13 +36,8 @@ const COMMANDMENTS = [
   "네 이웃의 집을 탐내지 말라."
 ];
 
-const DOC_IMAGES = {
-  creed: "/assets/history/사도신경.jfif",
-  "lords-prayer": "/assets/history/주기도문.jfif",
-  commandments: "/assets/history/십계명.jfif"
-};
-
 function DocImage({ src, alt }) {
+  if (!src) return null;
   return (
     <img
       src={src}
@@ -203,18 +198,23 @@ export function GalleryPage() {
           <Card>
             <CardContent className="p-6 lg:p-8">
               {active === "preface" && (
-                // 원본 발간사 PDF를 그대로 보존 — WEBP로 변환해 이미지로 표시.
-                <img
-                  src="/assets/history/preface.webp"
-                  alt="발간사 · 남서울평촌교회 담임목사 방상웅"
-                  loading="lazy"
-                  className="mx-auto w-full max-w-2xl rounded-xl bg-card object-contain shadow-premium"
-                />
+                // 원본 발간사 PDF를 그대로 보존 — WEBP로 변환해 외부 스토리지(R2)에서 로드.
+                // 경로는 data/history.json 의 docImages.preface 값을 사용.
+                history.docImages?.preface ? (
+                  <img
+                    src={history.docImages.preface}
+                    alt="발간사 · 남서울평촌교회 담임목사 방상웅"
+                    loading="lazy"
+                    className="mx-auto w-full max-w-2xl rounded-xl bg-card object-contain shadow-premium"
+                  />
+                ) : (
+                  <p className="typo-ko text-sm text-muted-foreground">발간사 이미지를 준비 중입니다.</p>
+                )
               )}
 
               {active === "creed" && (
                 <SectionShell en="Apostles' Creed" title="사도신경">
-                  <DocImage src={DOC_IMAGES.creed} alt="사도신경" />
+                  <DocImage src={history.docImages?.creed} alt="사도신경" />
                   <blockquote className="typo-ko typo-ko-body rounded-lg border-l-4 border-accent bg-muted/40 p-5 text-[15px] leading-loose text-foreground/90">
                     {APOSTLES_CREED}
                   </blockquote>
@@ -223,7 +223,7 @@ export function GalleryPage() {
 
               {active === "lords-prayer" && (
                 <SectionShell en="The Lord's Prayer" title="주기도문">
-                  <DocImage src={DOC_IMAGES["lords-prayer"]} alt="주기도문" />
+                  <DocImage src={history.docImages?.["lords-prayer"]} alt="주기도문" />
                   <blockquote className="typo-ko typo-ko-body rounded-lg border-l-4 border-accent bg-muted/40 p-5 text-[15px] leading-loose text-foreground/90">
                     {LORDS_PRAYER}
                   </blockquote>
@@ -232,7 +232,7 @@ export function GalleryPage() {
 
               {active === "commandments" && (
                 <SectionShell en="Ten Commandments" title="십계명">
-                  <DocImage src={DOC_IMAGES.commandments} alt="십계명" />
+                  <DocImage src={history.docImages?.commandments} alt="십계명" />
                   <ol className="grid gap-2.5">
                     {COMMANDMENTS.map((text, idx) => (
                       <li key={idx} className="flex items-start gap-3 rounded-lg border bg-card p-3">
