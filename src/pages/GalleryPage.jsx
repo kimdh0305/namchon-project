@@ -114,8 +114,8 @@ export function GalleryPage() {
           <div className="pointer-events-none absolute -right-24 -top-24 h-64 w-64 rounded-full bg-secondary/25 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 left-20 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
           <Badge variant="secondary" className="txt-en border-transparent bg-secondary/20 text-primary-foreground">History</Badge>
-          <h1 className="typo-ko typo-ko-title mt-5 font-serif text-3xl font-semibold sm:text-5xl">제작 스토리</h1>
-          <p className="typo-ko typo-ko-body mt-4 max-w-3xl text-sm text-primary-foreground/80 sm:text-base">발간사와 신앙의 고백, 그리고 손글씨 성경이 완성되기까지의 과정을 한곳에 모았습니다.</p>
+          <h1 className="typo-ko typo-ko-title mt-5 font-serif text-3xl font-semibold sm:text-5xl">성경이어쓰기 이야기</h1>
+          <p className="typo-ko typo-ko-body mt-4 max-w-3xl text-sm text-primary-foreground/80 sm:text-base">전교인 필사성경을 만들어가는 은혜의 과정을 한 곳에 모았습니다.</p>
         </section>
 
         <div className="grid gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">

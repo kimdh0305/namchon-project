@@ -68,8 +68,8 @@ export function LandingPage() {
           <div className="pointer-events-none absolute -right-20 -top-20 h-60 w-60 rounded-full bg-secondary/25 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 left-24 h-56 w-56 rounded-full bg-accent/20 blur-3xl" />
           <Badge variant="secondary" className="txt-en border-transparent bg-secondary/20 text-primary-foreground">Commemorative Bible Archive</Badge>
-          <h1 className="typo-ko typo-ko-title mt-5 max-w-3xl font-serif text-3xl font-semibold sm:text-5xl">남서울평촌교회 성경 전시관</h1>
-          <p className="typo-ko typo-ko-body mt-4 max-w-2xl pl-1.5 text-sm text-primary-foreground/80 sm:text-base" style={{ lineHeight: 1.95 }}>손으로 기록된 성경의 물성을 디지털로 온전히 전달하는 아카이브입니다. 종이의 흐름, 잉크의 결, 공동체의 시간을 한 화면에서 탐색할 수 있습니다.</p>
+          <h1 className="typo-ko typo-ko-title mt-5 max-w-3xl font-serif text-3xl font-semibold sm:text-5xl">남서울평촌교회 필사성경 전시관</h1>
+          <p className="typo-ko typo-ko-body mt-4 max-w-2xl pl-1.5 text-sm text-primary-foreground/80 sm:text-base" style={{ lineHeight: 1.95 }}>하나님의 말씀을 필사하고 함께 모아 성경을 만들었습니다. 남서울평촌교회의 소중한 신앙 유산으로 보존합니다. 하나님께서 우리 교회에 베푸신 은혜와 믿음의 고백이 담겼습니다. 손으로 기록된 성경의 물성을 디지털로 온전히 전달하는 아카이브입니다.</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild className="bg-secondary text-primary shadow-lift transition hover:-translate-y-0.5 hover:bg-secondary/80">
               <Link to="/reader/genesis">성경책 보기 <ArrowRight className="ml-2 h-4 w-4" /></Link>
@@ -81,21 +81,24 @@ export function LandingPage() {
         </section>
 
         <Card className="border-0">
-          <CardHeader className="sm:px-10">
-            <Badge variant="outline" className="w-fit">발간사</Badge>
-            <CardTitle className="typo-ko typo-ko-title font-serif">기록을 보존하고, 다음 세대로 전합니다.</CardTitle>
-            <CardDescription className="typo-ko typo-ko-body" style={{ lineHeight: 1.95 }}>성도들의 손끝에서 완성된 성경 필사를 책의 물성 그대로 경험할 수 있도록 디지털 아카이브로 정리했습니다.</CardDescription>
-          </CardHeader>
+          <CardContent className="flex flex-wrap items-center justify-between gap-4 p-6 sm:px-10">
+            <div className="grid gap-1.5">
+              <Badge variant="outline" className="w-fit">발간사</Badge>
+              <CardTitle className="typo-ko typo-ko-title font-serif">퍼즐 한 조각은 작아 보여도 소중합니다.</CardTitle>
+              <CardDescription className="typo-ko typo-ko-body" style={{ lineHeight: 1.95 }}>온 교우가 함께 참여한 성경 이어쓰기를 통해 또 하나의 아름다운 믿음의 발자취를 남기게 되었습니다.</CardDescription>
+            </div>
+            <Button asChild variant="secondary"><Link to="/gallery">발간사 전문보기</Link></Button>
+          </CardContent>
         </Card>
 
         <Card className="border-0">
           <CardHeader className="sm:px-10">
             <div className="txt-en flex items-center gap-2 text-sm text-muted-foreground"><BookOpenText className="h-4 w-4" /> Bible Collection</div>
-            <CardTitle className="typo-ko typo-ko-title font-serif">66권 전권 소장본</CardTitle>
+            <CardTitle className="typo-ko typo-ko-title font-serif">성경 66권 전권 필사본</CardTitle>
           </CardHeader>
 
           <CardContent className="grid gap-6 sm:px-10">
-            <p className="typo-ko typo-ko-body text-sm text-muted-foreground">구약·신약 전 권을 전시 중입니다. 위 버튼으로 구약/신약만 골라 볼 수도 있어요.</p>
+            <p className="typo-ko typo-ko-body text-sm text-muted-foreground">필사성경 전권을 전시 중입니다. 각 권을 클릭한 후, 필사자를 검색하여 볼 수도 있어요.</p>
 
             <div className="-mt-3 grid grid-cols-2 gap-2 sm:max-w-sm">
               <Button
@@ -143,10 +146,11 @@ export function LandingPage() {
         <Card className="border-0">
           <CardContent className="flex flex-wrap items-center justify-between gap-3 p-6 sm:px-10">
             <div>
-              <p className="txt-en flex items-center gap-2 text-sm text-muted-foreground"><Sparkles className="h-4 w-4" /> Making Story</p>
-              <h2 className="typo-ko typo-ko-title mt-1 font-serif text-xl font-semibold">제작 스토리 보기</h2>
+              <p className="txt-en flex items-center gap-2 text-sm text-muted-foreground"><Sparkles className="h-4 w-4" /> History</p>
+              <h2 className="typo-ko typo-ko-title mt-1 font-serif text-xl font-semibold">성경이어쓰기 이야기</h2>
+              <p className="typo-ko typo-ko-body mt-1.5 text-sm text-muted-foreground">전교인 필사성경을 만들어가는 은혜의 과정을 한 곳에 모았습니다.</p>
             </div>
-            <Button asChild variant="secondary"><Link to="/gallery">이동하기</Link></Button>
+            <Button asChild variant="secondary"><Link to="/gallery">제작기록 보기</Link></Button>
           </CardContent>
         </Card>
       </main>
