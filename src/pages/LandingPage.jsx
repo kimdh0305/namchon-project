@@ -28,7 +28,7 @@ function BookGrid({ books }) {
           <img
             src={thumbnailUrl(book)}
             alt={`${book.title_ko} 표지`}
-            className="aspect-[1042/1573] w-full rounded-xl object-cover"
+            className="aspect-[3/4] w-full rounded-xl object-cover"
             loading="lazy"
           />
           <div className="mt-1.5 text-center">
