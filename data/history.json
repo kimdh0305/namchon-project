@@ -1,4 +1,10 @@
 {
+  "docImages": {
+    "preface": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/preface.webp",
+    "creed": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/apostles-creed.webp",
+    "lords-prayer": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/lords-prayer.webp",
+    "commandments": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/ten-commandments.webp"
+  },
   "participants": [
     {
       "team": "필사",
