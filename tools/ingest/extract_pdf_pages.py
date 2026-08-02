@@ -164,44 +164,73 @@ def rewrite_manifest_page_urls(manifest: dict) -> dict:
     }
 
 
+def process_pdf(pdf_path: Path, book_id: str, args) -> None:
+    book_pages_dir = args.assets_root / book_id
+    
+    if not args.only_json:
+        total = convert_pdf_to_webp_pages(pdf_path, book_pages_dir, args.quality, args.dpi)
+    
+    pdfinfo_total = get_total_pages(pdf_path)
+    
+    if not args.only_json:
+        if total != pdfinfo_total:
+            raise RuntimeError(f"Mismatch in extracted pages ({total}) vs pdfinfo ({pdfinfo_total}).")
+        
+        cover_dir = pdf_path.parent
+        cover_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(book_pages_dir / "0001.webp", cover_dir / f"{book_id}_cover.webp")
+        gallery_dir = Path("assets/gallery")
+        gallery_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(book_pages_dir / "0001.webp", gallery_dir / "g-001.webp")
+        print(f"Extracted {pdfinfo_total} pages to {book_pages_dir}")
+
+    if args.manifest_root:
+        args.manifest_root.mkdir(parents=True, exist_ok=True)
+        manifest = build_manifest(book_id, book_pages_dir, pdfinfo_total, args.page_window)
+        manifest_path = args.manifest_root / f"{book_id}.json"
+        manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        print(f"Wrote manifest: {manifest_path}")
+
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pdf", required=True, type=Path)
-    parser.add_argument("--book-id", required=True)
-    parser.add_argument("--assets-root", type=Path, default=Path("assets/pages"))
-    parser.add_argument("--manifest-root", type=Path, default=Path("data/manifests"))
+    parser.add_argument("--pdf", required=True, type=Path, help="Path to PDF file or directory")
+    parser.add_argument("--book-id", type=str, help="Required if processing a single file without a numbered prefix")
+    parser.add_argument("--assets-root", type=Path, default=Path("C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라"))
+    parser.add_argument("--manifest-root", type=Path, default=Path("C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라\\json"))
     parser.add_argument("--quality", type=int, default=82)
     parser.add_argument("--dpi", type=int, default=170)
     parser.add_argument("--page-window", type=int, default=3)
+    parser.add_argument("--only-json", action="store_true", help="Only generate manifest JSON, skip image extraction")
     args = parser.parse_args()
 
     if not args.pdf.exists():
-        raise FileNotFoundError(f"PDF not found: {args.pdf}")
+        raise FileNotFoundError(f"PDF path not found: {args.pdf}")
 
-    book_pages_dir = args.assets_root / args.book_id
-    total = convert_pdf_to_webp_pages(args.pdf, book_pages_dir, args.quality, args.dpi)
-
-    # Sanity-check total pages with pdfinfo output.
-    pdfinfo_total = get_total_pages(args.pdf)
-    if total != pdfinfo_total:
-        raise RuntimeError(f"Mismatch in extracted pages ({total}) vs pdfinfo ({pdfinfo_total}).")
-
-    cover_dir = Path("assets/covers")
-    cover_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(book_pages_dir / "0001.webp", cover_dir / f"{args.book_id}.webp")
-    gallery_dir = Path("assets/gallery")
-    gallery_dir.mkdir(parents=True, exist_ok=True)
-    shutil.copyfile(book_pages_dir / "0001.webp", gallery_dir / "g-001.webp")
-
-    args.manifest_root.mkdir(parents=True, exist_ok=True)
-    manifest = build_manifest(args.book_id, book_pages_dir, total, args.page_window)
-    manifest_path = args.manifest_root / f"{args.book_id}.json"
-    manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-
-    print(f"Extracted {total} pages to {book_pages_dir}")
-    print(f"Wrote manifest: {manifest_path}")
-
+    if args.pdf.is_dir():
+        import re
+        for pdf_file in args.pdf.glob("*.pdf"):
+            match = re.search(r'_(\d+)', pdf_file.stem)
+            if match:
+                order_num = int(match.group(1))
+                if 1 <= order_num <= 66:
+                    book_id = CANONICAL_BOOK_IDS[order_num - 1]
+                    print(f"Processing {pdf_file.name} -> {book_id}...")
+                    process_pdf(pdf_file, book_id, args)
+                else:
+                    print(f"Skipping {pdf_file.name}: index out of bounds")
+    else:
+        if not args.book_id:
+            import re
+            match = re.search(r'_(\d+)', args.pdf.stem)
+            if match:
+                order_num = int(match.group(1))
+                if 1 <= order_num <= 66:
+                    args.book_id = CANONICAL_BOOK_IDS[order_num - 1]
+            if not args.book_id:
+                parser.error("--book-id is required for single files unless the filename contains the order number (e.g., _01)")
+        process_pdf(args.pdf, args.book_id, args)
 
 if __name__ == "__main__":
     main()
+
 
