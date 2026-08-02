@@ -7,6 +7,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchJson } from "@/lib/data";
 
+// 랜딩 썸네일은 리더용 cover와 분리 — R2 thumbnail 폴더의 전용 파일 사용.
+// 파일명 규칙: thumbnail_<두자리 order>_<book_id>.webp  (예: thumbnail_44_acts.webp)
+const THUMBNAIL_BASE = "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/thumbnail";
+
+function thumbnailUrl(book) {
+  const n = String(book.order ?? "").padStart(2, "0");
+  return `${THUMBNAIL_BASE}/thumbnail_${n}_${book.book_id}.webp`;
+}
+
 function BookGrid({ books }) {
   return (
     <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7">
@@ -17,9 +26,9 @@ function BookGrid({ books }) {
           className="group overflow-hidden rounded-lg bg-card p-1.5 transition duration-200 hover:-translate-y-0.5 hover:shadow-lift"
         >
           <img
-            src={book.cover_image}
-            alt={`${book.title_ko} cover`}
-            className="aspect-[3/4] w-full rounded-xl object-cover"
+            src={thumbnailUrl(book)}
+            alt={`${book.title_ko} 표지`}
+            className="aspect-[1042/1573] w-full rounded-xl object-cover"
             loading="lazy"
           />
           <div className="mt-1.5 text-center">
