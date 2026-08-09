@@ -8,31 +8,59 @@
   "participants": [
     {
       "team": "고문",
-      "members": ["전영운"]
+      "members": [
+        "전영운"
+      ]
     },
     {
       "team": "기획",
-      "members": ["여상현"]
+      "members": [
+        "여상현"
+      ]
     },
     {
       "team": "디자인",
-      "members": ["김다해", "오샛별"]
+      "members": [
+        "김다해",
+        "오샛별"
+      ]
     },
     {
       "team": "디지털화",
-      "members": ["유정화", "정수경", "채진범"]
+      "members": [
+        "유정화",
+        "정수경",
+        "채진범"
+      ]
     },
     {
       "team": "운영",
-      "members": ["김경혜", "김신화", "남궁혜영", "이명선", "이준희", "정희경", "지승아"]
+      "members": [
+        "김경혜",
+        "김신화",
+        "남궁혜영",
+        "이명선",
+        "이준희",
+        "정희경",
+        "지승아"
+      ]
     },
     {
       "team": "편집",
-      "members": ["김미선", "민준기", "이지수", "이혜신", "전영희", "조은선"]
+      "members": [
+        "김미선",
+        "민준기",
+        "이지수",
+        "이혜신",
+        "전영희",
+        "조은선"
+      ]
     },
     {
       "team": "회계",
-      "members": ["정혜미"]
+      "members": [
+        "정혜미"
+      ]
     }
   ],
   "reviews": [
@@ -88,25 +116,82 @@
   "minutes": [
     {
       "id": "mn-001",
-      "title": "1차 기획 회의",
-      "date": "2025-03-10",
-      "summary": "전시관 방향과 필사 범위, 전체 일정을 확정했습니다.",
-      "pdf": "",
-      "image": "/assets/history/note_260531.jfif"
+      "title": "성경 필사 TF 회의록 1",
+      "date": "2025-12-28",
+      "summary": "1차 성경 필사 TF 회의록 정리입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_1.webp"
+      ]
     },
     {
       "id": "mn-002",
-      "title": "필사 지침 회의",
-      "date": "2025-04-14",
-      "summary": "용지·필기구 규격과 교정 절차, 제출 방식을 합의했습니다.",
-      "pdf": ""
+      "title": "성경 필사 TF 회의록 2",
+      "date": "2026-01-04",
+      "summary": "2차 전교인 성경 이어쓰기 TF 회의 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_2_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_2_02.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_2_03.webp"
+      ]
     },
     {
       "id": "mn-003",
-      "title": "디지털화 점검 회의",
-      "date": "2025-09-05",
-      "summary": "스캔 해상도와 웹 전시 사양, 공개 일정을 점검했습니다.",
-      "pdf": ""
+      "title": "성경 필사 TF 회의록 3",
+      "date": "2026-01-25",
+      "summary": "3차 회의록 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_3_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_3_02.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_3_03.webp"
+      ]
+    },
+    {
+      "id": "mn-004",
+      "title": "성경 필사 TF 회의록 4",
+      "date": "2026-02-22",
+      "summary": "4차 회의록 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_4.webp"
+      ]
+    },
+    {
+      "id": "mn-005",
+      "title": "성경 필사 TF 회의록 5",
+      "date": "2026-03-29",
+      "summary": "1차 평가회 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_5_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_5_02.webp"
+      ]
+    },
+    {
+      "id": "mn-006",
+      "title": "성경 필사 TF 회의록 6",
+      "date": "2026-04-26",
+      "summary": "회의록 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_6_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_6_02.webp"
+      ]
+    },
+    {
+      "id": "mn-007",
+      "title": "성경 필사 TF 회의록 7",
+      "date": "2026-05-31",
+      "summary": "회의록 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_7_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_7_02.webp"
+      ]
+    },
+    {
+      "id": "mn-008",
+      "title": "성경 필사 TF 회의록 8",
+      "date": "2026-06-28",
+      "summary": "회의록 내용입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_8.webp"
+      ]
     }
   ]
 }

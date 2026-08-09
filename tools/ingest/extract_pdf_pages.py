@@ -191,6 +191,47 @@ def process_pdf(pdf_path: Path, book_id: str, args) -> None:
         manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
         print(f"Wrote manifest: {manifest_path}")
 
+def process_notes(input_dir: Path, output_dir: Path, quality: int, dpi: int) -> None:
+    output_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        import fitz
+    except ImportError:
+        print("PyMuPDF (fitz) is not installed. Please install it with 'pip install PyMuPDF'")
+        return
+
+    for file_path in input_dir.iterdir():
+        if file_path.is_file():
+            if file_path.suffix.lower() == ".pdf":
+                print(f"Processing PDF: {file_path.name}")
+                try:
+                    doc = fitz.open(file_path)
+                    total_pages = len(doc)
+                    if total_pages == 0:
+                        print(f"  No pages found in {file_path.name}")
+                        continue
+                        
+                    for i in range(total_pages):
+                        page = doc.load_page(i)
+                        zoom = dpi / 72.0
+                        mat = fitz.Matrix(zoom, zoom)
+                        pix = page.get_pixmap(matrix=mat)
+                        
+                        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+                        webp_name = f"{file_path.stem}_{i+1:02d}.webp" if total_pages > 1 else f"{file_path.stem}.webp"
+                        webp_path = output_dir / webp_name
+                        img.save(webp_path, "WEBP", quality=quality, method=6)
+                        print(f"  Saved {webp_name}")
+                except Exception as e:
+                    print(f"  Failed to process {file_path.name}: {e}")
+
+            elif file_path.suffix.lower() in [".jpg", ".jpeg", ".png"]:
+                print(f"Processing Image: {file_path.name}")
+                with Image.open(file_path) as img:
+                    rgb = img.convert("RGB")
+                    webp_path = output_dir / f"{file_path.stem}.webp"
+                    rgb.save(webp_path, "WEBP", quality=quality, method=6)
+                    print(f"  Saved {webp_path.name}")
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--pdf", required=True, type=Path, help="Path to PDF file or directory")
@@ -201,10 +242,19 @@ def main() -> None:
     parser.add_argument("--dpi", type=int, default=170)
     parser.add_argument("--page-window", type=int, default=3)
     parser.add_argument("--only-json", action="store_true", help="Only generate manifest JSON, skip image extraction")
+    parser.add_argument("--mode", type=str, choices=["bible", "notes"], default="bible", help="Mode of operation")
+    parser.add_argument("--output-dir", type=Path, help="Output directory for notes mode (defaults to input dir)")
     args = parser.parse_args()
 
     if not args.pdf.exists():
-        raise FileNotFoundError(f"PDF path not found: {args.pdf}")
+        raise FileNotFoundError(f"Input path not found: {args.pdf}")
+
+    if args.mode == "notes":
+        if not args.pdf.is_dir():
+            parser.error("--pdf must be a directory for notes mode")
+        out_dir = args.output_dir if args.output_dir else args.pdf
+        process_notes(args.pdf, out_dir, args.quality, args.dpi)
+        return
 
     if args.pdf.is_dir():
         import re

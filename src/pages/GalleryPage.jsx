@@ -339,6 +339,18 @@ export function GalleryPage() {
                         src={selectedMinute.pdf}
                         className="h-[60vh] w-full"
                       />
+                    ) : selectedMinute?.images?.length > 0 ? (
+                      <div className="grid gap-0">
+                        {selectedMinute.images.map((img, i) => (
+                          <img
+                            key={i}
+                            src={img}
+                            alt={`${selectedMinute.title} - ${i + 1}쪽`}
+                            loading="lazy"
+                            className="mx-auto w-full bg-card object-contain"
+                          />
+                        ))}
+                      </div>
                     ) : selectedMinute?.image ? (
                       <img
                         src={selectedMinute.image}
@@ -350,7 +362,7 @@ export function GalleryPage() {
                       <div className="flex h-[42vh] flex-col items-center justify-center gap-3 p-6 text-center">
                         <NotebookPen className="h-8 w-8 text-muted-foreground" />
                         <p className="typo-ko text-sm font-medium text-foreground">{selectedMinute ? selectedMinute.title : "회의록"}</p>
-                        <p className="typo-ko text-sm text-muted-foreground">회의록 자료가 준비되면 이곳에 표시됩니다.<br />(data/history.json의 해당 항목 <code className="text-xs">pdf</code> 또는 <code className="text-xs">image</code> 경로를 채워주세요.)</p>
+                        <p className="typo-ko text-sm text-muted-foreground">회의록 자료가 준비되면 이곳에 표시됩니다.<br />(data/history.json의 해당 항목 <code className="text-xs">pdf</code> 또는 <code className="text-xs">images</code> 경로를 채워주세요.)</p>
                       </div>
                     )}
                   </div>
