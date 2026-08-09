@@ -48,11 +48,27 @@ function DocImage({ src, alt }) {
   );
 }
 
+// 그림을 그린 무지개학교 유치부 친구들 (이미지 아래 · 본문 위에 표시)
+const DOC_CREDITS = {
+  creed: "무지개학교 유치부 친구들(김도엽, 박지온, 조이재, 채영원, 양서하)이 그린 사도신경",
+  "lords-prayer": "무지개학교 유치부 친구들(금시우, 하채빈, 김민지, 김유하)이 그린 주기도문",
+  commandments: "무지개학교 유치부 친구들(위하윤, 김해준, 전서진, 김예나, 조은빛)이 그린 십계명"
+};
+
+function DocCredit({ text }) {
+  if (!text) return null;
+  return (
+    <p className="typo-ko rounded-md border border-border bg-muted/50 px-4 py-2.5 text-center text-sm font-medium text-foreground/80">
+      {text}
+    </p>
+  );
+}
+
 const SECTIONS = [
   { id: "preface", title: "발간사", en: "Preface", icon: BookText },
-  { id: "creed", title: "사도신경", en: "Apostles' Creed", icon: ScrollText },
-  { id: "lords-prayer", title: "주기도문", en: "The Lord's Prayer", icon: ScrollText },
-  { id: "commandments", title: "십계명", en: "Ten Commandments", icon: ScrollText },
+  { id: "creed", title: "사도신경(무지개학교 유치부 그림)", en: "Apostles' Creed", icon: ScrollText },
+  { id: "lords-prayer", title: "주기도문(무지개학교 유치부 그림)", en: "The Lord's Prayer", icon: ScrollText },
+  { id: "commandments", title: "십계명(무지개학교 유치부 그림)", en: "Ten Commandments", icon: ScrollText },
   {
     id: "process",
     title: "제작 과정",
@@ -215,6 +231,7 @@ export function GalleryPage() {
               {active === "creed" && (
                 <SectionShell en="Apostles' Creed" title="사도신경">
                   <DocImage src={history.docImages?.creed} alt="사도신경" />
+                  <DocCredit text={DOC_CREDITS.creed} />
                   <blockquote className="typo-ko typo-ko-body rounded-lg border-l-4 border-accent bg-muted/40 p-5 text-[15px] leading-loose text-foreground/90">
                     {APOSTLES_CREED}
                   </blockquote>
@@ -224,6 +241,7 @@ export function GalleryPage() {
               {active === "lords-prayer" && (
                 <SectionShell en="The Lord's Prayer" title="주기도문">
                   <DocImage src={history.docImages?.["lords-prayer"]} alt="주기도문" />
+                  <DocCredit text={DOC_CREDITS["lords-prayer"]} />
                   <blockquote className="typo-ko typo-ko-body rounded-lg border-l-4 border-accent bg-muted/40 p-5 text-[15px] leading-loose text-foreground/90">
                     {LORDS_PRAYER}
                   </blockquote>
@@ -233,6 +251,7 @@ export function GalleryPage() {
               {active === "commandments" && (
                 <SectionShell en="Ten Commandments" title="십계명">
                   <DocImage src={history.docImages?.commandments} alt="십계명" />
+                  <DocCredit text={DOC_CREDITS.commandments} />
                   <ol className="grid gap-2.5">
                     {COMMANDMENTS.map((text, idx) => (
                       <li key={idx} className="flex items-start gap-3 rounded-lg border bg-card p-3">
@@ -265,6 +284,10 @@ export function GalleryPage() {
 
               {active === "participants" && (
                 <SectionShell en="Participants" title="참여자 명단">
+                  <div className="typo-ko typo-ko-body grid gap-1 rounded-lg border border-border bg-muted/40 p-4 text-sm text-foreground/90">
+                    <p>전체 참여 인원은 총 562명, 실제 필사자는 512명입니다.</p>
+                    <p>서포터즈는 장년 31명, 청년 2명, 유소년부 4명입니다.</p>
+                  </div>
                   <div className="grid gap-4">
                     {(history.participants || []).map((group) => (
                       <div key={group.team} className="rounded-lg border bg-card p-4">
