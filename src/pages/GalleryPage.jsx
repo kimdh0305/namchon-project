@@ -376,14 +376,11 @@ export function GalleryPage() {
                       <figure key={review.id} className="grid gap-3 rounded-lg border bg-card p-4 shadow-premium transition duration-200 hover:-translate-y-0.5 hover:shadow-lift">
                         <Quote className="h-5 w-5 text-accent" />
                         <blockquote className="typo-ko typo-ko-body text-[15px] leading-relaxed text-foreground/90">{review.message}</blockquote>
-                        <figcaption className="mt-1 flex items-center justify-between gap-2 border-t pt-3">
-                          <span className="typo-ko flex items-baseline gap-1.5">
-                            <span className="text-sm font-semibold text-foreground">{review.name}</span>
-                            {review.affiliation && (
-                              <span className="text-xs font-medium text-primary">{review.affiliation}</span>
-                            )}
-                          </span>
-                          <span className="typo-ko text-xs text-muted-foreground">{review.team} · {review.date}</span>
+                        <figcaption className="mt-1 flex items-baseline gap-1.5 border-t pt-3">
+                          <span className="typo-ko text-sm font-semibold text-foreground">{review.name}</span>
+                          {review.role && (
+                            <span className="typo-ko text-xs font-medium text-primary">{review.role}</span>
+                          )}
                         </figcaption>
                       </figure>
                     ))}
