@@ -1,4 +1,24 @@
 #!/usr/bin/env python3
+"""
+PDF 추출 및 변환 스크립트 (extract_pdf_pages.py)
+
+사용법 (Arguments):
+  --pdf             [필수] 변환할 PDF 파일 경로 또는 디렉토리 경로
+  --book-id         [선택] 단일 파일을 변환할 때 파일명에 번호 접두사(예: _66)가 없는 경우 필수 입력 (예: genesis, revelation)
+  --assets-root     [선택] WebP 이미지가 저장될 기본 디렉토리 경로
+                    (기본값: C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라)
+  --manifest-root   [선택] JSON 매니페스트 파일이 저장될 디렉토리 경로
+                    (기본값: C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라\\json)
+  --quality         [선택] 변환될 WebP 이미지의 품질 (기본값: 82)
+  --dpi             [선택] 추출할 이미지의 해상도 DPI (기본값: 170)
+  --page-window     [선택] JSON 매니페스트에 포함될 페이지 윈도우 크기 (기본값: 3)
+  --only-json       [선택] 이미지 추출 과정을 건너뛰고 JSON 매니페스트만 생성하는 플래그
+  --mode            [선택] 실행 모드. "bible"(기본) 또는 "notes" 선택 가능
+  --output-dir      [선택] "notes" 모드일 때 사용할 출력 디렉토리 (기본값은 입력 디렉토리와 동일)
+
+실행 예시:
+  python tools/ingest/extract_pdf_pages.py --pdf "C:\path\to\file_66.pdf"
+"""
 import argparse
 import json
 import shutil
@@ -87,41 +107,35 @@ def run(cmd: list[str]) -> None:
 
 
 def get_total_pages(pdf_path: Path) -> int:
-    out = subprocess.check_output(["pdfinfo", str(pdf_path)], text=True)
-    for line in out.splitlines():
-        if line.startswith("Pages:"):
-            return int(line.split(":", 1)[1].strip())
-    raise RuntimeError("Could not parse page count from pdfinfo output.")
+    import fitz
+    doc = fitz.open(pdf_path)
+    return len(doc)
 
 
 def convert_pdf_to_webp_pages(pdf_path: Path, output_dir: Path, quality: int, dpi: int) -> int:
     output_dir.mkdir(parents=True, exist_ok=True)
-    tmp_png_dir = output_dir / ".tmp_png"
-    if tmp_png_dir.exists():
-        shutil.rmtree(tmp_png_dir)
-    tmp_png_dir.mkdir(parents=True, exist_ok=True)
-
-    prefix = str(tmp_png_dir / "page")
-    run(["pdftoppm", "-r", str(dpi), "-png", str(pdf_path), prefix])
-
-    png_files = sorted(tmp_png_dir.glob("page-*.png"))
-    if not png_files:
-        raise RuntimeError("No pages extracted from PDF.")
-
-    for i, png in enumerate(png_files, start=1):
-        with Image.open(png) as img:
-            rgb = img.convert("RGB")
-            webp_path = output_dir / f"{i:04d}.webp"
-            rgb.save(webp_path, "WEBP", quality=quality, method=6)
-
-    shutil.rmtree(tmp_png_dir)
-    return len(png_files)
+    import fitz
+    from PIL import Image
+    
+    doc = fitz.open(pdf_path)
+    total_pages = len(doc)
+    for i in range(total_pages):
+        page = doc.load_page(i)
+        zoom = dpi / 72.0
+        mat = fitz.Matrix(zoom, zoom)
+        pix = page.get_pixmap(matrix=mat)
+        
+        img = Image.frombytes("RGB", [pix.width, pix.height], pix.samples)
+        webp_path = output_dir / f"{(i+1):04d}.webp"
+        img.save(webp_path, "WEBP", quality=quality, method=6)
+        
+    return total_pages
 
 
 def build_page_image_url(book_id: str, page: int) -> str:
     order = BOOK_ID_TO_ORDER.get(book_id)
     if order is None:
-        raise ValueError(f"Unknown canonical book_id: {book_id}")
+        return f"{R2_PAGES_BASE_URL}/{book_id}/{page:04d}.webp"
     return f"{R2_PAGES_BASE_URL}/book-{order:02d}/{page:04d}.webp"
 
 
@@ -277,7 +291,7 @@ def main() -> None:
                 if 1 <= order_num <= 66:
                     args.book_id = CANONICAL_BOOK_IDS[order_num - 1]
             if not args.book_id:
-                parser.error("--book-id is required for single files unless the filename contains the order number (e.g., _01)")
+                args.book_id = args.pdf.stem
         process_pdf(args.pdf, args.book_id, args)
 
 if __name__ == "__main__":

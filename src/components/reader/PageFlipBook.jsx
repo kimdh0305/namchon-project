@@ -3,7 +3,7 @@ import { PageFlip } from "page-flip";
 
 function createPageElement(pageData, pageNum) {
   const page = document.createElement("div");
-  page.className = "page";
+  page.className = pageNum === 0 ? "page cover-page" : "page";
 
   const img = document.createElement("img");
   img.alt = `Page ${pageNum}`;

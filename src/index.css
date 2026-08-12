@@ -94,7 +94,7 @@ body {
 #book .page {
   width: 100%;
   height: 100%;
-  background: #fffef8;
+  background: #ffffff;
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
   display: grid;
   place-items: center;
@@ -107,7 +107,12 @@ body {
   object-fit: contain;
   user-select: none;
   pointer-events: none;
-  background: #fffef8;
+  background: #ffffff;
+}
+
+#book .cover-page img {
+  /* 사용자의 요청에 따라 커버를 왼쪽으로 시프트하여 정렬 맞춤 */
+  object-position: left center;
 }
 
 .page-stage {
