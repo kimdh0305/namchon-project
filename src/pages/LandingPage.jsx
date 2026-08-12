@@ -28,7 +28,7 @@ function BookGrid({ books }) {
           <img
             src={thumbnailUrl(book)}
             alt={`${book.title_ko} 표지`}
-            className="aspect-[3/4] w-full rounded-xl object-cover"
+            className="aspect-[3/4] w-full object-cover"
             loading="lazy"
           />
           <div className="mt-1.5 text-center">
@@ -84,8 +84,8 @@ export function LandingPage() {
           <CardContent className="flex flex-wrap items-center justify-between gap-4 p-6 sm:px-10">
             <div className="grid gap-1.5">
               <Badge variant="outline" className="w-fit">발간사</Badge>
-              <CardTitle className="typo-ko typo-ko-title font-serif">퍼즐 한 조각은 작아 보여도 소중합니다.</CardTitle>
-              <CardDescription className="typo-ko typo-ko-body" style={{ lineHeight: 1.95 }}>온 교우가 함께 참여한 성경 이어쓰기를 통해 또 하나의 아름다운 믿음의 발자취를 남기게 되었습니다.</CardDescription>
+              <CardTitle className="typo-ko typo-ko-title font-serif">퍼즐 한 조각은,<br />작아 보여도 소중합니다.</CardTitle>
+              <CardDescription className="typo-ko typo-ko-body" style={{ lineHeight: 1.95 }}>온 교우가 함께 참여한 성경 이어쓰기를 통해<br />또 하나의 아름다운 믿음의 발자취를 남기게 되었습니다.</CardDescription>
             </div>
             <Button asChild variant="secondary"><Link to="/gallery">발간사 전문보기</Link></Button>
           </CardContent>
