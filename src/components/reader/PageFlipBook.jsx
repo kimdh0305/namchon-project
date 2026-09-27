@@ -60,6 +60,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   const panRef = useRef({ x: 0, y: 0 });
   const [pan, setPan] = useState({ x: 0, y: 0 });
   const [isPanning, setIsPanning] = useState(false);
+  const [coverSize, setCoverSize] = useState(null);
 
   const zoomed = zoomScale > minZoom + 0.001;
 
@@ -86,7 +87,35 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
   }, [onPageChange]);
 
   useEffect(() => {
+    if (!coverImage) {
+      setCoverSize(null);
+      return undefined;
+    }
+
+    let alive = true;
+    const image = new Image();
+    image.onload = () => {
+      if (alive) {
+        setCoverSize({
+          src: coverImage,
+          width: image.naturalWidth,
+          height: image.naturalHeight
+        });
+      }
+    };
+    image.onerror = () => {
+      if (alive) setCoverSize({ src: coverImage, width: 0, height: 0 });
+    };
+    image.src = coverImage;
+
+    return () => {
+      alive = false;
+    };
+  }, [coverImage]);
+
+  useEffect(() => {
     if (!wrapperRef.current || !manifest?.pages?.length) return undefined;
+    if (coverImage && coverSize?.src !== coverImage) return undefined;
 
     // Create the page-flip mount node imperatively so React never reconciles the
     // DOM that page-flip mutates (prevents "removeChild: not a child" crashes).
@@ -123,14 +152,29 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     const toIndex = (contentPage) =>
       Math.min(totalPagesRef.current - 1, Math.max(0, contentPage - 1 + offset));
 
+    // Size the entire viewer from the cover WEBP. Fall back to the first
+    // content page only when a cover cannot provide intrinsic dimensions.
+    const firstPage = manifest.pages[0] || {};
+    const sourceWidth = coverSize?.width || Number(firstPage.width) || 1042;
+    const sourceHeight = coverSize?.height || Number(firstPage.height) || 1573;
+    // Preserve the viewer's previous 560px page width and grow its height to
+    // the scan ratio. Using 760px as the height anchor made the corrected book
+    // narrower and exposed more of the brown stage on both sides.
+    const pageWidth = 560;
+    const pageHeight = Math.round((pageWidth * sourceHeight) / sourceWidth);
+    const minPageWidth = 320;
+    const minPageHeight = Math.round((minPageWidth * sourceHeight) / sourceWidth);
+    const maxPageWidth = 1200;
+    const maxPageHeight = Math.round((maxPageWidth * sourceHeight) / sourceWidth);
+
     const pageFlip = new PageFlip(host, {
-      width: 560,
-      height: 760,
+      width: pageWidth,
+      height: pageHeight,
       size: "stretch",
-      minWidth: 320,
-      maxWidth: 1200,
-      minHeight: 420,
-      maxHeight: 1600,
+      minWidth: minPageWidth,
+      maxWidth: maxPageWidth,
+      minHeight: minPageHeight,
+      maxHeight: maxPageHeight,
       showCover: false,
       drawShadow: true,
       maxShadowOpacity: 0.5,
@@ -203,7 +247,7 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
       hostRef.current = null;
       if (host.parentNode) host.parentNode.removeChild(host);
     };
-  }, [manifest, coverImage]);
+  }, [manifest, coverImage, coverSize]);
 
   useEffect(() => {
     const host = hostRef.current;

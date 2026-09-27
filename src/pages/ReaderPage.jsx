@@ -272,7 +272,7 @@ export function ReaderPage() {
             </div>
           </div>
 
-          <div className="page-stage flex min-h-[64vh] items-center justify-center overflow-hidden p-3 lg:min-h-[78vh]" style={{ overscrollBehavior: "contain" }}>
+          <div className="page-stage flex items-center justify-center overflow-hidden p-3" style={{ overscrollBehavior: "contain" }}>
             {manifest ? (
               <PageFlipBook
                 key={bookId}

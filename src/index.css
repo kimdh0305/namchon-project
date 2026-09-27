@@ -88,7 +88,6 @@ body {
 
 #book {
   width: min(1160px, 100%);
-  height: min(900px, calc(100vh - 170px));
 }
 
 #book .page {
@@ -107,7 +106,7 @@ body {
   object-fit: contain;
   user-select: none;
   pointer-events: none;
-  background: #6f5c49;
+  background: #ffffff;
 }
 
 #book .cover-page img {
@@ -162,10 +161,4 @@ body {
 
 .writer-results-panel {
   max-height: 290px;
-}
-
-@media (max-width: 900px) {
-  #book {
-    height: min(620px, calc(100vh - 280px));
-  }
 }
