@@ -16622,19 +16622,6 @@
       },
       {
         "book_id": "revelation",
-        "page": 17,
-        "start_page": 17,
-        "end_page": 17,
-        "page_count": 1,
-        "assigned": "요한계시록 12장",
-        "needs_review": false,
-        "review_reasons": [],
-        "notes": [
-          "2026-09 분배표 및 이름 크롭 대조 반영"
-        ]
-      },
-      {
-        "book_id": "revelation",
         "page": 16,
         "start_page": 16,
         "end_page": 17,

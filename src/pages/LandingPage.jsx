@@ -9,7 +9,7 @@ import { fetchJson } from "@/lib/data";
 
 // 랜딩 썸네일은 리더용 cover와 분리 — R2 thumbnail 폴더의 전용 파일 사용.
 // 파일명 규칙: thumbnail_<두자리 order>_<book_id>.webp  (예: thumbnail_44_acts.webp)
-const THUMBNAIL_BASE = "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/thumbnail";
+const THUMBNAIL_BASE = "/assets/thumbnails";
 
 function thumbnailUrl(book) {
   const n = String(book.order ?? "").padStart(2, "0");
