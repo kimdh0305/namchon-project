@@ -1,6 +1,6 @@
 {
   "docImages": {
-    "preface": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/preface.webp",
+    "preface": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/preface.webp?v=2",
     "creed": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/apostles-creed.webp",
     "lords-prayer": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/lords-prayer.webp",
     "commandments": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/ten-commandments.webp"
@@ -19,9 +19,14 @@
       ]
     },
     {
+      "team": "웹개발",
+      "members": [
+        "김다해"
+      ]
+    },
+    {
       "team": "디자인",
       "members": [
-        "김다해",
         "오샛별"
       ]
     },
@@ -104,7 +109,7 @@
       "id": "rv-07",
       "name": "전민아",
       "role": "집사",
-      "message": "일상의 모든 것을 접어두고 잠잠히 하나님 말씀과 마주하는 귀한 시간이었습니다. 한자 한자 하나님 말씀을 필사하는 동안 마음에 평안이 찾아왔습니다."
+      "message": "일상의 모든 것을 접어두고 잠잠히 하나님 말씀과 마주하는 귀한 시간이었습니다. 한 자 한 자 하나님 말씀을 필사하는 동안 마음에 평안이 찾아왔습니다."
     },
     {
       "id": "rv-08",
@@ -192,7 +197,7 @@
       "id": "mn-006",
       "title": "성경 필사 TF 회의록 6",
       "date": "2026-04-26",
-      "summary": "회의록 내용입니다.",
+      "summary": "부서별 이어쓰기 현황 관련 회의록 내용입니다.",
       "images": [
         "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_6_01.webp",
         "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_6_02.webp"
@@ -202,7 +207,7 @@
       "id": "mn-007",
       "title": "성경 필사 TF 회의록 7",
       "date": "2026-05-31",
-      "summary": "회의록 내용입니다.",
+      "summary": "스캔 작업 및 e-book 제작 관련 회의록 내용입니다.",
       "images": [
         "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_7_01.webp",
         "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_7_02.webp"
@@ -211,11 +216,276 @@
     {
       "id": "mn-008",
       "title": "성경 필사 TF 회의록 8",
-      "date": "2026-06-28",
-      "summary": "회의록 내용입니다.",
+      "date": "2026-07-26",
+      "summary": "전교인 필사 마무리 및 편집 방향 점검 회의입니다.",
       "images": [
-        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_8.webp"
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_8_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_8_02.webp"
       ]
+    },
+    {
+      "id": "mn-009",
+      "title": "성경 필사 TF 회의록 9",
+      "date": "2026-09-05",
+      "summary": "봉헌식 준비 및 최종 회의입니다.",
+      "images": [
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_9_01.webp",
+        "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_9_02.webp"
+      ]
+    }
+  ],
+  "album": [
+    {
+      "id": "alb-01",
+      "title": "성경필사TF모임",
+      "date": "2025-12-28",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2025-12-28_성경필사TF모임_01.webp"
+    },
+    {
+      "id": "alb-02",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_01.webp"
+    },
+    {
+      "id": "alb-03",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_02.webp"
+    },
+    {
+      "id": "alb-04",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_03.webp"
+    },
+    {
+      "id": "alb-05",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_04.webp"
+    },
+    {
+      "id": "alb-06",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_05.webp"
+    },
+    {
+      "id": "alb-07",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_06.webp"
+    },
+    {
+      "id": "alb-08",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_07.webp"
+    },
+    {
+      "id": "alb-09",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_08.webp"
+    },
+    {
+      "id": "alb-10",
+      "title": "사랑회필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_사랑회필사_09.webp"
+    },
+    {
+      "id": "alb-11",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_01.webp"
+    },
+    {
+      "id": "alb-12",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_02.webp"
+    },
+    {
+      "id": "alb-13",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_03.webp"
+    },
+    {
+      "id": "alb-14",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_04.webp"
+    },
+    {
+      "id": "alb-15",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_05.webp"
+    },
+    {
+      "id": "alb-16",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_06.webp"
+    },
+    {
+      "id": "alb-17",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_07.webp"
+    },
+    {
+      "id": "alb-18",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_08.webp"
+    },
+    {
+      "id": "alb-19",
+      "title": "초등부필사",
+      "date": "2026-01",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-01_초등부필사_09.webp"
+    },
+    {
+      "id": "alb-20",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_01.webp"
+    },
+    {
+      "id": "alb-21",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_02.webp"
+    },
+    {
+      "id": "alb-22",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_03.webp"
+    },
+    {
+      "id": "alb-23",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_04.webp"
+    },
+    {
+      "id": "alb-24",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_05.webp"
+    },
+    {
+      "id": "alb-25",
+      "title": "청소년부필사",
+      "date": "2026-02",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-02_청소년부필사_06.webp"
+    },
+    {
+      "id": "alb-26",
+      "title": "성경필사TF모임",
+      "date": "2026-03-29",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-03-29_성경필사TF모임_01.webp"
+    },
+    {
+      "id": "alb-27",
+      "title": "성경필사TF모임",
+      "date": "2026-03-29",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-03-29_성경필사TF모임_02.webp"
+    },
+    {
+      "id": "alb-28",
+      "title": "성경필사TF모임",
+      "date": "2026-03-29",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-03-29_성경필사TF모임_03.webp"
+    },
+    {
+      "id": "alb-29",
+      "title": "유치부필사",
+      "date": "2026-06",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-06_유치부필사_01.webp"
+    },
+    {
+      "id": "alb-30",
+      "title": "유치부필사",
+      "date": "2026-06",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-06_유치부필사_02.webp"
+    },
+    {
+      "id": "alb-31",
+      "title": "유치부필사",
+      "date": "2026-06",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-06_유치부필사_03.webp"
+    },
+    {
+      "id": "alb-32",
+      "title": "유치부필사",
+      "date": "2026-06",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-06_유치부필사_04.webp"
+    },
+    {
+      "id": "alb-33",
+      "title": "유치부필사",
+      "date": "2026-06",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-06_유치부필사_05.webp"
+    },
+    {
+      "id": "alb-34",
+      "title": "성경필사TF모임",
+      "date": "2026-07-26",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-07-26_성경필사TF모임_01.webp"
+    },
+    {
+      "id": "alb-35",
+      "title": "성경필사TF모임",
+      "date": "2026-07-26",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-07-26_성경필사TF모임_02.webp"
+    },
+    {
+      "id": "alb-36",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_01.webp"
+    },
+    {
+      "id": "alb-37",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_02.webp"
+    },
+    {
+      "id": "alb-38",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_03.webp"
+    },
+    {
+      "id": "alb-39",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_04.webp"
+    },
+    {
+      "id": "alb-40",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_05.webp"
+    },
+    {
+      "id": "alb-41",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_06.webp"
+    },
+    {
+      "id": "alb-42",
+      "title": "성경필사TF모임",
+      "date": "2026-09-05",
+      "src": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/gallery/2026-09-05_성경필사TF모임_07.webp"
     }
   ]
 }

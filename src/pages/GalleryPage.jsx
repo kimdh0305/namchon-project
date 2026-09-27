@@ -8,7 +8,12 @@ import {
   MessageSquareQuote,
   ChevronDown,
   CalendarDays,
-  Quote
+  Quote,
+  Images,
+  ZoomIn,
+  X,
+  ChevronLeft,
+  ChevronRight
 } from "lucide-react";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Badge } from "@/components/ui/badge";
@@ -77,12 +82,13 @@ const SECTIONS = [
     children: [
       { id: "participants", title: "참여자 명단", en: "Participants", icon: Users },
       { id: "minutes", title: "회의록", en: "Meeting Minutes", icon: NotebookPen },
-      { id: "reviews", title: "필사자 후기", en: "Reflections", icon: MessageSquareQuote }
+      { id: "reviews", title: "필사자 후기", en: "Reflections", icon: MessageSquareQuote },
+      { id: "album", title: "제작 앨범", en: "Production Album", icon: Images }
     ]
   }
 ];
 
-const PROCESS_CHILD_IDS = ["participants", "minutes", "reviews"];
+const PROCESS_CHILD_IDS = ["participants", "minutes", "reviews", "album"];
 
 function SectionShell({ en, title, children }) {
   return (
@@ -96,18 +102,182 @@ function SectionShell({ en, title, children }) {
   );
 }
 
+function AlbumLightboxModal({ items, activeIndex, onClose, onPrev, onNext }) {
+  const currentItem = items[activeIndex];
+
+  useEffect(() => {
+    function handleKeyDown(e) {
+      if (e.key === "Escape") onClose();
+      else if (e.key === "ArrowLeft") onPrev();
+      else if (e.key === "ArrowRight") onNext();
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose, onPrev, onNext]);
+
+  if (!currentItem) return null;
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/85 p-3 sm:p-6 backdrop-blur-sm animate-in fade-in duration-200"
+      onClick={onClose}
+    >
+      <div
+        className="relative flex max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-900 text-white shadow-2xl"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* Header */}
+        <div className="flex items-center justify-between border-b border-white/10 px-4 py-3">
+          <div className="flex items-center gap-2 overflow-hidden">
+            <Badge variant="secondary" className="bg-primary/20 text-xs text-primary-foreground border-transparent shrink-0">
+              {activeIndex + 1} / {items.length}
+            </Badge>
+            <span className="typo-ko text-sm font-semibold truncate">
+              {currentItem.title}
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full p-1.5 text-zinc-400 hover:bg-white/10 hover:text-white transition shrink-0 ml-2"
+            aria-label="닫기"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Image Display */}
+        <div className="relative flex min-h-[250px] max-h-[70vh] items-center justify-center bg-black/60 p-2 sm:p-4">
+          <img
+            src={currentItem.src || currentItem.image}
+            alt={currentItem.title}
+            className="max-h-[66vh] w-auto max-w-full rounded-lg object-contain shadow-lg"
+          />
+
+          {items.length > 1 && (
+            <>
+              <button
+                type="button"
+                onClick={onPrev}
+                className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/50 p-2 text-white/80 hover:bg-black/80 hover:text-white transition shadow-md"
+                aria-label="이전 사진"
+              >
+                <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+              <button
+                type="button"
+                onClick={onNext}
+                className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 rounded-full border border-white/10 bg-black/50 p-2 text-white/80 hover:bg-black/80 hover:text-white transition shadow-md"
+                aria-label="다음 사진"
+              >
+                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+            </>
+          )}
+        </div>
+
+        {/* Footer info */}
+        {(currentItem.caption || currentItem.date) && (
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 border-t border-white/10 bg-zinc-950/80 px-4 py-3 text-xs sm:text-sm">
+            <p className="typo-ko text-zinc-300 leading-relaxed">{currentItem.caption || currentItem.title}</p>
+            {currentItem.date && (
+              <span className="flex shrink-0 items-center gap-1.5 text-zinc-400 text-xs">
+                <CalendarDays className="h-3.5 w-3.5" /> {currentItem.date}
+              </span>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const DEFAULT_ALBUM_ITEMS = [
+  {
+    id: "alb-01",
+    title: "성경 필사 TF 1차 모임",
+    caption: "기획 및 전교인 이어쓰기 준비 회의 현장",
+    date: "2025-12-28",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_1.webp"
+  },
+  {
+    id: "alb-02",
+    title: "필사성경 분량 배정 및 용지 준비",
+    caption: "각 부서 및 개인별 필사 용지 배정 현황",
+    date: "2026-01-04",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_2_01.webp"
+  },
+  {
+    id: "alb-03",
+    title: "유치부 사도신경 그림 필사",
+    caption: "무지개학교 유치부 어린이들의 사도신경 그림 필사 작품",
+    date: "2026-01-20",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/apostles-creed.webp"
+  },
+  {
+    id: "alb-04",
+    title: "유치부 주기도문 그림 필사",
+    caption: "무지개학교 유치부 어린이들의 주기도문 그림 필사 작품",
+    date: "2026-01-22",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/lords-prayer.webp"
+  },
+  {
+    id: "alb-05",
+    title: "유치부 십계명 그림 필사",
+    caption: "무지개학교 유치부 어린이들의 십계명 그림 필사 작품",
+    date: "2026-01-25",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/ten-commandments.webp"
+  },
+  {
+    id: "alb-06",
+    title: "부서별 이어쓰기 중간점검",
+    caption: "전교인 필사 진척 상황 집계 및 서포터즈 점검",
+    date: "2026-03-29",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_5_01.webp"
+  },
+  {
+    id: "alb-07",
+    title: "필사 원본 스캔 및 디지털화",
+    caption: "500여 명 성도의 손글씨 성경 100% 디지털 보존 작업",
+    date: "2026-05-31",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_7_01.webp"
+  },
+  {
+    id: "alb-08",
+    title: "e-book 및 웹 보존 시스템 구축",
+    caption: "인터랙티브 웹 뷰어 및 검색 시스템 완성",
+    date: "2026-07-26",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_8_01.webp"
+  },
+  {
+    id: "alb-09",
+    title: "봉헌식 준비 및 최종 검수",
+    caption: "전교인 필사성경 출간 및 웹 아카이브 최종 점검",
+    date: "2026-09-05",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/meeting_notes/meeting_notes_9_01.webp"
+  },
+  {
+    id: "alb-10",
+    title: "발간사 및 은혜의 기념",
+    caption: "남서울평촌교회 담임목사 방상웅 발간사",
+    date: "2026-09-20",
+    src: "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/preface.webp?v=2"
+  }
+];
+
 export function GalleryPage() {
-  const [history, setHistory] = useState({ participants: [], reviews: [], minutes: [] });
+  const [history, setHistory] = useState({ participants: [], reviews: [], minutes: [], album: [] });
   const [gallery, setGallery] = useState({ items: [] });
   const [active, setActive] = useState("preface");
   const [processOpen, setProcessOpen] = useState(true);
   const [activeMinute, setActiveMinute] = useState(null);
+  const [activeAlbumIndex, setActiveAlbumIndex] = useState(null);
 
   useEffect(() => {
-    fetchJson("/data/history.json")
+    fetchJson("/data/history.json", { cache: "no-cache" })
       .then((data) => setHistory(data || {}))
-      .catch(() => setHistory({ participants: [], reviews: [], minutes: [] }));
-    fetchJson("/data/gallery.json")
+      .catch(() => setHistory({ participants: [], reviews: [], minutes: [], album: [] }));
+    fetchJson("/data/gallery.json", { cache: "no-cache" })
       .then(setGallery)
       .catch(() => setGallery({ items: [] }));
   }, []);
@@ -118,10 +288,25 @@ export function GalleryPage() {
     [minutes, activeMinute]
   );
 
+  const albumItems = useMemo(() => {
+    if (Array.isArray(history.album) && history.album.length > 0) return history.album;
+    if (Array.isArray(gallery.items) && gallery.items.length > 0) return gallery.items;
+    if (Array.isArray(gallery) && gallery.length > 0) return gallery;
+    return DEFAULT_ALBUM_ITEMS;
+  }, [history.album, gallery]);
+
   function selectSection(id) {
     setActive(id);
     if (PROCESS_CHILD_IDS.includes(id) || id === "process") setProcessOpen(true);
   }
+
+  const handlePrevAlbum = () => {
+    setActiveAlbumIndex((prev) => (prev > 0 ? prev - 1 : albumItems.length - 1));
+  };
+
+  const handleNextAlbum = () => {
+    setActiveAlbumIndex((prev) => (prev < albumItems.length - 1 ? prev + 1 : 0));
+  };
 
   return (
     <SiteShell>
@@ -214,8 +399,6 @@ export function GalleryPage() {
           <Card>
             <CardContent className="p-6 lg:p-8">
               {active === "preface" && (
-                // 원본 발간사 PDF를 그대로 보존 — WEBP로 변환해 외부 스토리지(R2)에서 로드.
-                // 경로는 data/history.json 의 docImages.preface 값을 사용.
                 history.docImages?.preface ? (
                   <img
                     src={history.docImages.preface}
@@ -265,20 +448,53 @@ export function GalleryPage() {
 
               {active === "process" && (
                 <SectionShell en="Making Process" title="제작 과정">
-                  <p className="typo-ko typo-ko-body text-[15px] leading-relaxed text-foreground/90">스캔부터 웹 전시까지, 손글씨 성경을 디지털 보존물로 완성한 과정을 기록합니다. 왼쪽 목차에서 참여자 명단, 회의록, 필사자 후기를 살펴보실 수 있습니다.</p>
-                  {gallery.items?.length > 0 && (
-                    <div className="grid gap-3">
-                      {gallery.items.map((item, idx) => (
-                        <div key={item.id || idx} className="flex items-center gap-3 rounded-lg border bg-muted/40 p-3">
-                          <span className="txt-en text-xs font-semibold text-muted-foreground">Step {String(idx + 1).padStart(2, "0")}</span>
-                          <div className="grid">
-                            <p className="typo-ko text-sm font-semibold">{item.title}</p>
-                            <p className="flex items-center gap-1.5 text-xs text-muted-foreground"><CalendarDays className="h-3.5 w-3.5" /> {item.date}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
+                  <p className="typo-ko typo-ko-body text-[15px] leading-relaxed text-foreground/90">스캔부터 웹 전시까지, 손글씨 성경을 디지털 보존물로 완성한 과정을 기록합니다. 아래 메뉴에서 참여자 명단, 회의록, 필사자 후기, 제작 앨범을 살펴보실 수 있습니다.</p>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <button
+                      type="button"
+                      onClick={() => selectSection("participants")}
+                      className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
+                    >
+                      <Users className="h-5 w-5 text-primary shrink-0" />
+                      <div>
+                        <p className="typo-ko text-sm font-semibold">참여자 명단</p>
+                        <p className="typo-ko text-xs text-muted-foreground">562명 성도 참여 및 팀별 명단</p>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => selectSection("minutes")}
+                      className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
+                    >
+                      <NotebookPen className="h-5 w-5 text-primary shrink-0" />
+                      <div>
+                        <p className="typo-ko text-sm font-semibold">회의록</p>
+                        <p className="typo-ko text-xs text-muted-foreground">성경 필사 TF 회의 기록</p>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => selectSection("reviews")}
+                      className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
+                    >
+                      <MessageSquareQuote className="h-5 w-5 text-primary shrink-0" />
+                      <div>
+                        <p className="typo-ko text-sm font-semibold">필사자 후기</p>
+                        <p className="typo-ko text-xs text-muted-foreground">필사 과정에서 얻은 은혜와 소감</p>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => selectSection("album")}
+                      className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
+                    >
+                      <Images className="h-5 w-5 text-primary shrink-0" />
+                      <div>
+                        <p className="typo-ko text-sm font-semibold">제작 앨범</p>
+                        <p className="typo-ko text-xs text-muted-foreground">제작 과정 바둑판식 이미지 갤러리</p>
+                      </div>
+                    </button>
+                  </div>
                 </SectionShell>
               )}
 
@@ -387,9 +603,71 @@ export function GalleryPage() {
                   </div>
                 </SectionShell>
               )}
+
+              {active === "album" && (
+                <SectionShell en="Production Album" title="제작 앨범">
+                  <p className="typo-ko typo-ko-body text-[15px] leading-relaxed text-foreground/90">
+                    성경 이어쓰기 제작 과정과 은혜의 순간들을 갤러리 앨범으로 모았습니다. 
+                    사진을 클릭하시면 큰 이미지로 감상하실 수 있습니다.
+                  </p>
+
+                  {albumItems.length > 0 ? (
+                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
+                      {albumItems.map((item, idx) => (
+                        <div
+                          key={item.id || idx}
+                          onClick={() => setActiveAlbumIndex(idx)}
+                          className="group relative flex flex-col overflow-hidden rounded-xl border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-md cursor-pointer"
+                        >
+                          <div className="relative aspect-square w-full overflow-hidden bg-muted">
+                            <img
+                              src={item.src || item.image}
+                              alt={item.title}
+                              loading="lazy"
+                              className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
+                              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-sm shadow-md transition-transform duration-300 group-hover:scale-110">
+                                <ZoomIn className="h-5 w-5" />
+                              </span>
+                            </div>
+                          </div>
+                          <div className="flex flex-col gap-1 p-2.5 sm:p-3">
+                            <p className="typo-ko text-xs sm:text-sm font-semibold text-foreground line-clamp-1 group-hover:text-primary transition-colors">
+                              {item.title}
+                            </p>
+                            {item.date && (
+                              <p className="flex items-center gap-1 text-[11px] text-muted-foreground">
+                                <CalendarDays className="h-3 w-3 shrink-0" />
+                                <span>{item.date}</span>
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex h-48 flex-col items-center justify-center rounded-xl border border-dashed p-6 text-center">
+                      <Images className="h-8 w-8 text-muted-foreground" />
+                      <p className="typo-ko mt-2 text-sm text-muted-foreground">등록된 제작 앨범 사진이 없습니다.</p>
+                    </div>
+                  )}
+                </SectionShell>
+              )}
             </CardContent>
           </Card>
         </div>
+
+        {/* Album Lightbox Modal */}
+        {activeAlbumIndex !== null && (
+          <AlbumLightboxModal
+            items={albumItems}
+            activeIndex={activeAlbumIndex}
+            onClose={() => setActiveAlbumIndex(null)}
+            onPrev={handlePrevAlbum}
+            onNext={handleNextAlbum}
+          />
+        )}
       </main>
     </SiteShell>
   );

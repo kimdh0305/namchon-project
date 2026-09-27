@@ -1034,6 +1034,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "정지인A"
     ]
   },
   {
@@ -1184,6 +1187,9 @@
           "저점수(70.0)"
         ]
       }
+    ],
+    "aliases": [
+      "박기범A"
     ]
   },
   {
@@ -2181,6 +2187,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "이은희A"
     ]
   },
   {
@@ -2364,6 +2373,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "김성희A"
     ]
   },
   {
@@ -2622,6 +2634,9 @@
           "분리등장(박지혜A@ezekiel:p63-66, p79-83)|본구간추정"
         ]
       }
+    ],
+    "aliases": [
+      "박지혜A"
     ]
   },
   {
@@ -2647,11 +2662,13 @@
         "match_margin_min": 0.0,
         "needs_review": false,
         "review_reasons": [
-			"수정(완)"
+          "수정(완)"
         ],
-        "notes": [
-        ]
+        "notes": []
       }
+    ],
+    "aliases": [
+      "심선화A"
     ]
   },
   {
@@ -2741,6 +2758,9 @@
           "저점수(66.7)"
         ]
       }
+    ],
+    "aliases": [
+      "조혜진B"
     ]
   },
   {
@@ -3156,6 +3176,9 @@
           "저점수(66.7)"
         ]
       }
+    ],
+    "aliases": [
+      "김유경A"
     ]
   },
   {
@@ -3268,6 +3291,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "이혜진C"
     ]
   },
   {
@@ -3430,6 +3456,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "김경희A"
     ]
   },
   {
@@ -4049,6 +4078,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "김은아A"
     ]
   },
   {
@@ -4161,6 +4193,19 @@
           "저점수(62.5)",
           "저점수(75.0)",
           "저점수(77.8)"
+        ]
+      },
+      {
+        "book_id": "genesis",
+        "page": 76,
+        "start_page": 76,
+        "end_page": 79,
+        "page_count": 4,
+        "assigned": "창세기 33~34장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
         ]
       }
     ]
@@ -4293,6 +4338,9 @@
           "저점수(60.0)"
         ]
       }
+    ],
+    "aliases": [
+      "황지은A"
     ]
   },
   {
@@ -5283,6 +5331,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "이경영A"
     ]
   },
   {
@@ -6310,6 +6361,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "김영미D"
     ]
   },
   {
@@ -6505,6 +6559,9 @@
           "저점수(75.0)"
         ]
       }
+    ],
+    "aliases": [
+      "유정화A"
     ]
   },
   {
@@ -6990,6 +7047,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "이준호A"
     ]
   },
   {
@@ -7120,6 +7180,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "김경희B"
     ]
   },
   {
@@ -7150,6 +7213,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "이정헌A"
     ]
   },
   {
@@ -7229,6 +7295,9 @@
           "저점수(70.0)"
         ]
       }
+    ],
+    "aliases": [
+      "박정훈A"
     ]
   },
   {
@@ -8046,6 +8115,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "김신화A"
     ]
   },
   {
@@ -8138,6 +8210,9 @@
           "저점수(70.0)"
         ]
       }
+    ],
+    "aliases": [
+      "김은정B"
     ]
   },
   {
@@ -8443,6 +8518,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "이진우B"
     ]
   },
   {
@@ -9667,6 +9745,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "김신화B"
     ]
   },
   {
@@ -10483,6 +10564,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "박지영B"
     ]
   },
   {
@@ -10590,6 +10674,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "이현경A"
     ]
   },
   {
@@ -10697,6 +10784,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "김미선B"
     ]
   },
   {
@@ -10726,6 +10816,9 @@
           "저점수(70.0)"
         ]
       }
+    ],
+    "aliases": [
+      "김현정D"
     ]
   },
   {
@@ -11052,6 +11145,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "김성희B"
     ]
   },
   {
@@ -11122,6 +11218,9 @@
           "저점수(66.7)"
         ]
       }
+    ],
+    "aliases": [
+      "이은정C"
     ]
   },
   {
@@ -11349,6 +11448,9 @@
           "저점수(77.8)"
         ]
       }
+    ],
+    "aliases": [
+      "김경애A"
     ]
   },
   {
@@ -11699,7 +11801,8 @@
         "notes": []
       }
     ]
-  },{
+  },
+  {
     "writer_id": "송아영",
     "name": "송아영",
     "entries": [
@@ -12644,6 +12747,9 @@
           "저점수(70.0)"
         ]
       }
+    ],
+    "aliases": [
+      "안수빈B"
     ]
   },
   {
@@ -13388,6 +13494,9 @@
         "review_reasons": [],
         "notes": []
       }
+    ],
+    "aliases": [
+      "안수빈A"
     ]
   },
   {
@@ -13981,6 +14090,9 @@
         ],
         "notes": []
       }
+    ],
+    "aliases": [
+      "안수빈C"
     ]
   },
   {
@@ -16494,6 +16606,199 @@
           "극저점수(25.0)"
         ],
         "notes": []
+      },
+      {
+        "book_id": "first-timothy",
+        "page": 5,
+        "start_page": 5,
+        "end_page": 8,
+        "page_count": 4,
+        "assigned": "디모데전서 5~6장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      },
+      {
+        "book_id": "revelation",
+        "page": 17,
+        "start_page": 17,
+        "end_page": 17,
+        "page_count": 1,
+        "assigned": "요한계시록 12장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      },
+      {
+        "book_id": "revelation",
+        "page": 16,
+        "start_page": 16,
+        "end_page": 17,
+        "page_count": 2,
+        "assigned": "요한계시록 12장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "성광제",
+    "name": "성광제",
+    "aliases": [
+      "성광제"
+    ],
+    "entries": [
+      {
+        "book_id": "psalms",
+        "page": 103,
+        "start_page": 103,
+        "end_page": 105,
+        "page_count": 3,
+        "assigned": "시편 83~85편",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이덕자A",
+    "name": "이덕자A",
+    "aliases": [
+      "이덕자A"
+    ],
+    "entries": [
+      {
+        "book_id": "psalms",
+        "page": 138,
+        "start_page": 138,
+        "end_page": 142,
+        "page_count": 5,
+        "assigned": "시편 108~112편",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "라온",
+    "name": "라온",
+    "aliases": [
+      "라온"
+    ],
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 6,
+        "start_page": 6,
+        "end_page": 7,
+        "page_count": 2,
+        "assigned": "마태복음 3장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이하율",
+    "name": "이하율",
+    "aliases": [
+      "이하율"
+    ],
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 82,
+        "start_page": 82,
+        "end_page": 82,
+        "page_count": 1,
+        "assigned": "마태복음 26장 1~16절",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "최연우1",
+    "name": "최연우1",
+    "aliases": [
+      "최연우1"
+    ],
+    "entries": [
+      {
+        "book_id": "matthew",
+        "page": 85,
+        "start_page": 85,
+        "end_page": 86,
+        "page_count": 2,
+        "assigned": "마태복음 26장 36~56절",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "이세은",
+    "name": "이세은",
+    "aliases": [
+      "이세은"
+    ],
+    "entries": [
+      {
+        "book_id": "mark",
+        "page": 18,
+        "start_page": 18,
+        "end_page": 22,
+        "page_count": 5,
+        "assigned": "마가복음 6장 1~29절",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
+      }
+    ]
+  },
+  {
+    "writer_id": "김하언",
+    "name": "김하언",
+    "aliases": [
+      "김하언"
+    ],
+    "entries": [
+      {
+        "book_id": "luke",
+        "page": 15,
+        "start_page": 15,
+        "end_page": 20,
+        "page_count": 6,
+        "assigned": "누가복음 5~6장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 및 이름 크롭 대조 반영"
+        ]
       }
     ]
   }

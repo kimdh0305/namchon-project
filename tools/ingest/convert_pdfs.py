@@ -18,12 +18,13 @@ except ImportError:
     sys.exit(1)
 
 # Configurations
-INPUT_DIR = r"C:\Users\user\Desktop\남서울평촌교회\성경전시관_웹페이지\이북\이북_도비라"
+INPUT_DIR = r"C:\Users\user\Desktop\남서울평촌교회\성경전시관_웹페이지\9월마지막작업\표지최종\이북_도비라"
 BOOKS_JSON_PATH = "./data/books.json"
-PAGES_OUTPUT_DIR = "./assets/pages"
+PAGES_OUTPUT_DIR = "./assets/new_pages"
 MANIFESTS_DIR = "./data/manifests"
-DEFAULT_ZOOM = 2.5  # Scales the page by 2x for high resolution (144 DPI)
-WEBP_QUALITY = 90   # Quality for WebP compression (0-100)
+UPDATE_MANIFESTS = False  # R2 objects keep their existing URLs; preserve current manifests
+DEFAULT_ZOOM = 300 / 72  # Scales the page by 2x for high resolution (144 DPI)
+WEBP_QUALITY = 92   # Quality for WebP compression (0-100)
 COPY_PDF_TO_DEST = False  # Set to True if you want to keep the original PDF in the assets folder
 
 def normalize(text):
@@ -157,7 +158,13 @@ def process_pdf(pdf_path, book):
             
     doc.close()
     
-    # 4. Update manifest file (e.g., data/manifests/genesis.json)
+    # 4. Update manifest file only when explicitly enabled.
+    # R2 replacement uploads keep the existing books/book-XX/NNNN.webp URLs,
+    # so the current production manifests should normally be preserved.
+    if not UPDATE_MANIFESTS:
+        print("  -> Manifest update skipped (existing R2 URLs preserved).")
+        return
+
     manifest_filename = f"{book_id}.json"
     manifest_path = os.path.join(MANIFESTS_DIR, manifest_filename)
     

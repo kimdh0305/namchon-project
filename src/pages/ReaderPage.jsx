@@ -100,7 +100,11 @@ export function ReaderPage() {
     const keyword = normalizeWriterSearch(writerKeyword);
     if (!keyword) return [];
     return writers
-      .filter((w) => normalizeWriterSearch(w.name).includes(keyword))
+      .filter((w) => {
+        const searchable = [w.name, w.writer_id, ...(w.aliases || [])]
+          .map(normalizeWriterSearch);
+        return searchable.some((value) => value.includes(keyword));
+      })
       .slice(0, 12);
   }, [writers, writerKeyword]);
 

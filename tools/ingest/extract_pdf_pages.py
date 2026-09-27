@@ -248,7 +248,7 @@ def process_notes(input_dir: Path, output_dir: Path, quality: int, dpi: int) -> 
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--pdf", required=True, type=Path, help="Path to PDF file or directory")
+    parser.add_argument("--pdf", required=True, type=Path, help="Path to PDF file or directory", default="C:\\Users\\user\\Documents\\카카오톡 받은 파일\\")
     parser.add_argument("--book-id", type=str, help="Required if processing a single file without a numbered prefix")
     parser.add_argument("--assets-root", type=Path, default=Path("C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라"))
     parser.add_argument("--manifest-root", type=Path, default=Path("C:\\Users\\user\\Desktop\\남서울평촌교회\\성경전시관_웹페이지\\이북\\이북_도비라\\json"))
