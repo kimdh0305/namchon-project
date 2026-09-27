@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams, useSearchParams } from "react-router-dom";
-import { BookMarked, Search, Sparkles } from "lucide-react";
+import { BookMarked, ClipboardList, Search, Sparkles } from "lucide-react";
 import { SiteShell } from "@/components/layout/SiteShell";
+import { PdfViewerModal } from "@/components/common/PdfViewerModal";
 import { PageFlipBook } from "@/components/reader/PageFlipBook";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -32,33 +33,52 @@ export function ReaderPage() {
 
   const [books, setBooks] = useState([]);
   const [toc, setToc] = useState({ sections: [] });
+  const [writerAssignment, setWriterAssignment] = useState(null);
   const [writers, setWriters] = useState([]);
   const [manifest, setManifest] = useState(null);
   const [pageInfo, setPageInfo] = useState({ current: initialPage, total: 0 });
   const [pageInput, setPageInput] = useState(String(initialPage));
   const [writerKeyword, setWriterKeyword] = useState("");
   const [zoomScale, setZoomScale] = useState(1);
+  const [assignmentOpen, setAssignmentOpen] = useState(false);
 
   const flipRef = useRef(null);
+  const writersLoadingRef = useRef(false);
+  const writersLoadedRef = useRef(false);
   const minZoom = 1;
   const maxZoom = 2.5;
   const zoomStep = 0.1;
 
   useEffect(() => {
     Promise.all([
-      fetchJson("/data/books.json", { cache: "no-cache" }),
-      fetchJson("/data/toc.json", { cache: "no-cache" }),
-      fetchJson("/data/writers.json", { cache: "no-cache" })
+      fetchJson("/data/books.json"),
+      fetchJson("/data/toc.json"),
+      fetchJson("/data/history.json")
     ])
-      .then(([booksData, tocData, writersData]) => {
+      .then(([booksData, tocData, historyData]) => {
         setBooks(Array.isArray(booksData) ? booksData : []);
         setToc(tocData && tocData.sections ? tocData : { sections: [] });
-        setWriters(Array.isArray(writersData) ? writersData : []);
+        setWriterAssignment(historyData?.writerAssignment || null);
       })
       .catch(() => {
         setBooks([]);
         setToc({ sections: [] });
-        setWriters([]);
+        setWriterAssignment(null);
+      });
+  }, []);
+
+  const loadWriters = useCallback(() => {
+    if (writersLoadedRef.current || writersLoadingRef.current) return;
+    writersLoadingRef.current = true;
+
+    fetchJson("/data/writers.json")
+      .then((writersData) => {
+        setWriters(Array.isArray(writersData) ? writersData : []);
+        writersLoadedRef.current = true;
+      })
+      .catch(() => setWriters([]))
+      .finally(() => {
+        writersLoadingRef.current = false;
       });
   }, []);
 
@@ -66,7 +86,7 @@ export function ReaderPage() {
     let alive = true;
     setManifest(null);
 
-    fetchJson(`/data/manifests/${bookId}.json`, { cache: "no-cache" })
+    fetchJson(`/data/manifests/${bookId}.json`)
       .then((data) => {
         if (!alive) return;
         setManifest(data);
@@ -200,6 +220,7 @@ export function ReaderPage() {
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   value={writerKeyword}
+                  onFocus={loadWriters}
                   onChange={(e) => setWriterKeyword(e.target.value)}
                   placeholder="필사자 검색"
                   className="border-input bg-card pl-9 text-foreground placeholder:text-muted-foreground"
@@ -233,6 +254,17 @@ export function ReaderPage() {
                   </div>
                 )}
               </div>
+
+              {(writerAssignment?.pages?.length > 0 || writerAssignment?.pdf) && (
+                <Button
+                  type="button"
+                  variant="outline"
+                  onClick={() => setAssignmentOpen(true)}
+                  className="typo-ko shrink-0"
+                >
+                  <ClipboardList className="mr-1.5 h-4 w-4" /> 분배표 보기
+                </Button>
+              )}
 
               <div className="flex flex-wrap items-center gap-2">
                 <Input
@@ -303,6 +335,13 @@ export function ReaderPage() {
           </div>
         </section>
       </main>
+      <PdfViewerModal
+        open={assignmentOpen}
+        title={writerAssignment?.title || "전교인 성경이어쓰기 분배표"}
+        src={writerAssignment?.pdf}
+        pages={writerAssignment?.pages || []}
+        onClose={() => setAssignmentOpen(false)}
+      />
     </SiteShell>
   );
 }

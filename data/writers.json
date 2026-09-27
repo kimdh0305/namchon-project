@@ -3513,6 +3513,45 @@
         "needs_review": false,
         "review_reasons": [],
         "notes": []
+      },
+      {
+        "book_id": "joshua",
+        "page": 40,
+        "start_page": 40,
+        "end_page": 43,
+        "page_count": 4,
+        "assigned": "여호수아 17~18장",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 검수 반영"
+        ]
+      },
+      {
+        "book_id": "psalms",
+        "page": 98,
+        "start_page": 98,
+        "end_page": 102,
+        "page_count": 5,
+        "assigned": "시편 79~82편",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 검수 반영"
+        ]
+      },
+      {
+        "book_id": "psalms",
+        "page": 154,
+        "start_page": 154,
+        "end_page": 158,
+        "page_count": 5,
+        "assigned": "시편 119편 91~176절",
+        "needs_review": false,
+        "review_reasons": [],
+        "notes": [
+          "2026-09 분배표 검수 반영"
+        ]
       }
     ]
   },
@@ -9534,12 +9573,11 @@
         "book_id": "psalms",
         "page": 30,
         "start_page": 30,
-        "end_page": 32,
-        "page_count": 3,
-        "assigned": "시 편 28~31장",
+        "end_page": 31,
+        "page_count": 2,
+        "assigned": "시 편 28~30장",
         "raw_ocr": [
           "갑동선",
-          "김동선",
           "김동선"
         ],
         "match_score_min": 77.8,
@@ -9559,12 +9597,13 @@
     "entries": [
       {
         "book_id": "psalms",
-        "page": 33,
-        "start_page": 33,
+        "page": 32,
+        "start_page": 32,
         "end_page": 39,
-        "page_count": 7,
-        "assigned": "시 편 32~35장; 시 편 78~78장",
+        "page_count": 8,
+        "assigned": "시 편 31~35장; 시 편 78~78장",
         "raw_ocr": [
+          "김동선",
           "김병렬",
           "김병례",
           "김병례",
@@ -9581,6 +9620,7 @@
           "애매(2위와 0.0차)"
         ],
         "notes": [
+          "수동확인(시편 31장 작성자: 김명례)",
           "상위후보동점:['김경혜', '김명례']",
           "위치보정-샌드위치(원래:이영자→김명례)",
           "저점수(66.7)",

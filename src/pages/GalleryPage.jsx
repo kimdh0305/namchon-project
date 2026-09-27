@@ -13,10 +13,13 @@ import {
   ZoomIn,
   X,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  ClipboardList,
+  ExternalLink
 } from "lucide-react";
 import { SiteShell } from "@/components/layout/SiteShell";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { cn } from "@/lib/utils";
@@ -81,6 +84,7 @@ const SECTIONS = [
     icon: FileText,
     children: [
       { id: "participants", title: "참여자 명단", en: "Participants", icon: Users },
+      { id: "assignment", title: "필사 분배표", en: "Writer Assignment", icon: ClipboardList },
       { id: "minutes", title: "회의록", en: "Meeting Minutes", icon: NotebookPen },
       { id: "reviews", title: "필사자 후기", en: "Reflections", icon: MessageSquareQuote },
       { id: "album", title: "제작 앨범", en: "Production Album", icon: Images }
@@ -88,7 +92,7 @@ const SECTIONS = [
   }
 ];
 
-const PROCESS_CHILD_IDS = ["participants", "minutes", "reviews", "album"];
+const PROCESS_CHILD_IDS = ["participants", "assignment", "minutes", "reviews", "album"];
 
 function SectionShell({ en, title, children }) {
   return (
@@ -274,15 +278,16 @@ export function GalleryPage() {
   const [activeAlbumIndex, setActiveAlbumIndex] = useState(null);
 
   useEffect(() => {
-    fetchJson("/data/history.json", { cache: "no-cache" })
+    fetchJson("/data/history.json")
       .then((data) => setHistory(data || {}))
       .catch(() => setHistory({ participants: [], reviews: [], minutes: [], album: [] }));
-    fetchJson("/data/gallery.json", { cache: "no-cache" })
+    fetchJson("/data/gallery.json")
       .then(setGallery)
       .catch(() => setGallery({ items: [] }));
   }, []);
 
   const minutes = history.minutes || [];
+  const writerAssignment = history.writerAssignment || null;
   const selectedMinute = useMemo(
     () => minutes.find((m) => m.id === activeMinute) || minutes[0] || null,
     [minutes, activeMinute]
@@ -463,6 +468,17 @@ export function GalleryPage() {
                     </button>
                     <button
                       type="button"
+                      onClick={() => selectSection("assignment")}
+                      className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
+                    >
+                      <ClipboardList className="h-5 w-5 text-primary shrink-0" />
+                      <div>
+                        <p className="typo-ko text-sm font-semibold">필사 분배표</p>
+                        <p className="typo-ko text-xs text-muted-foreground">성경별 필사 구간과 참여자 확인</p>
+                      </div>
+                    </button>
+                    <button
+                      type="button"
                       onClick={() => selectSection("minutes")}
                       className="flex items-center gap-3 rounded-lg border bg-card p-4 text-left transition hover:border-accent hover:shadow-sm"
                     >
@@ -520,6 +536,50 @@ export function GalleryPage() {
                       </div>
                     ))}
                   </div>
+                </SectionShell>
+              )}
+
+              {active === "assignment" && (
+                <SectionShell en="Writer Assignment" title="필사 분배표">
+                  <div className="flex flex-wrap items-center justify-between gap-3 rounded-lg border bg-muted/40 p-4">
+                    <p className="typo-ko typo-ko-body text-sm text-foreground/90">
+                      성경별 필사 범위와 참여자를 확인할 수 있는 원본 분배표입니다.
+                    </p>
+                    {writerAssignment?.pdf && (
+                      <div>
+                        <Button asChild variant="outline" size="sm">
+                          <a href={writerAssignment.pdf} target="_blank" rel="noreferrer">
+                            <ExternalLink className="mr-1.5 h-4 w-4" /> 원본 PDF
+                          </a>
+                        </Button>
+                      </div>
+                    )}
+                  </div>
+                  {writerAssignment?.pages?.length > 0 ? (
+                    <div className="grid gap-4 rounded-lg bg-muted/30 p-2 sm:p-4">
+                      {writerAssignment.pages.map((page, index) => (
+                        <figure key={page} className="mx-auto w-full max-w-4xl overflow-hidden rounded-lg border bg-white shadow-sm">
+                          <img
+                            src={page}
+                            alt={`${writerAssignment.title || "전교인 성경이어쓰기 분배표"} ${index + 1}쪽`}
+                            loading={index === 0 ? "eager" : "lazy"}
+                            className="h-auto w-full"
+                          />
+                          <figcaption className="border-t bg-muted/30 py-2 text-center text-xs text-muted-foreground">
+                            {index + 1} / {writerAssignment.pages.length}
+                          </figcaption>
+                        </figure>
+                      ))}
+                    </div>
+                  ) : writerAssignment?.pdf ? (
+                    <div className="overflow-hidden rounded-lg border bg-muted/30">
+                      <iframe title={writerAssignment.title} src={writerAssignment.pdf} className="h-[72vh] min-h-[520px] w-full" />
+                    </div>
+                  ) : (
+                    <div className="flex h-64 items-center justify-center rounded-lg border bg-muted/30 p-6 text-center">
+                      <p className="typo-ko text-sm text-muted-foreground">분배표 자료를 준비 중입니다.</p>
+                    </div>
+                  )}
                 </SectionShell>
               )}
 

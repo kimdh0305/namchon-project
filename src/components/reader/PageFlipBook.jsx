@@ -128,7 +128,9 @@ export const PageFlipBook = forwardRef(function PageFlipBook(
     const offset = coverImage ? 1 : 0;
     coverOffsetRef.current = offset;
 
-    const pageWindow = manifest.page_window || 3;
+    // Keep only two pages on either side warm to reduce initial image transfer
+    // and decode work while still covering the adjacent desktop spread.
+    const pageWindow = 2;
     const pages = manifest.pages.map((p, idx) => createPageElement(p, idx + 1));
     if (coverImage) pages.unshift(createPageElement({ image: coverImage }, 0));
     totalPagesRef.current = (manifest.total_pages || manifest.pages.length) + offset;

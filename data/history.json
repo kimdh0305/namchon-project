@@ -1,4 +1,24 @@
 {
+  "writerAssignment": {
+    "title": "전교인 성경이어쓰기 분배표",
+    "pdf": "/assets/documents/writer-assignment.pdf",
+    "pages": [
+      "/assets/documents/writer-assignment/page-01.webp",
+      "/assets/documents/writer-assignment/page-02.webp",
+      "/assets/documents/writer-assignment/page-03.webp",
+      "/assets/documents/writer-assignment/page-04.webp",
+      "/assets/documents/writer-assignment/page-05.webp",
+      "/assets/documents/writer-assignment/page-06.webp",
+      "/assets/documents/writer-assignment/page-07.webp",
+      "/assets/documents/writer-assignment/page-08.webp",
+      "/assets/documents/writer-assignment/page-09.webp",
+      "/assets/documents/writer-assignment/page-10.webp",
+      "/assets/documents/writer-assignment/page-11.webp",
+      "/assets/documents/writer-assignment/page-12.webp",
+      "/assets/documents/writer-assignment/page-13.webp",
+      "/assets/documents/writer-assignment/page-14.webp"
+    ]
+  },
   "docImages": {
     "preface": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/preface.webp?v=2",
     "creed": "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/history/apostles-creed.webp",
