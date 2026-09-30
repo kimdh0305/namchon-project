@@ -1,12 +1,15 @@
+import { versionResourceUrl, versionResourceUrls } from "@/lib/resourceVersion";
+
 export async function fetchJson(path, options = {}) {
   // Dev: always revalidate so edited JSON (toc/books/manifests) shows immediately.
   // Prod: keep aggressive caching for the static archive.
   const { cache = import.meta.env.DEV ? "no-cache" : "force-cache" } = options;
-  const response = await fetch(path, { cache });
+  const requestUrl = versionResourceUrl(path);
+  const response = await fetch(requestUrl, { cache });
   if (!response.ok) {
     throw new Error(`Failed to fetch ${path}: ${response.status}`);
   }
-  return response.json();
+  return versionResourceUrls(await response.json());
 }
 
 export function findBook(books, bookId) {

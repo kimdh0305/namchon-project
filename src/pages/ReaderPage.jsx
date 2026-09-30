@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
 import { fetchJson, findBook, formatWriterEntry } from "@/lib/data";
+import { versionResourceUrl } from "@/lib/resourceVersion";
 
 // 리더 첫 페이지(표지)는 R2 cover 폴더의 전용 파일 사용: cover/<book_id>_cover.webp
 const COVER_BASE = "https://pub-2ae8b46c1ff5400481a480cff09faf89.r2.dev/cover";
@@ -317,7 +318,7 @@ export function ReaderPage() {
                 zoomStep={zoomStep}
                 onZoomChange={setZoom}
                 onPageChange={handlePageChange}
-                coverImage={`${COVER_BASE}/${bookId}_cover.webp`}
+                coverImage={versionResourceUrl(`${COVER_BASE}/${bookId}_cover.webp`)}
               />
             ) : (
               <p className="typo-ko text-sm text-secondary">리더 데이터를 불러오는 중입니다...</p>

@@ -3,6 +3,10 @@ import react from "@vitejs/plugin-react";
 import path from "node:path";
 import fs from "node:fs";
 
+// A new value is embedded on every production build. Set BUILD_VERSION in CI
+// when a stable release id (for example, a git SHA) is preferred.
+const buildVersion = process.env.BUILD_VERSION || Date.now().toString(36);
+
 const MIME = {
   ".json": "application/json",
   ".webp": "image/webp",
@@ -50,6 +54,9 @@ function serveRootStatic() {
 
 export default defineConfig({
   plugins: [react(), serveRootStatic()],
+  define: {
+    __BUILD_VERSION__: JSON.stringify(buildVersion)
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src")

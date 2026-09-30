@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { fetchJson } from "@/lib/data";
+import { versionResourceUrl } from "@/lib/resourceVersion";
 
 // 랜딩 썸네일은 리더용 cover와 분리 — R2 thumbnail 폴더의 전용 파일 사용.
 // 파일명 규칙: thumbnail_<두자리 order>_<book_id>.webp  (예: thumbnail_44_acts.webp)
@@ -13,7 +14,7 @@ const THUMBNAIL_BASE = "/assets/thumbnails";
 
 function thumbnailUrl(book) {
   const n = String(book.order ?? "").padStart(2, "0");
-  return `${THUMBNAIL_BASE}/thumbnail_${n}_${book.book_id}.webp`;
+  return versionResourceUrl(`${THUMBNAIL_BASE}/thumbnail_${n}_${book.book_id}.webp`);
 }
 
 function BookGrid({ books }) {
